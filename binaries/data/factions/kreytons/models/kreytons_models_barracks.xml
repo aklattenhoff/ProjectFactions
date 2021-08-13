@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.8</Scale>
+	<ModelFile>models/barracks.dae</ModelFile>
+	<TextureFile>models/barracks.png</TextureFile>
+	<BumpTextureFile>models/barracks_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/barracks_sbc.png</SBCTextureFile>
+</Model>

@@ -1,0 +1,4 @@
+<Action type="train" name="kreytons_action_trainVillager">
+	<Icon>textures/ui/train_villager_icon.png</Icon>
+	<Train>kreytons_villager</Train>
+</Action>

@@ -1,0 +1,5 @@
+C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\obj\Release\AmbientOcclusion.InfoGetter.resources
+C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\obj\Release\AmbientOcclusion.ProgressShower.resources
+C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\obj\Release\AmbientOcclusion.Viewport.resources
+C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\obj\Release\AmbientOcclusion.Resources.resources
+C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\obj\Release\AmbientOcclusion.vbproj.GenerateResource.Cache

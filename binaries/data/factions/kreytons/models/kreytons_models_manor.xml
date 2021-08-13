@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.1</Scale>
+	<ModelFile>models/manor.dae</ModelFile>
+	<TextureFile>models/manor.png</TextureFile>
+	<BumpTextureFile>models/manor_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/manor_sbc.png</SBCTextureFile>
+</Model>

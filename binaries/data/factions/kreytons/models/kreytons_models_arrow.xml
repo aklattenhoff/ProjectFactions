@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model name="kreytons_models_arrow">
+	<Orientation>z</Orientation>
+	<Scale>0.0078125</Scale>
+	<ModelFile>models/arrow.dae</ModelFile>
+	<TextureFile>models/arrow.png</TextureFile>
+	<BumpTextureFile>models/arrow_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/arrow_sbc.png</SBCTextureFile>
+</Model>

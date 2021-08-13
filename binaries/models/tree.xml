@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<Model>
+	<ModelFile>models/armory.dae</ModelFile>
+	<TextureFile>models/armory.png</TextureFile>
+	<BumpTextureFile>test.png</BumpTextureFile>
+</Model>

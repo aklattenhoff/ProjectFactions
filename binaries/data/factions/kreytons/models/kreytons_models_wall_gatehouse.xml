@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.1</Scale>
+	<ModelFile>models/wall_gatehouse.dae</ModelFile>
+	<TextureFile>models/wall_gatehouse.png</TextureFile>
+	<BumpTextureFile>models/wall_gatehouse_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/wall_gatehouse_sbc.png</SBCTextureFile>
+</Model>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.075</Scale>
+	<ModelFile>models/outpost.dae</ModelFile>
+	<TextureFile>models/outpost.png</TextureFile>
+	<BumpTextureFile>models/outpost_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/outpost_sbc.png</SBCTextureFile>
+</Model>

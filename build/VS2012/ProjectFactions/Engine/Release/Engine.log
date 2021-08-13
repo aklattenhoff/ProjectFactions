@@ -1,0 +1,172 @@
+﻿Build started 2/2/2017 12:48:40 AM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Engine\Engine.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\source\Game\ActionManager\ActionManager.cpp ..\..\..\..\source\Game\Bloom\Bloom.cpp ..\..\..\..\source\Game\EntityManager\DebugEntityRenderer.cpp ..\..\..\..\source\Game\EntityManager\EntityAnimationHandler.cpp ..\..\..\..\source\Game\EntityManager\EntityManager.cpp ..\..\..\..\source\Game\EntityManager\EntityMap.cpp ..\..\..\..\source\Game\EntityManager\EntityMouseOverList.cpp ..\..\..\..\source\Game\EntityManager\EntityRenderer.cpp ..\..\..\..\source\Game\EntityManager\EntitySelectionHandler.cpp ..\..\..\..\source\Game\EntityManager\EntitySelectionList.cpp ..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp ..\..\..\..\source\Game\Entity\Entity.cpp ..\..\..\..\source\Game\Entity\EntityBase.cpp ..\..\..\..\source\Game\Entity\EntityBaseCreator.cpp ..\..\..\..\source\Game\Entity\EntityBaseList.cpp ..\..\..\..\source\Game\Entity\EntityList.cpp ..\..\..\..\source\Game\Entity\EntityStats.cpp ..\..\..\..\source\Game\Faction\FactionBase.cpp ..\..\..\..\source\Game\Faction\FactionBaseList.cpp ..\..\..\..\source\Game\Game.cpp ..\..\..\..\source\Game\LogicModules\LMAttack.cpp ..\..\..\..\source\Game\LogicModules\LMBuild.cpp ..\..\..\..\source\Game\LogicModules\LMEntityEventHandler.cpp ..\..\..\..\source\Game\LogicModules\LMEntityProcessEventHandler.cpp ..\..\..\..\source\Game\LogicModules\LMGatherResource.cpp ..\..\..\..\source\Game\LogicModules\LMMovement.cpp ..\..\..\..\source\Game\LogicModules\LMTrain.cpp ..\..\..\..\source\Game\ParticleSystem\ParticleSystem.cpp ..\..\..\..\source\Game\Player\Player.cpp ..\..\..\..\source\Game\ShadowMap\ShadowMap.cpp ..\..\..\..\source\Game\SquadronManager\Group.cpp ..\..\..\..\source\Game\SquadronManager\Squadron.cpp ..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseCreator.cpp ..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseListCreator.cpp ..\..\..\..\source\Game\TempEntityCreator\TempEntityModelXMLCreator.cpp ..\..\..\..\source\Game\World.cpp ..\..\..\..\source\MainMenu\MMHomePage.cpp ..\..\..\..\source\MainMenu\MMLANHost.cpp ..\..\..\..\source\MainMenu\MMLANLobby.cpp ..\..\..\..\source\MainMenu\MainMenu.cpp ..\..\..\..\source\MainMenu\Menu.cpp ..\..\..\..\source\MainMenu\UIElements\MMButton.cpp ..\..\..\..\source\MainMenu\UIElements\MMPage.cpp ..\..\..\..\source\MainMenu\UIElements\MMView.cpp
+         ActionManager.cpp
+     1>..\..\..\..\source\Game\ActionManager\ActionManager.cpp(192): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Game\ActionManager\ActionManager.cpp(252): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Game\ActionManager\ActionManager.cpp(256): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Game\ActionManager\ActionManager.cpp(280): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Game\ActionManager\ActionManager.cpp(287): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Game\ActionManager\ActionManager.cpp(298): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Game\ActionManager\ActionManager.cpp(662): warning C4018: '<' : signed/unsigned mismatch
+         Bloom.cpp
+         DebugEntityRenderer.cpp
+         EntityAnimationHandler.cpp
+         EntityManager.cpp
+         EntityMap.cpp
+         EntityMouseOverList.cpp
+         EntityRenderer.cpp
+     1>..\..\..\..\source\Game\EntityManager\EntityRenderer.cpp(258): warning C4244: '*=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityManager\EntityRenderer.cpp(260): warning C4244: '*=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityManager\EntityRenderer.cpp(264): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityManager\EntityRenderer.cpp(269): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityManager\EntityRenderer.cpp(277): warning C4305: 'argument' : truncation from 'double' to 'float'
+         EntitySelectionHandler.cpp
+         EntitySelectionList.cpp
+         EntityMovement.cpp
+     1>..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp(37): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp(51): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp(143): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp(218): warning C4552: '+' : operator has no effect; expected operator with side-effect
+     1>..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp(259): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp(260): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp(288): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp(289): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         Entity.cpp
+         EntityBase.cpp
+     1>..\..\..\..\source\Game\Entity\EntityBase.cpp(189): warning C4101: 'err' : unreferenced local variable
+         EntityBaseCreator.cpp
+         EntityBaseList.cpp
+     1>..\..\..\..\source\Game\Entity\EntityBaseList.cpp(31): warning C4101: 'err' : unreferenced local variable
+     1>..\..\..\..\source\Game\Entity\EntityBaseList.cpp(53): warning C4101: 'err' : unreferenced local variable
+     1>..\..\..\..\source\Game\Entity\EntityBaseList.cpp(75): warning C4101: 'err' : unreferenced local variable
+     1>..\..\..\..\source\Game\Entity\EntityBaseList.cpp(97): warning C4101: 'err' : unreferenced local variable
+         EntityList.cpp
+         EntityStats.cpp
+         FactionBase.cpp
+         FactionBaseList.cpp
+         Game.cpp
+     1>..\..\..\..\source\Game\Game.cpp(429): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\..\source\Game\Game.cpp(430): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\..\source\Game\Game.cpp(431): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\..\source\Game\Game.cpp(1002): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Game\Game.cpp(1095): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Compiling...
+         LMAttack.cpp
+         LMBuild.cpp
+         LMEntityEventHandler.cpp
+         LMEntityProcessEventHandler.cpp
+         LMGatherResource.cpp
+     1>..\..\..\..\source\Game\LogicModules\LMGatherResource.cpp(78): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Game\LogicModules\LMGatherResource.cpp(88): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Game\LogicModules\LMGatherResource.cpp(114): warning C4018: '<' : signed/unsigned mismatch
+         LMMovement.cpp
+         LMTrain.cpp
+         ParticleSystem.cpp
+         Player.cpp
+         ShadowMap.cpp
+         Group.cpp
+         Squadron.cpp
+         TempEntityBaseCreator.cpp
+         TempEntityBaseListCreator.cpp
+         TempEntityModelXMLCreator.cpp
+         World.cpp
+         MMHomePage.cpp
+         MMLANHost.cpp
+         MMLANLobby.cpp
+         MainMenu.cpp
+         Compiling...
+         Menu.cpp
+         MMButton.cpp
+     1>..\..\..\..\source\MainMenu\UIElements\MMButton.cpp(59): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         MMPage.cpp
+         MMView.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../Release/Engine.lib" /NOLOGO /LTCG Release\Action.obj
+         Release\ActionArray.obj
+         Release\ActionList.obj
+         Release\ActionListCreator.obj
+         Release\ActionListParser.obj
+         Release\ActionManager.obj
+         Release\ActionManagerInterface.obj
+         Release\ActionParser.obj
+         Release\ActionProgressQueue.obj
+         Release\ActionSystem.obj
+         Release\Bloom.obj
+         Release\DebugEntityRenderer.obj
+         Release\EntityAnimationHandler.obj
+         Release\EntityManager.obj
+         Release\EntityMap.obj
+         Release\EntityMouseOverList.obj
+         Release\EntityRenderer.obj
+         Release\EntitySelectionHandler.obj
+         Release\EntitySelectionList.obj
+         Release\EntityMovement.obj
+         Release\EntityStatsBase.obj
+         Release\EntityStatsSystem.obj
+         Release\DebugEntityXMLParser.obj
+         Release\EntityXML.obj
+         Release\OldEntityXMLParser.obj
+         Release\EntityXMLTags.obj
+         Release\Entity.obj
+         Release\EntityBase.obj
+         Release\EntityBaseList.obj
+         Release\EntityEvent.obj
+         Release\EntityEventQueue.obj
+         Release\EntityList.obj
+         Release\EntityProcessEvent.obj
+         Release\EntityProcessEventQueue.obj
+         Release\EntityStats.obj
+         Release\EntityBaseCreator.obj
+         Release\FactionBase.obj
+         Release\FactionBaseList.obj
+         Release\Game.obj
+         Release\Input.obj
+         Release\LMAttack.obj
+         Release\LMBuild.obj
+         Release\LMEntityEventHandler.obj
+         Release\LMEntityProcessEventHandler.obj
+         Release\LMGatherResource.obj
+         Release\LMMovement.obj
+         Release\LMTrain.obj
+         Release\LOSMap.obj
+         Release\LOS.obj
+         Release\BoundingBox.obj
+         Release\BoundingBox2DSet.obj
+         Release\BoundingBox3DSet.obj
+         Release\EuclideanVector2D.obj
+         Release\Line2D.obj
+         Release\Path.obj
+         Release\Ray.obj
+         Release\Transformation.obj
+         Release\Particle.obj
+         Release\ParticleSystem.obj
+         Release\PathFinder.obj
+         Release\Player.obj
+         Release\PlayerList.obj
+         Release\Projectile.obj
+         Release\ProjectileBase.obj
+         Release\ProjectileSystem.obj
+         Release\ShadowMap.obj
+         Release\Group.obj
+         Release\Squadron.obj
+         Release\SquadronManager.obj
+         Release\TempEntityBaseCreator.obj
+         Release\TempEntityBaseListCreator.obj
+         Release\TempEntityModelXMLCreator.obj
+         Release\World.obj
+         Release\MainMenu.obj
+         Release\Menu.obj
+         Release\MMHomePage.obj
+         Release\MMLANHost.obj
+         Release\MMLANLobby.obj
+         Release\MMButton.obj
+         Release\MMPage.obj
+         Release\MMView.obj
+         Engine.vcxproj -> C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Engine\../Release/Engine.lib
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Engine\Engine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:08.42

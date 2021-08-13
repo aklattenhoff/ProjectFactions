@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model name="kreytons_props_swordsman_sword">
+	<Orientation>z</Orientation>
+	<Scale>0.012</Scale>
+	<ModelFile>models/sword.dae</ModelFile>
+	<TextureFile>models/sword.png</TextureFile>
+	<BumpTextureFile>models/sword_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/sword_sbc.png</SBCTextureFile>
+</Model>

@@ -1,0 +1,36 @@
+﻿Build started 5/25/2016 3:23:45 AM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\Shaders.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Performing Custom Build Tools
+     1>C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\AmbientOcclusion.fx(158,36-61): warning X3206: 'mul': implicit truncation of vector type
+     1>C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\AmbientOcclusion.fx(159,33-66): warning X3206: 'mul': implicit truncation of vector type
+     1>C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\AmbientOcclusion.fx(269,17-52): warning X3206: implicit truncation of vector type
+     1>CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+         
+         Compilation succeeded but fx_2_0 disassembly is not supported; use /Fo to capture compilation output.
+         The June 2010 DirectX SDK supports fx_2_0 disassembly if needed.
+         compilation code save succeeded; see C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\AmbientOcclusion.html
+         Performing Custom Build Tools
+     1>CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+         
+         Compilation succeeded but fx_2_0 disassembly is not supported; use /Fo to capture compilation output.
+         The June 2010 DirectX SDK supports fx_2_0 disassembly if needed.
+         compilation code save succeeded; see C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\DepthTest.html
+         Performing Custom Build Tools
+     1>CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+     1>C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\Downsample4x.fx(64,3-12): warning X3550: array reference cannot be used as an l-value; not natively addressable, forcing loop to unroll
+         
+         Compilation succeeded but fx_2_0 disassembly is not supported; use /Fo to capture compilation output.
+         The June 2010 DirectX SDK supports fx_2_0 disassembly if needed.
+         compilation code save succeeded; see C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\Downsample4x.html
+         Performing Custom Build Tools
+     1>CUSTOMBUILD : warning X4717: Effects deprecated for D3DCompiler_47
+         
+         Compilation succeeded but fx_2_0 disassembly is not supported; use /Fo to capture compilation output.
+         The June 2010 DirectX SDK supports fx_2_0 disassembly if needed.
+         compilation code save succeeded; see C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\ThreePixelsAverage.html
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\docs\StaticAO\Shaders\Shaders.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.87

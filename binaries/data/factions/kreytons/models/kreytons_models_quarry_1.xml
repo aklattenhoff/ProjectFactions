@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>1.0</Scale>
+	<ModelFile>models/quarry_new.dae</ModelFile>
+	<TextureFile>models/quarry_new.png</TextureFile>
+	<BumpTextureFile>models/quarry_new_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/quarry_sbc.png</SBCTextureFile>
+</Model>

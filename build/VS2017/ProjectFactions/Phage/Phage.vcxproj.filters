@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Phage">
+      <UniqueIdentifier>{d7ec5b87-2ef8-4a9d-91c0-bcdf725d402b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Phage\PhageTerrain">
+      <UniqueIdentifier>{4862d55a-66c4-4f09-bb75-a758a1a55284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Phage\HUD">
+      <UniqueIdentifier>{26d87518-a7c2-467a-bd48-7aa64a0067f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Phage\Backend">
+      <UniqueIdentifier>{1fd69077-6134-4b06-9eee-4f4d8fb5e79e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Phage\PhageMixer">
+      <UniqueIdentifier>{90246b47-4240-403e-8ee8-0e8b440b8e0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Math.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Scene.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Camera.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Window.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Entity.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Shader.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_MVP.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Matrix.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Model.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Terrain.cpp">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainMesh.cpp">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainMeshPatch.cpp">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainTexture.cpp">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_UIEntity.cpp">
+      <Filter>Phage\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_UITextureQuad.cpp">
+      <Filter>Phage\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_UIText.cpp">
+      <Filter>Phage\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainDecal.cpp">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_UILineRect.cpp">
+      <Filter>Phage\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_FrameBuffer.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_BoundingBox.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Prop.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_PropDesc.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainTileDebug.cpp">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Line.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Backend\Model.cpp">
+      <Filter>Phage\Backend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Backend\Skeleton.cpp">
+      <Filter>Phage\Backend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Backend\Animation.cpp">
+      <Filter>Phage\Backend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Quad.cpp">
+      <Filter>Phage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Mixer.cpp">
+      <Filter>Phage\PhageMixer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Sound.cpp">
+      <Filter>Phage\PhageMixer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Const.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Math.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Scene.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Camera.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Window.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Entity.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Shader.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_MVP.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Matrix.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Model.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Terrain.h">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainMesh.h">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainMeshPatch.h">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainTexture.h">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_UIEntity.h">
+      <Filter>Phage\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_UITextureQuad.h">
+      <Filter>Phage\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_UIText.h">
+      <Filter>Phage\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainDecal.h">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_UILineRect.h">
+      <Filter>Phage\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_FrameBuffer.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_BoundingBox.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Prop.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_PropDesc.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainTileDebug.h">
+      <Filter>Phage\PhageTerrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Line.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Backend\Model.h">
+      <Filter>Phage\Backend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Backend\Skeleton.h">
+      <Filter>Phage\Backend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Backend\Animation.h">
+      <Filter>Phage\Backend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Quad.h">
+      <Filter>Phage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Mixer.h">
+      <Filter>Phage\PhageMixer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Sound.h">
+      <Filter>Phage\PhageMixer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

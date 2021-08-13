@@ -1,0 +1,4 @@
+<Action type="build" name="inferno_buildHouse">
+	<Icon>textures/ui/build_house_icon.png</Icon>
+	<Build>inferno_house</Build>
+</Action>

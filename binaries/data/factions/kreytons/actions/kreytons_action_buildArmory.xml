@@ -1,0 +1,4 @@
+<Action type="build" name="kreytons_action_buildArmory">
+	<Icon>textures/ui/build_armory_icon.png</Icon>
+	<Build>kreytons_armory</Build>
+</Action>

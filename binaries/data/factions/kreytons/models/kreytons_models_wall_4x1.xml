@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.1</Scale>
+	<ModelFile>models/wall_4x1.dae</ModelFile>
+	<TextureFile>models/wall.png</TextureFile>
+	<BumpTextureFile>models/wall_bump.png</BumpTextureFile>
+</Model>

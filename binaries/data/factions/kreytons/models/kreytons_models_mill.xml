@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>1.0</Scale>
+	<ModelFile>models/mill_2.dae</ModelFile>
+	<TextureFile>models/mill_2.png</TextureFile>
+	<BumpTextureFile>models/mill_2_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/mill_2_sbc.png</SBCTextureFile>
+	<Animations>
+		<Animation name="Idle_1">
+			<AnimFile>models/mill_2_idle.dae</AnimFile>
+		</Animation>
+	</Animations>
+</Model>

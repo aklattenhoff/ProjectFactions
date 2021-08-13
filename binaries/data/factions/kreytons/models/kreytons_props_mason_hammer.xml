@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model name="kreytons_props_mason_hammer">
+	<Orientation>z</Orientation>
+	<Scale>0.015</Scale>
+	<ModelFile>models/mason_hammer.dae</ModelFile>
+	<TextureFile>models/mason_hammer.png</TextureFile>
+	<BumpTextureFile>models/mason_hammer_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/mason_hammer_sbc.png</SBCTextureFile>
+</Model>

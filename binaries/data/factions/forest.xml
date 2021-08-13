@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<Faction>
+	<StartingObjects>
+		<Object number="1">forest_factionCenter</Object>
+		<Object number="3">forest_villager</Object>
+		<Object number="1">forest_tree</Object>
+	</StartingObjects>
+	<StartingFood>500</StartingFood>
+	<StartingWood>0</StartingWood>
+	<StartingStone>0</StartingStone>
+	<StartingAlloy>0</StartingAlloy>
+</Faction>

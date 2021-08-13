@@ -1,0 +1,23 @@
+﻿Build started 2/2/2017 12:50:19 AM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\GUI\GUI.vcxproj" on node 3 (Build target(s)).
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../Release/GUI.lib" /NOLOGO /LTCG Release\ActionPanel.obj
+         Release\GUIBottomBar.obj
+         Release\GUIBottomBarParser.obj
+         Release\MinimapPanel.obj
+         Release\ObjectPanel.obj
+         Release\ResourcePanel.obj
+         Release\UIProgressQueue.obj
+         Release\GUICursor.obj
+         Release\GUIIcon.obj
+         Release\GUIManager.obj
+         Release\GUIRectangle.obj
+         Release\GUIText.obj
+         Release\GUITexture.obj
+         Release\GUIUnitSelectionBox.obj
+         GUI.vcxproj -> C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\GUI\../Release/GUI.lib
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\GUI\GUI.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.43

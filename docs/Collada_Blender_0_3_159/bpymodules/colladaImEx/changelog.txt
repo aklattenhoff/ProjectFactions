@@ -1,0 +1,201 @@
+## Release 0.3.159 - July 8, 2007
+	Feature: Exporting materials with textures maped to Col works correctly and is now 1.4.1 compliant!!
+	Bugfix: You can now import skeletal (non-animated) dae files.
+	Bugfix: You can import materials, and texture information will be moved to the materials section rather then discarded.
+	Bugfix: Fixed exporting joints which start with a number.
+	Bugfix: Fixed node transfrom information for joints when using Baked Matrices ( it was transposed incorrectly)
+	Bugfix: Material EMISSION is now a value between 0.0 and 1.0, and is not scaled by the diffuse color!!! Should ambient be like this too??
+
+## Release 0.3.153 - July 7, 2007
+	Feature: Materials now export when textures are present (Only when textures are present)
+	BugFix: Physics Model exported even if its disabled (Fixed)
+	BugFix: Diffuse reflection used improperly for <reflectivity> tag inside <effect> (Fixed)
+	BugFix: Changed default light values.
+	BugFix: Bad names all over the place ( Fixed more!!)
+
+## Release 0.3.145 - January 21, 2007
+
+
+Features
+        [21-01-2007] Feature: Ridgid body constaints exporting / importing changes
+
+Bugfixes
+        [21-01-2007] Bugfix: 0000074: Collada effects now export under the collada standard 1.4.1 Using Samplers and Surfaces.
+
+----------------------------------------------------------------------------------
+## Release 0.3.143 - January 2, 2007
+
+Bugfixes
+        [02-01-2007] Bugfix: Skeletal Animations Forward Bind fixed.
+
+----------------------------------------------------------------------------------
+## Release 0.3.140 - December 20, 2006
+
+Features
+        [16-12-2006] Feature - Export Vertex colors
+        [16-12-2006] Feature - Export visible layers as extras
+
+Bugfixes
+        [20-12-2006] Bugfix: Skeletal Animations InverseBind Matrix fixed
+        [20-12-2006] Bugfix: Skeletal Joint weights now use Average Weighting.
+
+
+----------------------------------------------------------------------------------
+## Release 0.3.137 - December 16, 2006
+
+Features
+        [16-12-2006] Feature - Skinned Armature Animation Export (no import yet)
+        [16-12-2006] Feature - Object Properties - Import and export of object properties as Extra Params. (Blender specific)
+        [16-12-2006] Feature - Animation Sampling - Animations are sampled between keyframes at a rate of 1 sample per frame.
+        [15-12-2006] Feature - Importing Trifan and TriStrip
+
+Bugfixes
+        [15-12-2006] Bugfix: Animation keys are now exported in chronological order.
+	   [06-10-2006] Bugfix 0000061: Error duing import
+	   [06-10-2006] Bugfix 0000062: For a rotated object a cube is exported instead of the object
+	   [06-10-2006] Bugfix 0000063: Cannot find the correct <scene> to instantiate.
+				Collada ID's must start with a letter.
+				So the default char 'i' is added to the front when an id not starts with a letter.
+        [06-10-2006] Bugfix 0000066: Error when there's group without bone
+        [15-12-2006] Bugfix 0000068: Google Earth 4 kmz import
+        [15-12-2006] Bugfix 0000070: Problems importing Trifan and TriStrip
+        [15-12-2006] Bugfix 0000071: Skin reference id inconsistant if "-Geometry" added to ID.
+        [15-12-2006] Bugfix 0000073: Export overrides file by default.
+
+
+
+----------------------------------------------------------------------------------
+## Release 0.3.108 - September 15, 2006
+
+This is the first release with armature export.
+
+Features
+        [15-09-2006] Feature - Skinned Armature Export (no animations yet)
+        [15-09-2006] Feature - Solid Armature Import
+
+Bugfixes
+        [15-09-2006] Bugfix 0000060: Transforms of nested nodes are not correct
+
+----------------------------------------------------------------------------------
+## Release 0.3.104 - September 13, 2006
+
+Bugfixes
+        [13-09-2006] Bugfix: UV Image Import (not Collada compliant yet)
+
+----------------------------------------------------------------------------------
+## Release 0.3.102 - September 13, 2006
+
+Features
+        [13-09-2006] Feature - Better Import Skinned Meshes
+
+Bugfixes
+        [13-09-2006] Bugfix: UV coordinates fixed in auto triangulation.
+        [03-09-2006] Bugfix 0000057: rigidbody export/import is broken
+
+----------------------------------------------------------------------------------
+## Release 0.3.94 - August 31, 2006
+
+Features
+        [31-08-2006] Feature - Import Skinned Meshes
+
+Bugfixes
+        [27-08-2006] Bugfix 0000055: Use Blender.sys.sep instead of \ in colladaImEx/cstartup.py
+
+----------------------------------------------------------------------------------
+## Release 0.3.91 - August 24, 2006
+
+Features
+        [24-08-2006] Feature - Import Polylists
+        [24-08-2006] Feature - Import Textures for Transparency
+
+Bugfixes
+        [24-08-2006] Bugfix: Polylists were not importing corrrect
+
+----------------------------------------------------------------------------------
+## Release 0.3.90 - August 23, 2006
+
+Features
+        [23-08-2006] Feature - BETA - Armature import (no skinning)
+
+Bugfixes
+	   [23-08-2006] Bugfix 0000054: <diffuse> tags contain both <color> and <texture> tags, schema violation & causes problems with other importers
+	   [23-08-2006] Bugfix 0000050: EQUATION = 'equation' missing
+	   [23-08-2006] Bugfix 0000051: EQUATION = missing u'Materials' key causes import failure, can we continue and report a warning?
+	   [23-08-2006] Bugfix 0000049: EQUATION = <rigid_body> lacks 'sid' attridute, and <instance_rigid_body> lacks 'body' attribute
+	   [23-08-2006] Bugfix 0000053: EQUATION = Importer not handling COLLADA 1.4.1 files (even simple ones)
+	   [23-08-2006] Bugfix 0000052: EQUATION = Import functionality with Daz Exporter ver 1.4.1
+
+----------------------------------------------------------------------------------
+
+## Release 0.3.89 - July 05, 2006
+
+In this release most of the texture information is exported, including UV-Image.
+Layer information is also imported and exported.
+Basic animation using IPOs is implemented.
+
+
+Features
+        [04-07-2006] Feature - import + export basic IPOs (translate, rotate, scale)
+        [04-07-2006] Feature 0000048 - import + export Layer information of Nodes.
+        [04-07-2006] Feature 0000041 - export Spotlight Angle.
+        [01-07-2006] Feature 0000030 - export all the texture information (also UV texture)
+
+Bugfixes
+        [04-07-2006] Bugfix 0000042: Errors loading the COLLADD-DOM sample models. (all errors fixed)
+        [04-07-2006] Bugfix 0000045: Empty physics_scene not schema compliant.
+        [04-07-2006] Bugfix 0000039: Meshes should export as 'Static TriMeshes' when 'Actor' information is missing.
+
+----------------------------------------------------------------------------------
+
+## Release 0.2.65 - June 09, 2006
+
+Features
+	[07-06-2006] Feature - export paths relative to collada file (GUI)
+	[07-06-2006] Feature - export Texture
+	[06-06-2006] Feature - import + export, store usersettings (from GUI)
+	[06-06-2006] Feature - export only current scene (GUI)
+	[06-06-2006] Feature - disable export physics (GUI)
+	[06-06-2006] Feature 0000027- physics, cylinder + cone support
+
+Bugfixes
+	[09-06-2006] Bugfix 0000040: Orthopraphic camera fails to export.
+	[07-06-2006] Bugfix 0000037: Cylinder and Tapered Cylinder need 2 radii.
+	[06-06-2006] Bugfix 0000031: Static meshes should always export a Rigid Body, with <dynamic>false</dynamic>
+
+----------------------------------------------------------------------------------
+## Release 0.2.56 - June 06, 2006
+
+Features
+
+	import - Import file to new scene (GUI)
+	import - replace existing scene on import (GUI)
+
+	export - export triangles (GUI)
+	export - export polygons (GUI)
+	export - bake matrices (GUI)
+
+
+Bugfixes
+	[05-06-2006] Bugfix 0000022 - Import Extremely slow imports
+	[05-06-2006] Bugfix 0000033 - Export crash when importing polygons with more then 4 faces 
+	[05-06-2006] Bugfix 0000032 - Export Select Error
+	[02-06-2006] Bugfix 0000021 - Export ID's not unique
+
+
+----------------------------------------------------------------------------------
+## Release 0.2.48 - June 02, 2006
+
+Features
+	[02-06-2006] exporter - only export selection (GUI)
+
+Bugfixes
+	[02-06-2006] Bugfix 0000026 - Export, rotation in wrong order
+	[02-06-2006] Bugfix 0000025 - when import/export fails, no info is shown in console 
+	[02-06-2006] Bugfix 0000024 - Export Crash on nested childs export- 
+
+
+
+----------------------------------------------------------------------------------
+
+## Release 0.2.45 - June 02, 2006
+---

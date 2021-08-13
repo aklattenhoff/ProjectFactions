@@ -1,0 +1,38 @@
+<Object type="building" name="inferno_factionCenter">
+	<Name>Faction Center</Name>
+	<Cost type="wood">10</Cost>
+	<PopulationLimitAdd>10</PopulationLimitAdd>
+	<BuildLimit>1</BuildLimit>
+	<Defense>
+		<HackArmor>0.8</HackArmor>
+		<PierceArmor>0.8</PierceArmor>
+		<MagicArmor>0.8</MagicArmor>
+	</Defense>
+	<HealthIndicatorPosition>
+		<Point3D x="0.000" y="5.960" z="0.000" />
+	</HealthIndicatorPosition>
+	<BoundingBox2DSet>
+		<BoundingBox2D>
+			<Point2D x="-6.000" y="0.000" />
+			<Point2D x="6.000" y="0.000" />
+			<BB2DSize width="12.000" />
+		</BoundingBox2D>
+	</BoundingBox2DSet>
+	<BoundingBox3DSet>
+		<BoundingBox3D>
+			<Point3D x="-6.000" y="0.500" z="0.000" />
+			<Point3D x="6.000" y="0.500" z="0.000" />
+			<BB3DSize width="12.000" height="1.000" />
+		</BoundingBox3D>
+		<BoundingBox3D>
+			<Point3D x="-2.000" y="2.730" z="0.000" />
+			<Point3D x="2.000" y="2.730" z="0.000" />
+			<BB3DSize width="4.000" height="5.460" />
+		</BoundingBox3D>
+	</BoundingBox3DSet>
+	<ModelFile>models/factionCenter.xml</ModelFile>
+	<Icon>textures/ui/icon.png</Icon>
+	<SmallIcon>art/factionCenter_small_icon.png</SmallIcon>
+	
+	<Health>10000</Health>
+</Object>

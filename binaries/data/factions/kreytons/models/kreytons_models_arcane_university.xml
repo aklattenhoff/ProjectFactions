@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>1.2</Scale>
+	<ModelFile>models/arcane_university.dae</ModelFile>
+	<TextureFile>models/arcane_university.png</TextureFile>
+	<BumpTextureFile>models/arcane_university_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/arcane_university_sbc.png</SBCTextureFile>
+</Model>

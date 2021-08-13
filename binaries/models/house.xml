@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<Model>
+	<ModelFile>models/house.dae</ModelFile>
+	<TextureFile>models/goblin_house.png</TextureFile>
+</Model>

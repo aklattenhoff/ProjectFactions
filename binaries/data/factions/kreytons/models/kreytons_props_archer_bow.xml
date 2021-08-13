@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model name="kreytons_props_archer_bow">
+	<Orientation>z</Orientation>
+	<Scale>0.0118</Scale>
+	<ModelFile>models/bow.dae</ModelFile>
+	<TextureFile>models/bow.png</TextureFile>
+	<BumpTextureFile>models/bow_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/bow_sbc.png</SBCTextureFile>
+</Model>

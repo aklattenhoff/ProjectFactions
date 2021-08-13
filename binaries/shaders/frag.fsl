@@ -1,0 +1,673 @@
+#version 330
+
+float rand(vec2 co){
+    return fract(sin(dot(co.xy ,vec2(12.9898,78.233))) * 43758.5453);
+}
+
+vec4 FxaaNew(
+sampler2D tex,
+vec2 pos,
+float lumaThreshold,
+float mulReduce,
+float minReduce,
+float maxSpan,
+vec2 texelStep,
+bool debugEdges
+) {
+	vec3 rgbM = texture(tex, pos).rgb;
+
+	// Sampling neighbour texels. Offsets are adapted to OpenGL texture coordinates. 
+	vec3 rgbNW = textureOffset(tex, pos, ivec2(-1, 1)).rgb;
+    vec3 rgbNE = textureOffset(tex, pos, ivec2(1, 1)).rgb;
+    vec3 rgbSW = textureOffset(tex, pos, ivec2(-1, -1)).rgb;
+    vec3 rgbSE = textureOffset(tex, pos, ivec2(1, -1)).rgb;
+
+	// see http://en.wikipedia.org/wiki/Grayscale
+	const vec3 toLuma = vec3(0.299, 0.587, 0.114);
+	
+	// Convert from RGB to luma.
+	float lumaNW = dot(rgbNW, toLuma);
+	float lumaNE = dot(rgbNE, toLuma);
+	float lumaSW = dot(rgbSW, toLuma);
+	float lumaSE = dot(rgbSE, toLuma);
+	float lumaM = dot(rgbM, toLuma);
+
+	// Gather minimum and maximum luma.
+	float lumaMin = min(lumaM, min(min(lumaNW, lumaNE), min(lumaSW, lumaSE)));
+	float lumaMax = max(lumaM, max(max(lumaNW, lumaNE), max(lumaSW, lumaSE)));
+	
+	// If contrast is lower than a maximum threshold ...
+	if (lumaMax - lumaMin <= lumaMax * lumaThreshold)
+	{
+		// ... do no AA and return.
+		return vec4(rgbM, 1.0);
+	}  
+	
+	// Sampling is done along the gradient.
+	vec2 samplingDirection;	
+	samplingDirection.x = -((lumaNW + lumaNE) - (lumaSW + lumaSE));
+    samplingDirection.y =  ((lumaNW + lumaSW) - (lumaNE + lumaSE));
+    
+    // Sampling step distance depends on the luma: The brighter the sampled texels, the smaller the final sampling step direction.
+    // This results, that brighter areas are less blurred/more sharper than dark areas.  
+    float samplingDirectionReduce = max((lumaNW + lumaNE + lumaSW + lumaSE) * 0.25 * mulReduce, minReduce);
+
+	// Factor for norming the sampling direction plus adding the brightness influence. 
+	float minSamplingDirectionFactor = 1.0 / (min(abs(samplingDirection.x), abs(samplingDirection.y)) + samplingDirectionReduce);
+    
+    // Calculate final sampling direction vector by reducing, clamping to a range and finally adapting to the texture size. 
+    samplingDirection = clamp(samplingDirection * minSamplingDirectionFactor, vec2(-maxSpan), vec2(maxSpan)) * texelStep;
+	
+	// Inner samples on the tab.
+	vec3 rgbSampleNeg = texture(tex, pos + samplingDirection * (1.0/3.0 - 0.5)).rgb;
+	vec3 rgbSamplePos = texture(tex, pos + samplingDirection * (2.0/3.0 - 0.5)).rgb;
+
+	vec3 rgbTwoTab = (rgbSamplePos + rgbSampleNeg) * 0.5;  
+
+	// Outer samples on the tab.
+	vec3 rgbSampleNegOuter = texture(tex, pos + samplingDirection * (0.0/3.0 - 0.5)).rgb;
+	vec3 rgbSamplePosOuter = texture(tex, pos + samplingDirection * (3.0/3.0 - 0.5)).rgb;
+	
+	vec3 rgbFourTab = (rgbSamplePosOuter + rgbSampleNegOuter) * 0.25 + rgbTwoTab * 0.5;   
+	
+	// Calculate luma for checking against the minimum and maximum value.
+	float lumaFourTab = dot(rgbFourTab, toLuma);
+	
+	vec4 returnColor;
+	
+	// Are outer samples of the tab beyond the edge ... 
+	if (lumaFourTab < lumaMin || lumaFourTab > lumaMax)
+	{
+		// ... yes, so use only two samples.
+		returnColor = vec4(rgbTwoTab, 1.0); 
+	}
+	else
+	{
+		// ... no, so use four samples. 
+		returnColor = vec4(rgbTwoTab, 1.0); 
+	}
+
+	// Show edges for debug purposes.	
+	if (debugEdges)
+	{
+		returnColor.r = 1.0;
+	}
+	
+	return returnColor;
+}
+
+float FxaaLuma(vec4 rgba) { return rgba.y; }
+
+vec4 FxaaPixelShader(
+	vec2 pos,
+	sampler2D tex,
+	vec2 fxaaQualityRcpFrame,
+	// Choose the amount of sub-pixel aliasing removal.
+	// This can effect sharpness.
+	//   1.00 - upper limit (softer)
+	//   0.75 - default amount of filtering
+	//   0.50 - lower limit (sharper, less sub-pixel aliasing removal)
+	//   0.25 - almost off
+	//   0.00 - completely off
+	float fxaaQualitySubpix,
+	// The minimum amount of local contrast required to apply algorithm.
+	//   0.333 - too little (faster)
+	//   0.250 - low quality
+	//   0.166 - default
+	//   0.125 - high quality 
+	//   0.063 - overkill (slower)
+	float fxaaQualityEdgeThreshold,
+	// Trims the algorithm from processing darks.
+	//   0.0833 - upper limit (default, the start of visible unfiltered edges)
+	//   0.0625 - high quality (faster)
+	//   0.0312 - visible limit (slower)
+	// Special notes when using FXAA_GREEN_AS_LUMA,
+	//   Likely want to set this to zero.
+	float fxaaQualityEdgeThresholdMin
+) {
+/*--------------------------------------------------------------------------*/
+	vec2 posM = pos;
+	vec4 rgbM = texture(tex, posM);
+	float lumaM = FxaaLuma(rgbM);
+	float lumaS = FxaaLuma(textureOffset(tex, posM, ivec2( 0, 1)));
+	float lumaE = FxaaLuma(textureOffset(tex, posM, ivec2( 1, 0)));
+	float lumaN = FxaaLuma(textureOffset(tex, posM, ivec2( 0,-1)));
+	float lumaW = FxaaLuma(textureOffset(tex, posM, ivec2(-1, 0)));
+	float lumaNW = FxaaLuma(textureOffset(tex, posM, ivec2(-1,-1)));
+	float lumaSE = FxaaLuma(textureOffset(tex, posM, ivec2( 1, 1)));
+	float lumaNE = FxaaLuma(textureOffset(tex, posM, ivec2( 1,-1)));
+	float lumaSW = FxaaLuma(textureOffset(tex, posM, ivec2(-1, 1)));
+	float rangeMax = max(max(lumaN, lumaW), max(lumaE, max(lumaS, lumaM)));
+	float rangeMin = min(min(lumaN, lumaW), min(lumaE, min(lumaS, lumaM)));
+	float range = rangeMax - rangeMin;
+	bool earlyExit = range < max(fxaaQualityEdgeThresholdMin, rangeMax * fxaaQualityEdgeThreshold);
+	if(earlyExit)
+		return rgbM;
+/*--------------------------------------------------------------------------*/
+	float lumaNS = lumaN + lumaS;
+	float lumaWE = lumaW + lumaE;
+	float lumaNESE = lumaNE + lumaSE;
+	float lumaNWNE = lumaNW + lumaNE;
+	float lumaNWSW = lumaNW + lumaSW;
+	float lumaSWSE = lumaSW + lumaSE;
+	float edgeHorz = abs((-2.0 * lumaW) + lumaNWSW) + ((abs((-2.0 * lumaM) + lumaNS) * 2.0) + abs((-2.0 * lumaE) + lumaNESE));
+	float edgeVert = abs((-2.0 * lumaS) + lumaSWSE) + ((abs((-2.0 * lumaM) + lumaWE) * 2.0) + abs((-2.0 * lumaN) + lumaNWNE));
+/*--------------------------------------------------------------------------*/
+	float lengthSign = fxaaQualityRcpFrame.x;
+	bool horzSpan = edgeHorz >= edgeVert;
+	float subpixA = (lumaNS + lumaWE) * 2.0 + (lumaNWSW + lumaNESE);
+	float subpixB = clamp(abs((subpixA * (1.0/12.0)) - lumaM) * 1.0/range, 0.0, 1.0);
+	float subpixC = (((-2.0)*subpixB) + 3.0) * (subpixB * subpixB);
+	float subpixD = (subpixC * subpixC) * fxaaQualitySubpix;
+/*--------------------------------------------------------------------------*/
+	if(!horzSpan) lumaN = lumaW;
+	if(!horzSpan) lumaS = lumaE;
+	if(horzSpan) lengthSign = fxaaQualityRcpFrame.y;
+	float gradientN = lumaN - lumaM;
+	float gradientS = lumaS - lumaM;
+	float lumaNN = lumaN + lumaM;
+	float lumaSS = lumaS + lumaM;
+	bool pairN = abs(gradientN) >= abs(gradientS);
+	if(pairN) lengthSign = -lengthSign;
+/*--------------------------------------------------------------------------*/
+	vec2 posB = posM;
+	vec2 offNP = vec2((!horzSpan) ? 0.0 : fxaaQualityRcpFrame.x, (horzSpan) ? 0.0 : fxaaQualityRcpFrame.y);
+	if(!horzSpan) posB.x += lengthSign * 0.5;
+	if(horzSpan) posB.y += lengthSign * 0.5;
+	vec2 posN = vec2(posB.x - offNP.x, posB.y - offNP.y);
+	vec2 posP = vec2(posB.x + offNP.x, posB.y + offNP.y);
+	float lumaEndN = FxaaLuma(texture(tex, posN));
+	float lumaEndP = FxaaLuma(texture(tex, posP));
+	if(!pairN) lumaNN = lumaSS;
+	float gradientScaled = max(abs(gradientN), abs(gradientS)) * 1.0/4.0;
+	bool lumaMLTZero = (lumaM - lumaNN * 0.5) < 0.0;
+	lumaEndN -= lumaNN * 0.5;
+	lumaEndP -= lumaNN * 0.5;
+/*--------------------------------------------------------------------------*/
+	bool doneN = true;
+	bool doneP = true;
+	bool doneNP = true;
+	for (int k = 0;k < 5;k ++)
+	{
+		if(!doneNP) break;
+		float FXAA_QUALITY = 1.0;
+		if (k == 0) FXAA_QUALITY = 1.0;
+		if (k == 1) FXAA_QUALITY = 1.5;
+		if (k == 2) FXAA_QUALITY = 2.0;
+		if (k == 3) FXAA_QUALITY = 2.0;
+		if (k == 4) FXAA_QUALITY = 8.0;
+
+		if(!doneN) lumaEndN = FxaaLuma(texture(tex, posN.xy));
+		if(!doneP) lumaEndP = FxaaLuma(texture(tex, posP.xy));
+		if(!doneN) lumaEndN = lumaEndN - lumaNN * 0.5;
+		if(!doneP) lumaEndP = lumaEndP - lumaNN * 0.5;
+		doneN = abs(lumaEndN) >= gradientScaled;
+		doneP = abs(lumaEndP) >= gradientScaled;
+		if(!doneN) posN.x -= offNP.x * FXAA_QUALITY;
+		if(!doneN) posN.y -= offNP.y * FXAA_QUALITY;
+		doneNP = (!doneN) || (!doneP);
+		if(!doneP) posP.x += offNP.x * FXAA_QUALITY;
+		if(!doneP) posP.y += offNP.y * FXAA_QUALITY;
+	}
+/*--------------------------------------------------------------------------*/
+	float dstN = posM.x - posN.x;
+	float dstP = posP.x - posM.x;
+	if(!horzSpan) dstN = posM.y - posN.y;
+	if(!horzSpan) dstP = posP.y - posM.y;
+/*--------------------------------------------------------------------------*/
+	bool goodSpan = (dstN < dstP) ? ((lumaEndN < 0.0) != lumaMLTZero) : ((lumaEndP < 0.0) != lumaMLTZero);
+	float pixelOffset = (min(dstN, dstP) * (-1.0/(dstP + dstN))) + 0.5;
+	float pixelOffsetSubpix = max(goodSpan ? pixelOffset : 0.0, subpixD);
+	if(!horzSpan) posM.x += pixelOffsetSubpix * lengthSign;
+	if(horzSpan) posM.y += pixelOffsetSubpix * lengthSign;
+	return vec4(texture(tex, posM).xyz, lumaM);
+}
+
+in vec3 camPos;
+in vec4 surfacePos;
+in vec3 directionToLight;
+in vec2 textureCoords;
+in vec3 normalVec;
+in float normalValue;
+in vec3 lightVec;
+flat in int passValOut;
+flat in int shadowFlagOut;
+in mat3 TBN;
+in vec4 shadowOut;
+
+uniform sampler2D sampler; //0
+uniform sampler2D bumpSampler; //3
+
+uniform vec2 fbSize;
+uniform vec2 fbShadowSize;
+uniform sampler2D fbColorSampler; //6
+uniform sampler2D fbDepthSampler; //7
+uniform sampler2D fbSilhouetteSampler; //5
+uniform sampler2D fbShadowSampler; //30
+
+uniform sampler2D gPositionSampler; //27
+uniform sampler2D gNormalSampler; //28
+uniform sampler2D gMiscSampler; //29
+
+uniform int postProc;
+uniform int entityNumber;
+uniform int occlusionValue;
+uniform int shadowDepth;
+
+const int PASS_NORMAL = 0;
+const int PASS_TERRAIN = 1;
+const int PASS_UI = 2;
+const int PASS_FINAL = 3;
+const int PASS_DECAL = 4;
+const int PASS_LINE = 5;
+
+//Data for terrain pass
+const int MAX_TERRAIN_TEXTURES = 16;
+uniform sampler2D terrainTextureSampler[MAX_TERRAIN_TEXTURES];
+uniform sampler2D terrainBumpSampler[MAX_TERRAIN_TEXTURES];
+uniform sampler2D alphaTextureSampler;
+in vec2 terrainTextureUV[3];
+flat in int terrainTextureMap[3];
+in vec2 alphaTextureUV[2];
+
+const uint losTable8[8] = 
+uint[](
+	0x01,
+	0x02,
+	0x04,
+	0x08,
+	0x10,
+	0x20,
+	0x40,
+	0x80
+);
+float CalcLOS(sampler2D tex, float x, float y)
+{
+	int losCol = int(mod(x, 32.0));
+	int channel = int(losCol/8);
+	int los8Val = int(mod(losCol,8));
+	vec4 losTex = texelFetch(tex, ivec2(x/32.0, y), 0)*255.0;
+	float returnValue = ((int(losTex[3-channel]) & int(losTable8[7-los8Val])) > 0) ? 1.0 : 0.0;
+	return returnValue;
+}
+in vec3 terrPos;
+
+layout (location = 0) out vec4 outputColor;
+layout (location = 1) out vec4 gPosition;
+layout (location = 2) out vec4 gNormal;
+layout (location = 3) out vec4 gMisc;
+
+float doAmbientOcclusion(vec2 tcoord, vec2 uv, vec3 p, vec3 cnorm)
+{
+	float scale = 10.0, bias = 0.6, intensity = 10;
+	vec3 diff = texture(gPositionSampler, tcoord + uv).xyz - p;
+	vec3 v = normalize(diff);
+	float d = length(diff) * scale;
+	return max(0.0,dot(cnorm,v)-bias)*(1.0/(1.0+d))* intensity;
+}
+
+float pdM1 = 6.0;
+float pdM2 = 3.0;
+vec2 pDisk[4] = vec2[](
+	vec2(-0.7800193, 0.1936351) * pdM1,
+	vec2(0.7215998, 0.08988218) * pdM1,
+	vec2(-0.1250293, -0.3693504) * pdM1,
+	vec2(0.08140863, 0.6992921) * pdM1
+);
+vec2 poissonDisk[16] = vec2[](
+	vec2(-0.2903507, 0.2686484) * pdM2,
+	vec2(0.2856117, 0.4309694) * pdM2,
+	vec2(-0.4875696, 0.603075) * pdM2,
+	vec2(0.09155953, -0.2507944) * pdM2,
+	vec2(-0.8156705, 0.1442883) * pdM2,
+	vec2(-0.2563568, 0.9632782) * pdM2,
+	vec2(0.7289771, 0.5478004) * pdM2,
+	vec2(-0.3943505, -0.2128524) * pdM2,
+	vec2(-0.7628381, -0.4662621) * pdM2,
+	vec2(0.6670182, -0.1728864) * pdM2,
+	vec2(-0.4954273, -0.7791401) * pdM2,
+	vec2(0.2746873, 0.8936772) * pdM2,
+	vec2(-0.1587755, -0.9759419) * pdM2,
+	vec2(-0.09291486, 0.5817585) * pdM2,
+	vec2(0.2324807, -0.7673864) * pdM2,
+	vec2(0.9113816, 0.2115391) * pdM2
+);
+
+void main()
+{
+	if (shadowFlagOut == 1)
+	{
+		vec4 t;
+		if (passValOut == PASS_TERRAIN)
+			t = texture(terrainTextureSampler[terrainTextureMap[0]], terrainTextureUV[0]);
+		else
+			t = texture(sampler, textureCoords);
+		outputColor = t;
+		gl_FragDepth = gl_FragCoord.z;// * 0.5 + 0.5;
+		//gl_FragDepth = surfacePos.z / 10000.0;
+		
+		if (passValOut != PASS_TERRAIN && outputColor.w <= 0.5)
+			discard;
+		
+		return;
+	}
+	gl_FragDepth = gl_FragCoord.z;
+	if (passValOut == PASS_LINE)
+	{
+		gl_FragDepth = 0.0;
+		outputColor = vec4(1.0, 0.0, 0.0, 1.0);
+		return;
+	}
+	if (postProc == -2)
+	{
+		outputColor = texture(sampler, textureCoords);
+	}
+	if (postProc == -1)
+	{
+		float occlusionPixel = texture(gMiscSampler, textureCoords).y;
+		if (occlusionPixel > 0.9)
+			gl_FragDepth = texture(fbDepthSampler, textureCoords).x;
+		else
+			discard;
+	}
+	else if (postProc == 0)
+	{
+		outputColor = vec4(1.0);
+		outputColor = texture(sampler, textureCoords);
+		
+		//CLEAN THIS UP - THIS IS TEMPORARY TO REPLACE THE DEPTH TEST FUNCTION
+		if (passValOut != PASS_TERRAIN && outputColor.w <= 0.5)
+			discard;
+		
+		vec3 normalBump;
+		if (passValOut != PASS_UI)
+		{
+			//outputColor = vec4(1.0);
+			
+			normalBump = normalize(texture(bumpSampler, textureCoords).xyz * 2.0 - 1.0);
+			float bumpValue = (clamp(pow(dot(normalBump, lightVec), 1.0), -1.0, 1.0))*0.5+0.75;
+			outputColor.xyz *= bumpValue*bumpValue;
+			//outputColor.xyz *= dot(normalBump * TBN, vec3(1.0));
+		}
+		
+		gPosition = surfacePos;
+		//gPosition.w = surfacePos.w / 10.0;
+		gNormal = vec4(normalVec, 1.0);
+		gMisc = vec4(entityNumber, 1.0, gl_FragDepth, 1.0);
+		gMisc.y = (occlusionValue == 1) ? 1.0 : 0.0;
+		
+		if (occlusionValue == 1)
+		{
+			vec2 silTexCoord = gl_FragCoord.xy / fbSize;
+			vec4 depthTest = texture(fbDepthSampler, silTexCoord);
+			vec4 colorTest = texture(fbColorSampler, silTexCoord);
+			if (depthTest.x > gl_FragCoord.z && depthTest.x < 1.0)
+				outputColor.w *= (colorTest.x * 0.75) + 0.25;
+			//if (testTex.x > 0.5)
+				//outputColor.w *= (testTex.x * 0.9) + 0.1;
+		}
+		if (occlusionValue == 2)
+		{
+			vec2 silTexCoord = gl_FragCoord.xy / fbSize;
+			vec4 ocTex = texture(fbSilhouetteSampler, silTexCoord);
+			
+			float occludeDepth = ocTex.x;
+			
+			
+			if (gl_FragCoord.z > occludeDepth)
+			{
+				//gl_FragDepth = gl_FragCoord.z-occludeDepth;
+				//outputColor.xyz = vec3(0.0, 0.0, 1.0);
+				////outputColor.a = 0.6;
+				////lightingFlag = false;
+				//return;
+			}
+		}
+		
+		if (passValOut == PASS_TERRAIN)
+		{
+			outputColor = vec4(1.0);
+			
+			vec4 tex1 = texture(terrainTextureSampler[terrainTextureMap[0]], terrainTextureUV[0]);
+			vec4 tex2 = texture(terrainTextureSampler[terrainTextureMap[1]], terrainTextureUV[1]);
+			vec4 tex3 = texture(terrainTextureSampler[terrainTextureMap[2]], terrainTextureUV[2]);
+			vec3 bum1 = normalize(texture(terrainBumpSampler[terrainTextureMap[0]], terrainTextureUV[0]).xyz * 2.0 - 1.0);
+			vec3 bum2 = normalize(texture(terrainBumpSampler[terrainTextureMap[1]], terrainTextureUV[1]).xyz * 2.0 - 1.0);
+			vec3 bum3 = normalize(texture(terrainBumpSampler[terrainTextureMap[2]], terrainTextureUV[2]).xyz * 2.0 - 1.0);
+			vec4 alp1 = texture(alphaTextureSampler, alphaTextureUV[0]);
+			vec4 alp2 = texture(alphaTextureSampler, alphaTextureUV[1]);
+			float bv1 = (clamp(pow(dot(bum1, lightVec), 1.0), -1.0, 1.0))*0.5+0.75;
+			float bv2 = (clamp(pow(dot(bum2, lightVec), 1.0), -1.0, 1.0))*0.5+0.75;
+			float bv3 = (clamp(pow(dot(bum3, lightVec), 1.0), -1.0, 1.0))*0.5+0.75;
+			outputColor *= ((tex1)*(1.0-alp1.r) + (tex2)*(alp1.r))*(1.0-alp2.r) + (tex3)*(alp2.r);
+			outputColor.xyz *= (normalValue*normalValue+0.25);
+			//outputColor.xyz *= ((bv1*bv1)*(1.0-alp1.r) + (bv2*bv2)*(alp1.r))*(1.0-alp2.r) + (bv3*bv3)*(alp2.r);
+			//bv1 = dot(bum1, lightVec);
+			//outputColor.xyz *= bv1;
+			
+			float mulVal = 1.0;
+			float losDist = 1.00;
+			float losDist2 = 1.00;
+			float losDist4 = losDist2*losDist2;
+			float losNW = CalcLOS(sampler, floor(terrPos.x)+losDist, floor(terrPos.z)+losDist);
+			float losNE = CalcLOS(sampler, floor(terrPos.x), floor(terrPos.z)+losDist);
+			float losSE = CalcLOS(sampler, floor(terrPos.x), floor(terrPos.z));
+			float losSW = CalcLOS(sampler, floor(terrPos.x)+losDist, floor(terrPos.z));
+			float losSum = (losNW + losNE + losSE + losSW);
+			if (losSum > 0.0) mulVal = 0.8;
+			if (losSum > 1.0) mulVal = 1.0;
+			if (losSum > 2.0) mulVal = 1.2;
+			if (losSum > 3.0) mulVal = 1.0;
+			float valNW = abs(terrPos.x-floor(terrPos.x))*abs(terrPos.z-floor(terrPos.z))/losDist4;
+			float valNE = abs(terrPos.x-floor(terrPos.x+losDist2))*abs(terrPos.z-floor(terrPos.z))/losDist4;
+			float valSE = abs(terrPos.x-floor(terrPos.x+losDist2))*abs(terrPos.z-floor(terrPos.z+losDist2))/losDist4;
+			float valSW = abs(terrPos.x-floor(terrPos.x))*abs(terrPos.z-floor(terrPos.z+losDist2))/losDist4;
+			float shade = 0.75;
+			shade += clamp((valNW*losNW+valNE*losNE+valSE*losSE+valSW*losSW)*0.25, 0.0, 0.25);
+			outputColor.xyz *= shade;
+		}
+		
+		
+		//Shadow Process
+		if (shadowFlagOut == 0 && passValOut != PASS_UI)
+		{
+			float bias;
+			if (passValOut == PASS_TERRAIN)
+				bias = 1.0 - clamp(dot(normalVec, lightVec), 0.0, 1.0);
+			else
+				bias = 1.0 - clamp(dot(normalBump, lightVec), 0.0, 1.0);
+			bias = bias * (0.4 / float(shadowDepth));
+			float vis = 1.0;
+			for (int i = 0;i < 4;i ++)
+			{
+				if (texture(fbShadowSampler, shadowOut.xy+(pDisk[i]/fbShadowSize)).z < shadowOut.z-bias)
+				{
+					vis -= 0.25;
+				}
+			}
+			if (vis <= 0.1)
+			{
+				vis = 0.5;
+				outputColor.xyz *= vis;
+			}
+			else if (vis < 1.0)
+			{
+				vis = 1.0;
+				for (int i = 0;i < 16;i ++)
+				{
+					if (texture(fbShadowSampler, shadowOut.xy+(poissonDisk[i]/fbShadowSize)).z < shadowOut.z-bias)
+					{
+						vis -= 0.03125;
+					}
+				}
+				outputColor.xyz *= vis;
+			}
+			//outputColor.xyz *= vis;
+		}
+	}
+	
+	//////////////////////////////////////////////////
+	// Post Processing
+	//////////////////////////////////////////////////
+	
+	//Outline
+	else if (postProc == 1)
+	{
+		outputColor = texture(sampler, textureCoords);
+		float oM = texture(gMiscSampler, textureCoords).x;
+		
+		if (int(oM) == 0)
+			return;
+		
+		float outlineVal = 1.0;
+		float reduce = 0.1;
+		float additive = 0.05;
+		for (int y = -1; y <= 1; y++)
+		{
+			for (int x = -1; x <= 1; x++)
+			{
+				if (x == 0 && y == 0)
+					continue;
+				
+				int outlineTest = int(textureOffset(gMiscSampler, textureCoords, ivec2(x, y)).x);
+				//if (outlineTest == 0)
+					//continue;
+				
+				if (outlineTest != int(oM))
+				{
+					outlineVal -= reduce;
+					
+					reduce += additive;
+				}
+			}
+		}
+		
+		if (outlineVal < 0.0)
+			outlineVal = 0.0;
+		
+		/*float oNW = textureOffset(gMiscSampler, textureCoords, ivec2(-1, -1)).x;
+		float oNE = textureOffset(gMiscSampler, textureCoords, ivec2(1, -1)).x;
+		float oSE = textureOffset(gMiscSampler, textureCoords, ivec2(1, 1)).x;
+		float oSW = textureOffset(gMiscSampler, textureCoords, ivec2(-1, 1)).x;
+		float dimAmount = 1.0;
+		if (abs(oM-oNW) > 0.1) dimAmount -= 0.25;
+		if (abs(oM-oNE) > 0.1) dimAmount -= 0.25;
+		if (abs(oM-oSE) > 0.1) dimAmount -= 0.25;
+		if (abs(oM-oSW) > 0.1) dimAmount -= 0.25;
+		if (oM > 0.5 && oNW > 0.5 && oNE > 0.5 && oSE > 0.5 && oSW > 0.5)
+		{
+			if (dimAmount < 1.0)
+			{
+				//outputColor.xyz = vec3(dimAmount * outputColor.x, dimAmount * outputColor.y + (1.0 - dimAmount), dimAmount * outputColor.z);
+				//outputColor.xyz *= dimAmount / 1.5;
+			}
+		}*/
+		
+		outputColor.xyz *= outlineVal;
+		//outputColor.xyz = vec3(outputColor.x, outputColor.y, outlineVal * outputColor.z + (1.0 - outlineVal));
+	}
+	//FXAA
+	else if (postProc == 2)
+	{
+		//outputColor = vec4(1.0);
+		//outputColor.xyz *= texture(fbColorSampler, textureCoords).xyz;
+		
+		//outputColor = FxaaPixelShader(textureCoords, fbColorSampler, 1.0/fbSize, 0.75, 0.166, 0.0833);
+		
+		//lumaThreshold - Softer -> Sharper
+		//mulReduce - 
+		//minReduce - 
+		//maxSpan - 
+		outputColor = FxaaNew(sampler, textureCoords, 0.25, 1.0/8.0, 1.0/128.0, 16.0, 1.0/fbSize, false);
+		//outputColor = FxaaNew(fbColorSampler, textureCoords, 0.5, 1.0/8.0, 1.0/128.0, 4.0, 1.0/fbSize, true);
+		
+		//outputColor = texture(fbColorSampler, textureCoords);
+	}
+	//Sharpen
+	else if (postProc == 3)
+	{
+		float shMM = 1.4;
+		float shOM = -0.1;
+		vec4 shN = textureOffset(sampler, textureCoords, ivec2(0, -1));
+		vec4 shS = textureOffset(sampler, textureCoords, ivec2(0, 1));
+		vec4 shE = textureOffset(sampler, textureCoords, ivec2(1, 0));
+		vec4 shW = textureOffset(sampler, textureCoords, ivec2(-1, 0));
+		vec4 shM = textureOffset(sampler, textureCoords, ivec2(0, 0));
+		outputColor = shM*shMM + shN*shOM + shS*shOM + shE*shOM + shW*shOM;
+		
+		outputColor.xyz *= texture(fbColorSampler, textureCoords).x;
+		
+		//vec2 tempCoords = textureCoords;
+		//tempCoords.x = (tempCoords.x - 0.5) * 2.0;
+		//tempCoords.y = (tempCoords.y - 0.5) * 2.0;
+		//if (textureCoords.x > 0.5 && textureCoords.y > 0.5)
+			//outputColor = texture(fbShadowSampler, tempCoords);
+	}
+	else if (postProc == -3)
+	{
+		float shMM = 1.4;
+		float shOM = -0.1;
+		vec4 shN = textureOffset(sampler, textureCoords, ivec2(0, -1));
+		vec4 shS = textureOffset(sampler, textureCoords, ivec2(0, 1));
+		vec4 shE = textureOffset(sampler, textureCoords, ivec2(1, 0));
+		vec4 shW = textureOffset(sampler, textureCoords, ivec2(-1, 0));
+		vec4 shM = textureOffset(sampler, textureCoords, ivec2(0, 0));
+		outputColor = shM*shMM + shN*shOM + shS*shOM + shE*shOM + shW*shOM;
+	}
+	//SSAO
+	else if (postProc == 4)
+	{
+		vec3 fragPos = texture(gPositionSampler, textureCoords).xyz;
+		vec3 normal = texture(gNormalSampler, textureCoords).xyz;
+		vec2 rnd = normalize(vec2(rand(fragPos.xy), rand(normal.xy)));
+		
+		float ao = 0.0;
+		float rad = (1.0/fragPos.z) * 0.25;
+		float angle = 0.707;
+		vec2 vec[4];
+		vec[0] = vec2(1.0,0.0);
+		vec[1] = vec2(-1.0,0.0);
+		vec[2] = vec2(0.0,1.0);
+		vec[3] = vec2(0.0,-1.0);
+		int iterations = 4;
+		for (int j = 0; j < iterations; ++j)
+		{
+			vec2 coord1 = reflect(vec[j],rnd)*rad;
+			vec2 coord2 = vec2(coord1.x*angle - coord1.y*angle, coord1.x*angle + coord1.y*angle);
+			
+			ao += doAmbientOcclusion(textureCoords.xy,coord1*0.25, fragPos, normal);
+			ao += doAmbientOcclusion(textureCoords.xy,coord2*0.5, fragPos, normal);
+			ao += doAmbientOcclusion(textureCoords.xy,coord1*0.75, fragPos, normal);
+			ao += doAmbientOcclusion(textureCoords.xy,coord2, fragPos, normal);
+		}
+		ao /= float(iterations)*4.0;
+		outputColor = vec4(1.0);//texture(sampler, textureCoords);//vec4(1.0);
+		outputColor.xyz *= 1.0 - ao;
+	}
+	//Blur SSAO
+	else if (postProc == 5)
+	{
+		float result = 0.0;
+		for (int y = -1;y <= 1;y +=2)
+		{
+			for (int x = -1;x <= 1;x +=2)
+			{
+				result += textureOffset(fbColorSampler, textureCoords, ivec2(x, y)).x;
+			}
+		}
+		outputColor = texture(sampler, textureCoords);
+		outputColor.xyz *= result / 4.0;
+		
+		//outputColor.xyz *= texture(fbColorSampler, textureCoords).x;
+		//outputColor = texture(fbColorSampler, textureCoords);
+	}
+	else if (postProc == 6)
+	{
+		outputColor = texture(sampler, textureCoords);
+		outputColor.xyz *= texture(fbColorSampler, textureCoords).xyz;
+	}
+	else if (postProc == 7)
+	{
+		outputColor = texture(sampler, textureCoords);
+	}
+}

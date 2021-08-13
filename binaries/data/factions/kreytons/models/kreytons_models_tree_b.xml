@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>1.5</Scale>
+	<ModelFile>models/blueberry.dae</ModelFile>
+	<TextureFile>models/blueberry.png</TextureFile>
+	<BumpTextureFile>models/tree_bump.png</BumpTextureFile>
+</Model>

@@ -1,0 +1,5 @@
+<Action type="upgrade" name="kreytons_action_upgradeToGatehouse">
+	<Icon>textures/ui/upgrade_wall_gatehouse_icon.png</Icon>
+	<Upgrade>kreytons_wall_gatehouse</Upgrade>
+	<Time>0.000</Time>
+</Action>

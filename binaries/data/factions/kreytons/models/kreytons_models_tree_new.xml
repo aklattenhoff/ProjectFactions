@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.8</Scale>
+	<ModelFile>models/tree_01.dae</ModelFile>
+	<TextureFile>models/tree_01.png</TextureFile>
+	<BumpTextureFile>models/tree_bump.png</BumpTextureFile>
+</Model>

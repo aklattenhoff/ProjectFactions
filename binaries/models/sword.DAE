@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>aklat_000</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.4.1;  Revision: exported;  Platform: x64;  Configuration: Release_Max2013_static</authoring_tool>
+      <source_data>file:///C:/Users/aklat_000/Dropbox/ProjectFactions/models/Kreyton/swordsman/sword.max</source_data>
+    </contributor>
+    <created>2015-03-19T18:02:00</created>
+    <modified>2015-03-19T18:02:00</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="_1_-_Default">
+      <profile_COMMON>
+        <newparam sid="sword_png-surface">
+          <surface type="2D">
+            <init_from>sword_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="sword_png-sampler">
+          <sampler2D>
+            <source>sword_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="sword_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="_1_-_Default-material" name="_1_-_Default">
+      <instance_effect url="#_1_-_Default"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Box001" name="Box001">
+      <mesh>
+        <source id="geom-Box001-positions">
+          <float_array id="geom-Box001-positions-array" count="63">-1.738953 0.8567219 -9.090807 1.733751 0.8567219 -9.090807 -2.030919 1.012394 10.78125 2.010003 1.012394 10.78125 -12.35879 -0.2514057 13.02022 0.1414599 -1.642868 -9.090811 -0.05259323 -1.954216 9.948759 -12.35879 -1.954216 10.46645 -12.35879 1.012394 10.78125 12.33787 1.012394 10.78125 12.33787 -0.6880474 13.02022 12.33787 -1.954216 10.43409 -2.271904 -0.4272537 12.30034 -7.45058e-8 0.3204517 11.09696 2.271905 -0.4272537 12.30034 -2.271904 -0.4272537 70.07213 -7.45058e-8 0.3204498 70.07213 2.271905 -0.4272537 70.07213 5.21541e-8 -0.4272537 89.66054 -7.45058e-8 -1.225073 11.09696 -7.45058e-8 -1.225075 70.07213</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-positions-array" count="21" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-normals">
+          <float_array id="geom-Box001-normals-array" count="63">-0.7432924 0.3707265 -0.5568466 -0.2555077 0.9583063 -0.1279247 0.2725923 0.958659 -0.08164795 0.7292311 0.3977876 -0.5567647 -0.5561059 0.03069929 0.8305443 0.03394956 -0.8252817 -0.5636998 -0.006159999 -0.9207439 -0.3901186 0.565069 0.7630967 -0.3136566 0.552354 -0.08507478 0.8292572 0.5625339 -0.6831887 -0.4656273 -0.569353 0.7358021 -0.3666503 -0.566285 -0.7110797 -0.4167577 -0.99993 0.01182985 3.82621e-10 -0.9983965 0.009570695 0.05579138 -1.45383e-7 0.9998195 0.01900294 3.69234e-7 1 1.67642e-8 0.9983965 0.009570817 0.05579139 0.99993 0.01183068 0 -1.02281e-6 9.13166e-4 0.9999996 3.00846e-7 -1 -1.67667e-8 -1.91886e-7 -0.9997946 0.02026514</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-normals-array" count="21" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-map1">
+          <float_array id="geom-Box001-map1-array" count="105">0.905732 0.169982 0 0.2910739 0.9034922 0 0.9452017 0.8732635 0 0.8021088 0.8791871 0 0.7827604 0.1750726 0 0.3801662 0.4549627 0 0.6777337 0.1764648 0 0.6736774 0.8513643 0 0.144159 0.05183751 0 0.3777581 0.5815331 0 0.1464963 0.7437692 0 0.2603897 0.05034739 0 0.2985811 0.1297149 0 0.2083878 0.1281382 0 0.2533579 0.9746605 0 0.1949323 0.9017142 0 0.1180301 0.7419816 0 0.11546 0.03756058 0 0.08980634 0.740533 0 0.08687094 0.05203174 0 0.09048884 0.9747825 0 0.05796774 0.03783269 0 0.06140103 0.7421851 0 0.4753811 0.5214983 0 0.02920074 0.05235353 0 0.03276239 0.7442244 0 0.3866416 0.1314779 0 0.4801998 0.1330643 0 0.371604 0.9050241 0 0.4650394 0.9071304 0 0.4754465 0.5214038 0 0.185928 0.5159516 0 0.5668859 0.1749925 0 0.715265 0.07215381 0 0.5469022 0.8790972 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-map1-array" count="35" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-map1-textangents">
+          <float_array id="geom-Box001-map1-textangents-array" count="105">-0.4641631 -0.2665046 0.4421478 -0.9351885 -0.2395483 0.07338107 -0.511789 0.1491535 0.04259285 -0.09775525 0.4826388 0.216791 0.01976421 0.5126193 -0.005714396 -0.04253772 -0.04518537 -0.6725558 0.04135132 -0.0769882 -0.6593244 0.4758443 0.8724039 -0.05435638 0.5592077 0.02102328 0.002899994 0.5511788 0.03756265 -0.09735708 -0.03855392 0.4032903 0.9117101 0.01528914 0.5149056 0.04264113 0.3856639 -0.08941341 0.5971198 0.0501286 0.474504 0.8744033 -0.3487514 -0.08884762 0.6254724 0.3392669 0.07278692 -0.1323676 0.05437098 -0.526261 -0.4229394 -0.1041791 -0.3276893 -0.4958398 0.1372973 -0.2905916 -0.4596333 0.01632879 -0.3592426 0.8476137 0.02448653 -0.07969971 0.1877175 -0.400375 -0.4863327 0.2298674 0.02676984 -0.08142154 0.1917452 -0.003827238 -0.3234914 -0.02944682 -0.009493843 -0.31992 -0.1150115 -0.9486718 8.25785e-4 -0.04345487 -0.9494688 3.50815e-7 -0.01423547 -0.003303805 0.3222951 0.003833576 -0.003809295 0.321962 0.004756276 -0.003388896 0.002269153 -2.07558e-6 -0.003782437 -0.3197239 0.03785456 0.9429886 2.83317e-7 0.02249362 0.9419715 0.001034356 0.05103984 0.003819636 -0.3202178 0.1232826 0.4406987 -0.4689582 0.2013293</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-map1-textangents-array" count="35" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-map1-texbinormals">
+          <float_array id="geom-Box001-map1-texbinormals-array" count="105">-0.02234637 -0.8456935 -0.5332009 -0.04098202 -0.1429333 -0.9888835 -0.0991252 -0.05642709 -0.9934738 -0.6597063 0.1926673 -0.7264069 0.8302181 -0.02580198 0.5568412 0.9600661 -0.2765815 -0.04214013 0.9648058 0.2612461 0.03000515 -0.4678784 0.3068404 0.8288177 -0.01690017 0.5634703 -0.8259634 -0.1859187 0.3843785 -0.9042607 -0.8241381 0.5042615 -0.2579082 0.8330848 0.02103788 -0.5527451 0.6275195 0.719498 -0.2975598 -0.8205514 -0.4813337 0.3082421 0.6676476 -0.6922475 0.2739345 0.3164905 0.2079329 0.9255256 0.6641331 0.5088224 -0.5477471 0.8037586 0.404559 -0.4362386 0.7878894 -0.3863045 0.4795822 0.9998238 0.001247756 -0.01873219 0.9928495 0.04087771 -0.1121553 0.571894 -0.08517771 0.8158934 0.9918249 0.04409985 -0.1197439 0.001072341 0.09064068 -0.9958831 -0.04924476 0.3391869 -0.9394292 0.04576627 0.01898304 -0.9987718 0.0149914 1.12269e-8 -0.9998876 0.05567068 0.01244592 -0.9983716 -1.74741e-4 0.01476911 -0.9998909 0.5563778 0.8309291 -7.58208e-4 -0.001390816 -0.1175601 -0.9930648 0.02384677 2.39361e-8 -0.9997156 0.05411577 -0.02023546 -0.9983296 -0.0555012 -0.3593112 -0.9315659 0.5021605 0.1033006 -0.8585825</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-map1-texbinormals-array" count="35" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Box001-vertices">
+          <input semantic="POSITION" source="#geom-Box001-positions"/>
+        </vertices>
+        <triangles material="_1_-_Default_1" count="32">
+          <input semantic="VERTEX" source="#geom-Box001-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Box001-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Box001-map1" offset="2" set="0"/>
+          <input semantic="TEXTANGENT" source="#geom-Box001-map1-textangents" offset="3" set="1"/>
+          <input semantic="TEXBINORMAL" source="#geom-Box001-map1-texbinormals" offset="3" set="1"/>
+          <p>0 0 0 0 2 1 2 1 3 2 3 2 3 2 3 2 1 3 4 3 0 0 0 0 4 4 1 4 3 2 5 5 2 1 9 6 0 0 33 7 1 3 4 3 5 5 6 8 1 3 4 3 3 2 3 2 6 6 7 9 6 6 7 9 5 5 6 8 1 3 4 3 9 7 11 10 10 8 12 11 11 9 13 12 4 4 1 4 8 10 14 13 7 11 15 14 2 1 34 15 0 0 32 16 5 5 6 8 5 5 6 8 6 6 7 9 2 1 34 15 4 4 1 4 2 1 9 6 8 10 28 17 3 2 5 5 4 4 1 4 10 8 12 11 10 8 12 11 9 7 26 18 3 2 5 5 7 11 15 14 6 6 31 19 11 9 13 12 6 6 23 20 3 2 5 5 9 7 26 18 9 7 26 18 11 9 27 21 6 6 23 20 4 4 1 4 7 11 15 14 11 9 13 12 11 9 13 12 10 8 12 11 4 4 1 4 2 1 9 6 6 6 30 22 8 10 28 17 12 12 8 23 15 13 10 24 16 14 16 25 16 14 16 25 13 15 17 26 12 12 8 23 13 15 17 26 16 14 16 25 17 16 18 27 17 16 18 27 14 17 19 28 13 15 17 26 18 18 20 29 16 14 16 25 15 13 10 24 18 18 20 29 17 16 18 27 16 14 16 25 12 12 24 30 19 19 21 31 20 20 22 32 20 20 22 32 15 13 25 33 12 12 24 30 19 19 21 31 14 17 19 28 17 16 18 27 17 16 18 27 20 20 22 32 19 19 21 31 15 13 25 33 20 20 22 32 18 18 20 29 20 20 22 32 17 16 18 27 18 18 20 29 8 10 28 17 6 6 30 22 7 11 29 34</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="sword_png">
+      <init_from>file:///C:/Users/aklat_000/Dropbox/ProjectFactions/models/Kreyton/swordsman/sword.png</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Box001" name="Box001">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Box001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_1_-_Default_1" target="#_1_-_Default-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

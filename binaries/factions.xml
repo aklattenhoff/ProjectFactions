@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<Factions>
+	<ScreenWidth>1600</ScreenWidth>
+	<ScreenHeight>900</ScreenHeight>
+	<FullScreen>0</FullScreen>
+	<MSAA>0</MSAA>
+	<MSAANicest>0</MSAANicest>
+	<VSync>1</VSync>
+	<FactionList>data/factionList.xml</FactionList>
+	<BottomBar>data/bottomBar.xml</BottomBar>
+	<ShaderList>shaders/shaderList.xml</ShaderList>
+</Factions>

@@ -1,0 +1,38 @@
+Gather Rate Lists
+
+GatherRateBase
+	Food
+	Wood
+	Stone
+	Alloy
+GatherRateOverwrite
+	List of classes that have an overwritten rate.
+	Note that the lowest rate will be chosen if something has two classes that are both overwritten.
+		If you want a different effect, it is best to make a new class
+	
+	
+Example of someone who can't gather from a quarry, but from trees faster and farms slower
+GatherRateBase
+	Food - 1.0
+	Wood - 1.0
+	Stone - 1.0
+	Alloy - 1.0
+GatherRateOverwrite
+	Quarry - 0.0
+	Tree - 1.5
+	Farm - 0.8
+	
+Example of someone who can only gather from a Farm. Note that if a tech research can allow them to gather from all wood
+	sources later in the game, the system should be able to change if the tech upgrade sets "Wood - 1.0"
+GatherRateBase
+	Food - 0.0
+	Wood - 0.0
+	Stone - 0.0
+	Alloy - 0.0
+GatherRateOverwrite
+	Farm - 1.0
+	
+This means that gather classes are only 2 levels deep. The first level describes the type of resource and the second describes the actual entity.
+			Food
+			/	\
+		Farm	Animal

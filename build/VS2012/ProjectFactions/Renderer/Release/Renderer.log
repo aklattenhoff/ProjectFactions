@@ -1,0 +1,23 @@
+﻿Build started 2/2/2017 12:50:19 AM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Renderer\Renderer.vcxproj" on node 4 (Build target(s)).
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../Release/Renderer.lib" /NOLOGO /LTCG Release\GUIRenderer.obj
+         Release\ModelRenderer.obj
+         Release\Renderer.obj
+         Release\GUILineRect.obj
+         Release\GUIRectangle.obj
+         Release\GUIText.obj
+         Release\Entity.obj
+         Release\GUITexture.obj
+         Release\GUIToolTip.obj
+         Release\GUIToolTipBackground.obj
+         Release\PhageEntity.obj
+         Release\PhageTerrainDecal.obj
+         Release\Prop.obj
+         Release\TerrainDecal.obj
+         Renderer.vcxproj -> C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Renderer\../Release/Renderer.lib
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Renderer\Renderer.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.18

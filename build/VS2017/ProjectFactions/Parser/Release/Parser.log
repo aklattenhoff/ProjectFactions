@@ -1,0 +1,27 @@
+﻿  ActionListXML.cpp
+  ActionListXMLCreator.cpp
+  ActionXML.cpp
+  ActionXMLCreator.cpp
+  DebugEntityXMLParser.cpp
+  EntityListXML.cpp
+  EntityListXMLCreator.cpp
+  EntityXML.cpp
+  EntityXMLCreator.cpp
+  EntityXMLParser.cpp
+  EntityXMLTag.cpp
+  FactionListXML.cpp
+  FactionListXMLParser.cpp
+  FactionsXML.cpp
+  FactionsXMLParser.cpp
+  FactionXMLData.cpp
+  Parser.cpp
+  ProjectileListXML.cpp
+  ProjectileListXMLCreator.cpp
+  ProjectileXML.cpp
+  Compiling...
+  ProjectileXMLCreator.cpp
+  PropXML.cpp
+  PropXMLCreator.cpp
+  ShaderListXML.cpp
+  ShaderListXMLParser.cpp
+  Parser.vcxproj -> C:\Users\aklat\Dropbox\ProjectFactions\build\VS2017\ProjectFactions\Parser\../Release/Parser.lib

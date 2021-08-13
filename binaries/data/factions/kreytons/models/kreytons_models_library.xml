@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.75</Scale>
+	<ModelFile>models/library.dae</ModelFile>
+	<TextureFile>models/library.png</TextureFile>
+	<BumpTextureFile>models/library_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/library_sbc.png</SBCTextureFile>
+</Model>

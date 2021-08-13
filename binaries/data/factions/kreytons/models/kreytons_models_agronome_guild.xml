@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>1.5</Scale>
+	<ModelFile>models/agronome_guild.dae</ModelFile>
+	<TextureFile>models/agronome_new.png</TextureFile>
+	<BumpTextureFile>models/agronome_new_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/agronome_new_sbc.png</SBCTextureFile>
+</Model>

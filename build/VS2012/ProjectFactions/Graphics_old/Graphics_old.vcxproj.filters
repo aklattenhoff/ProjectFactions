@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{cd4f8f45-c3ef-44d1-a70c-d518d7e8a42a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectModel">
+      <UniqueIdentifier>{071d1fac-e14a-4772-a44d-b2c36e048ffc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{d1221113-53b4-4ead-bcb3-1d6a48b18665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{f30e789a-5721-4862-9bbb-ac347ec6b758}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Camera.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\MVPMatrix.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\OrthoDepth.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Shader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectAnimation.cpp">
+      <Filter>ObjectModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectModel.cpp">
+      <Filter>ObjectModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectModelXMLParser.cpp">
+      <Filter>ObjectModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectSkeleton.cpp">
+      <Filter>ObjectModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Utility\Quad.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Model\Model.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Model\Skeleton.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Model\Animation.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Utility\TextureUtility.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Utility\Texture.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Camera.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\MVPMatrix.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\OrthoDepth.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Shader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectAnimation.h">
+      <Filter>ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectModel.h">
+      <Filter>ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectModelXMLParser.h">
+      <Filter>ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectSkeleton.h">
+      <Filter>ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Utility\Quad.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Model\Model.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Model\Skeleton.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Model\Animation.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Utility\Texture.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Utility\TextureUtility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

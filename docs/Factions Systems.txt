@@ -1,0 +1,30 @@
+Project Factions Systems
+
+All systems in the program should have simple APIs and have has little inputs as possible
+main
+	Creates Factions object and calls Run
+Factions
+	Creates MainMenu, Game, Input, and Network object
+	Sets up all initial portions of each object
+	Passes Game, Input, and Network to MainMenu
+	Runs MainMenu
+Input
+	Takes in Keyboard and Mouse inputs and contains accessors
+Network
+	Creates and handles all network connection and communication
+MainMenu
+	Main loop for rendering main menu and handle user inputs
+Game
+	Main loop for running a game
+Terrain
+	Creates, handles, and renders terrain and all maps (e.g. collision map, maybe LOS map???)
+ActionManager
+	Takes inputs and computes actions, then creates an event for the action and puts it into Entity Event Queue
+EntityManager
+	Handles all Entity calculations and entity event handling
+LogicModules
+	Abstraction and specific logic for handling entity events
+GUIManager
+	All on screen Ortho graphics
+Graphics
+	All 3D and shader logic handling (i.e. Graphics library)

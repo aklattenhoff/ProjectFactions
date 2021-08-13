@@ -1,0 +1,4 @@
+<Action type="build" name="kreytons_action_buildBarracks">
+	<Icon>textures/ui/build_barracks_icon.png</Icon>
+	<Build>kreytons_barracks</Build>
+</Action>

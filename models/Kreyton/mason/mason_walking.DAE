@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>aklat_000</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.4.1;  Revision: exported;  Platform: x64;  Configuration: Release_Max2013_static</authoring_tool>
+      <source_data>file:///C:/Users/aklat_000/Dropbox/ProjectFactions/models/Kreyton/mason/mason_idle.max</source_data>
+    </contributor>
+    <created>2015-02-27T16:08:53</created>
+    <modified>2015-02-27T16:08:53</modified>
+    <unit name="inch" meter="0.0254"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="_1_-_Default">
+      <profile_COMMON>
+        <newparam sid="mason_3_png-surface">
+          <surface type="2D">
+            <init_from>mason_3_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="mason_3_png-sampler">
+          <sampler2D>
+            <source>mason_3_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <newparam sid="mason_bump_png-surface">
+          <surface type="2D">
+            <init_from>mason_bump_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="mason_bump_png-sampler">
+          <sampler2D>
+            <source>mason_bump_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.5882353 0.5882353 0.5882353 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="mason_3_png-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="OpenCOLLADA3dsMax">
+              <bump bumptype="HEIGHTFIELD">
+                <texture texture="mason_bump_png-sampler" texcoord="CHANNEL1"/>
+              </bump>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="_1_-_Default-material" name="_1_-_Default">
+      <instance_effect url="#_1_-_Default"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Box001" name="Box001">
+      <mesh>
+        <source id="geom-Box001-positions">
+          <float_array id="geom-Box001-positions-array" count="414">6.966721 -2.737923 36.533 0 -0.05162704 21.34612 7.006858 3.680308 36.533 0 -6.192167 55.17196 8.215333 -4.805108 54.37643 0 6.193176 55.17196 9.362919 5.163686 54.57051 0 -4.353389 20.67439 4.672885 -3.712965 20.57983 8.993724 -0.05162716 21.4724 4.225767 3.924586 20.33128 0 -5.705747 60.44577 7.92047 -3.318929 60.88592 6.421191 3.940132 60.44576 0 5.712768 60.44577 16.33886 -3.37353 57.85001 16.33886 0.8141659 54.76077 16.33886 0.1203508 60.45335 16.33886 3.224554 58.16341 23.83175 -2.692856 57.84428 23.83175 0.6923456 55.34705 23.83175 0.1323194 59.94814 23.83175 2.641661 58.09701 27.12788 -2.692856 57.84428 27.12788 0.6923456 55.34705 27.12788 0.06505106 59.99775 27.12788 2.711542 58.04546 41.33663 -3.148698 57.84985 41.33663 0.7711247 54.95823 41.33663 0.04469202 60.34348 41.33663 3.109143 58.08286 1.907537 0 17.12743 4.736487 -3.217489 17.12743 8.03875 0 17.12743 5.229901 3.097466 17.12743 2.086403 0 14.05104 4.678109 -3.217489 14.05104 7.996521 0 14.05104 5.193929 3.097466 14.05104 2.825498 -3.411732 3.862003 7.383582 -3.217489 3.862003 7.146148 3.02359 0.097435 2.97256 3.097466 0.097435 1.577122 2.721777 62.31316 2.219031 -2.25815 62.5194 4.279401 -5.818752 62.38926 5.727551 0.2313019 65.4155 4.364285 5.124179 64.6266 4.703875 -3.774415 70.28157 6.203592 0.627698 69.72046 3.936156 5.775733 69.89259 0 -3.471218 72.93171 3.934007 0.7980778 73.02194 3.669995 -11.85331 0.097435 7.147223 -11.831 0.097435 41.01284 -1.694103 57.8558 41.01284 0.5007715 56.23666 41.01284 -0.1466436 59.42963 41.01284 2.04823 57.81049 46.61623 -2.095989 58.88544 46.61623 -2.503934 56.74003 46.61623 2.954136 58.92145 46.61623 2.523895 56.65878 0 1.080589 74.29367 0 5.564891 72.11566 0 -6.884649 61.31001 0 6.531817 64.31252 0 -4.457976 69.14356 0 7.003574 69.8026 0 4.65778 20.55981 0 -4.620086 71.5939 4.05566 -4.388671 65.63072 0 -5.470939 67.16574 0 -5.819839 65.91908 0 -5.486035 64.73843 6.398616 -0.7635412 63.40345 0 -2.25815 62.5194 0 2.721778 62.31316 0 -5.062487 36.533 0 5.564373 36.533 -6.966721 -2.737923 36.533 -7.006858 3.680308 36.533 -9.362919 5.163686 54.57051 -4.672885 -3.712965 20.57983 -8.993724 -0.05162716 21.4724 -4.225767 3.924586 20.33128 -8.215333 -4.805108 54.37643 -7.92047 -3.318929 60.88592 -46.61623 -2.095989 58.88544 -46.61623 -2.503934 56.74003 -46.61623 2.523895 56.65878 -46.61623 2.954136 58.92145 -6.421191 3.940132 60.44576 -16.33886 0.1203508 60.45335 -16.33886 3.224554 58.16341 -16.33886 0.8141659 54.76077 -16.33886 -3.37353 57.85001 -23.83175 0.1323194 59.94814 -23.83175 2.641661 58.09701 -23.83175 -2.692856 57.84428 -23.83175 0.6923456 55.34705 -27.12788 0.06505106 59.99775 -27.12788 2.711542 58.04546 -27.12788 -2.692856 57.84428 -27.12788 0.6923456 55.34705 -41.33663 0.04469202 60.34348 -41.33663 3.109143 58.08286 -41.33663 -3.148698 57.84985 -41.33663 0.7711247 54.95823 -1.907537 0 17.12743 -4.736487 -3.217489 17.12743 -8.03875 0 17.12743 -5.229901 3.097466 17.12743 -2.086403 0 14.05104 -4.678109 -3.217489 14.05104 -7.996521 0 14.05104 -5.193929 3.097466 14.05104 -2.825498 -3.411732 3.862003 -7.383582 -3.217489 3.862003 -7.146148 3.02359 0.097435 -2.97256 3.097466 0.097435 -3.934007 0.7980778 73.02194 -2.219031 -2.25815 62.5194 -1.577122 2.721777 62.31316 -6.398616 -0.7635412 63.40345 -4.364285 5.124179 64.6266 -5.727551 0.2313019 65.4155 -4.05566 -4.388671 65.63072 -4.279401 -5.818752 62.38926 -6.203592 0.627698 69.72046 -3.936156 5.775733 69.89259 -4.703875 -3.774415 70.28157 -7.147223 -11.831 0.097435 -3.669995 -11.85331 0.097435 -41.01284 -0.1466436 59.42963 -41.01284 2.04823 57.81049 -41.01284 -1.694103 57.8558 -41.01284 0.5007715 56.23666</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-positions-array" count="138" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-map1">
+          <float_array id="geom-Box001-map1-array" count="639">0.4522628 0.9211619 0 0.4686515 0.9925581 0 0.3601955 0.9716146 0 0.5730265 0.9328672 0 0.2174478 0.3510637 0 0.2082616 0.2877789 0 0.4050647 0.7897146 0 0.4675009 0.7151183 0 0.4946131 0.7845522 0 0.4242006 0.8112337 0 0.3725209 0.2392482 0 0.3631552 0.8213674 0 0.309114 0.7798706 0 0.06110488 0.3786663 0 0.06600969 0.3280719 0 0.937495 0.3936563 0 0.3645697 0.7375798 0 0.02136466 0.4213215 0 0.3538927 0.7843509 0 0.06333338 0.4219449 0 0.4443593 0.4275908 0 0.4409882 0.8656659 0 0.5268841 0.8603339 0 0.3799598 0.8794348 0 0.400384 0.3364687 0 0.4698214 0.353209 0 0.5428014 0.3684127 0 0.3106157 0.8761996 0 0.3103175 0.8449955 0 0.3854225 0.1546325 -11.12053 0.5653752 0.740168 0 0.3012009 0.1199691 11.12053 0.6149297 0.8617965 -16.21791 0.3118936 0.9185442 0 0.487187 0.6864595 0 0.3100546 0.8309267 0 0.3089616 0.8201547 0 0.311996 0.7248218 0 0.1717288 0.9211625 0 0.1564905 0.715118 0 0.2189269 0.7897145 0 0.1293782 0.7845521 0 0.6944568 0.9555712 0 0.5963937 0.9220086 12.29055 0.6587619 0.8712906 0 0.7139616 0.9006295 0 0.7822195 0.9856751 0 0.7847853 0.9109608 0 0.199791 0.8112338 0 0.257156 0.8228372 0 0.3847081 0.1204197 -11.12053 0.3032312 0.1618982 -11.12053 0.3041063 0.07271378 -11.12053 0.3860944 0.08178344 -11.12053 0.30968 0.2063913 -11.12053 0.3923662 0.03772121 -11.12053 0.4206011 0.1201203 -11.12053 0.4207209 0.1538385 -11.12053 0.4217678 0.08415914 -11.12053 0.4244919 0.04233411 -11.12053 0.5580353 0.1218617 -11.12053 0.5573616 0.1554129 -11.12053 0.557263 0.08790252 -11.12053 0.5601361 0.04450034 -11.12053 0.5089101 0.2716947 0 0.5513309 0.2704827 0 0.4390404 0.2439078 0 0.4658862 0.2707953 0 0.5978546 0.429867 0 0.5527439 0.4291815 0 0.7770845 0.4326173 0 0.5657681 0.1556033 -11.12053 0.5672681 0.1199691 11.12053 0.5665778 0.08852275 -11.12053 0.5697464 0.05689896 -11.12053 0.4004241 0.4269667 0 0.4804145 0.4080392 0 0.5219615 0.4152668 0 0.7303112 0.1593238 0.897868 0.82887 0.1570117 1.259299 0.7930965 0.1585706 1.078645 0.7672738 0.1570389 0.9653862 0.7794295 0.09141965 0.7338604 0.7455382 0.09930398 0.6045036 0.8834139 0.9547572 0 0.8520982 0.9019108 0 0.6859466 0.8460917 0 0.7257562 0.8589561 0 0.783651 0.8632568 0 0.8386099 0.856337 0 0.7061896 0.7671646 0 0.7435499 0.7590396 0 0.793366 0.7265977 0 0.8304591 0.7159529 0 0.7838224 0.5856813 0 0.7531454 0.5952913 0 0.5964086 0.9220093 12.29055 0.6944712 0.9555724 0 0.6587768 0.8712919 0 0.7139761 0.9006311 0 0.2594222 0.7375796 0 0.7822336 0.9856765 0 0.2659872 0.7836244 0 0.1830033 0.8656663 0 0.09710705 0.8603343 0 0.7847995 0.9109625 0 0.8834279 0.9547585 0 0.8521121 0.9019125 0 0.2427267 0.8833584 0 0.4822149 0.4281442 0 0.9328265 0.4350289 0 0.5198238 0.4286867 0 0.218079 0.4242577 0 0.2042259 0.5603935 0 0.2152842 0.4974087 0 0.3670019 0.6137927 0 0.06322571 0.5158674 0 0.05982348 0.4651425 0 0.2852843 0.1184181 11.12053 0.2832877 0.159648 -11.12053 0.202467 0.1525034 -11.12053 0.2031695 0.118861 -11.12053 0.2824274 0.07195063 -11.12053 0.2018063 0.08086891 -11.12053 0.2769466 0.2033992 -11.12053 0.1956391 0.03754129 -11.12053 0.1678749 0.1185666 -11.12053 0.1677572 0.1517226 -11.12053 0.1667277 0.08320495 -11.12053 0.1640491 0.04207716 -11.12053 0.03273185 0.1202791 -11.12053 0.03339426 0.1532709 -11.12053 0.03349108 0.08688597 -11.12053 0.03066594 0.04420729 -11.12053 0.9362187 0.4765276 0 0.3977054 0.5174434 0 0.02512787 0.1534582 -11.12053 0.02365286 0.1184181 11.12053 0.02433162 0.08749586 -11.12053 0.02121583 0.05639922 -11.12053 0.6859618 0.8460935 0 0.725771 0.858958 0 0.7836652 0.8632587 0 0.8386237 0.8563389 0 0.7062048 0.7671677 0 0.7435645 0.7590429 0 0.7933798 0.726601 0 0.8304728 0.7159563 0 0.7838368 0.5856844 0 0.7531596 0.5952942 0 0.4675634 0.5026515 0 0.5409771 0.4896229 0 0.504282 0.5852728 0 0.5465713 0.5877692 0 0.4337141 0.6110626 0 0.4613933 0.5849082 0 0.4798053 0.4481745 0 0.5215504 0.4421677 0 0.8313637 0.1765321 1.070817 0.7313966 0.174187 0.5739952 0.7950791 0.1749509 0.8360611 0.7688873 0.1765046 0.7016738 0.7468412 0.2350645 0.9287083 0.7812167 0.2430615 1.078676 0.7186782 0.2421087 0.9475417 0.8100492 0.2351463 1.1619 0.7177721 0.09235899 0.5367349 0.8078558 0.09922323 0.9228371 0.15534 0.9925592 0 0.2637966 0.9716151 0 0.05096427 0.9328678 0 0.0586158 0.7401677 0 0.009061128 0.8617965 -16.21791 0.1368043 0.6864591 0 0.9897701 0.9220086 12.29055 0.9180552 0.8689436 0 0.8894354 0.8387255 0 0.6645764 0.7606038 0 0.7055155 0.724815 0 0.7121206 0.7183242 0 0.9897835 0.9220093 12.29055 0.9180685 0.8689451 0 0.8894488 0.8387274 0 0.6645924 0.7606069 0 0.7055306 0.7248191 0 0.7121355 0.7183284 0 0.7793134 0.3613791 0 0.6009476 0.3353241 0 0.9299645 0.332178 0 0.9788449 0.4357394 0 0.5894951 0.254572 0 0.7771232 0.5038948 0 0.5980759 0.5244543 0 0.9267942 0.5377437 0 0.5842307 0.60482 0 0.2722096 0.01801804 -11.12053 0.1990865 0.1875442 -11.12053 0.167048 0.1848136 -11.12053 0.03243545 0.1884628 -11.12053 0.02102105 0.1782412 -11.12053 0.3144974 0.01786674 -11.12053 0.3888604 0.1902674 -11.12053 0.4214421 0.1874905 -11.12053 0.5583367 0.1912013 -11.12053 0.5699445 0.1808064 -11.12053 0.8564311 0.174187 0.5739952 0.8437128 0.2421087 0.9475417 0.8564311 0.174187 0.5739952 0.8437128 0.2421087 0.9475417 0.8535843 0.1593238 0.897868 0.8410451 0.09235899 0.5367349 0.8535843 0.1593238 0.897868 0.8410451 0.09235899 0.5367349</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-map1-array" count="213" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Box001-vertices">
+          <input semantic="POSITION" source="#geom-Box001-positions"/>
+        </vertices>
+        <triangles material="_1_-_Default_1" count="272">
+          <input semantic="VERTEX" source="#geom-Box001-vertices" offset="0"/>
+          <input semantic="TEXCOORD" source="#geom-Box001-map1" offset="1" set="0"/>
+          <p>0 4 2 5 6 10 8 13 9 14 0 4 2 5 0 4 9 14 9 188 10 15 2 186 1 17 8 13 7 19 11 20 4 24 12 25 59 209 60 79 62 80 62 80 61 81 59 78 13 26 12 25 17 64 17 64 18 65 13 26 4 24 6 10 16 66 16 66 15 67 4 24 12 25 4 24 15 67 15 67 17 64 12 25 6 187 13 26 18 65 18 65 16 190 6 187 22 29 17 31 21 50 17 31 22 29 18 51 17 31 15 52 19 53 19 53 21 50 17 31 19 53 16 200 20 55 16 200 19 53 15 52 16 54 18 51 22 29 22 29 20 201 16 54 22 29 21 50 25 56 25 56 26 57 22 29 21 50 19 53 23 58 23 58 25 56 21 50 19 53 20 55 24 59 24 59 23 58 19 53 20 201 22 29 26 57 26 57 24 202 20 201 26 57 25 56 29 60 29 60 30 61 26 57 29 60 23 58 27 62 23 58 29 60 25 56 23 58 24 59 28 63 28 63 27 62 23 58 28 203 26 57 30 61 26 57 28 203 24 202 8 42 1 43 31 44 31 44 32 45 8 42 9 46 8 42 32 45 32 45 33 47 9 46 1 174 10 84 34 85 34 85 31 175 1 174 10 84 9 46 33 47 33 47 34 85 10 84 32 45 31 44 35 86 35 86 36 87 32 45 33 47 32 45 36 87 36 87 37 88 33 47 31 175 34 85 38 89 38 89 35 176 31 175 34 85 33 47 37 88 37 88 38 89 34 85 36 87 35 86 39 90 37 88 36 87 40 91 40 91 41 92 37 88 35 176 38 89 42 93 42 177 39 90 35 86 38 89 37 88 41 92 52 0 63 1 51 2 52 0 64 3 63 1 6 187 5 68 14 69 39 90 40 91 36 87 41 92 42 93 38 89 6 10 4 24 0 4 5 68 6 187 79 70 4 24 3 75 0 4 12 25 13 26 44 76 43 77 44 76 13 26 11 20 12 25 44 76 44 76 76 109 11 20 13 26 14 69 43 77 75 6 43 7 47 8 47 8 46 9 75 6 46 9 71 11 75 6 65 12 44 16 45 18 49 21 47 8 50 22 71 11 46 9 49 21 49 21 48 23 71 11 71 11 67 27 72 28 47 8 66 30 68 32 49 21 50 22 52 0 48 23 49 21 52 0 52 0 51 2 48 23 50 22 68 32 64 3 53 94 41 92 54 95 41 92 53 94 42 93 39 90 42 177 53 178 40 91 54 179 41 92 53 178 54 179 39 90 40 91 39 90 54 179 58 71 29 60 57 72 29 60 58 71 30 61 29 60 27 62 55 73 55 73 57 72 29 60 55 73 28 63 56 74 28 63 55 73 27 62 28 203 30 61 58 71 58 71 56 204 28 203 58 82 57 83 61 81 57 83 55 166 59 78 59 78 61 81 57 83 55 210 56 167 60 79 60 79 59 211 55 212 56 167 58 82 62 80 62 80 60 79 56 167 61 81 62 80 58 82 66 30 47 8 43 7 68 32 50 22 47 8 67 27 48 23 70 33 64 3 52 0 50 22 3 75 4 24 11 20 6 187 14 69 13 26 10 15 1 189 69 110 43 7 77 34 66 30 70 33 48 23 51 2 48 23 67 27 71 11 71 11 73 35 74 36 74 36 45 18 71 11 65 12 45 18 74 36 75 6 45 18 44 16 44 16 43 7 75 6 71 11 45 18 75 6 71 11 72 28 73 35 46 9 47 8 49 21 14 69 77 111 43 77 76 37 44 16 65 12 78 112 8 13 0 4 79 70 2 186 10 15 79 70 6 187 2 186 0 4 3 75 78 112 10 15 69 110 79 70 7 19 8 13 78 112 81 113 80 114 82 115 84 116 83 117 80 114 80 114 81 113 84 116 85 134 84 193 81 191 83 117 1 17 7 19 86 135 11 20 87 150 89 158 88 205 90 160 91 161 90 160 88 159 87 150 92 151 93 152 94 153 93 152 92 151 82 115 86 135 95 154 96 155 95 154 86 135 86 135 87 150 96 155 93 152 96 155 87 150 92 151 82 192 94 153 95 194 94 153 82 192 93 118 94 119 98 120 98 120 97 121 93 118 96 122 93 118 99 123 97 121 99 123 93 118 95 195 96 122 99 123 99 123 100 125 95 195 94 119 95 124 98 120 100 196 98 120 95 124 97 121 98 120 101 126 102 127 101 126 98 120 99 123 97 121 103 128 101 126 103 128 97 121 100 125 99 123 104 129 103 128 104 129 99 123 98 120 100 196 102 127 104 197 102 127 100 196 101 126 102 127 105 130 106 131 105 130 102 127 103 128 101 126 105 130 105 130 107 132 103 128 104 129 103 128 108 133 107 132 108 133 103 128 102 127 104 197 108 198 108 198 106 131 102 127 1 96 83 97 109 98 110 99 109 98 83 97 83 97 84 101 110 99 111 105 110 99 84 101 85 106 1 180 112 107 109 181 112 107 1 180 84 101 85 106 111 105 112 107 111 105 85 106 109 98 110 99 113 140 114 141 113 140 110 99 110 99 111 105 114 141 115 142 114 141 111 105 112 107 109 181 116 143 113 182 116 143 109 181 111 105 112 107 115 142 116 143 115 142 112 107 113 140 114 141 117 144 114 141 115 142 118 145 119 146 118 145 115 142 116 143 113 182 120 147 117 144 120 183 113 140 115 142 116 143 119 146 63 168 121 38 51 169 64 170 121 38 63 168 5 68 82 192 14 69 118 145 117 144 114 141 120 147 119 146 116 143 86 135 82 115 80 114 82 192 5 68 79 70 3 75 86 135 80 114 92 151 87 150 122 156 122 156 123 157 92 151 87 150 11 20 122 156 76 109 122 156 11 20 14 69 92 151 123 157 123 39 124 40 125 41 126 48 125 41 124 40 127 49 126 48 124 40 122 100 65 12 128 102 125 41 129 103 130 104 126 48 127 49 129 103 131 108 129 103 127 49 67 27 127 49 72 28 66 171 125 41 68 172 130 104 129 103 121 38 129 103 131 108 121 38 51 169 121 38 131 108 68 172 130 104 64 170 119 146 120 147 133 148 133 148 132 149 119 146 120 183 117 144 133 184 132 185 118 145 119 146 132 185 133 184 117 144 117 144 118 145 132 185 105 130 106 131 135 136 135 136 134 137 105 130 107 132 105 130 136 138 134 137 136 138 105 130 108 133 107 132 136 138 136 138 137 139 108 133 106 131 108 198 135 136 137 199 135 136 108 198 134 162 135 163 91 161 136 164 134 162 88 159 91 161 88 159 134 162 137 165 136 206 89 158 88 207 89 158 136 208 135 163 137 165 90 160 89 158 90 160 137 165 90 160 91 161 135 163 125 41 66 171 123 39 130 104 68 172 125 41 131 108 67 27 70 33 121 38 64 170 130 104 86 135 3 75 11 20 14 69 82 192 92 151 1 189 85 134 69 110 77 173 123 39 66 171 131 108 70 33 51 169 67 27 131 108 127 49 73 35 127 49 74 36 128 102 74 36 127 49 128 102 65 12 74 36 128 102 124 40 122 100 123 39 122 100 124 40 128 102 127 49 124 40 72 28 127 49 73 35 125 41 126 48 129 103 77 111 14 69 123 157 122 100 76 37 65 12 83 117 78 112 80 114 81 191 79 70 85 134 82 192 79 70 81 191 3 75 80 114 78 112 69 110 85 134 79 70 83 117 7 19 78 112</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="geom-Box001-skin1">
+      <skin source="#geom-Box001">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="geom-Box001-skin1-joints">
+          <Name_array id="geom-Box001-skin1-joints-array" count="12">joint0 joint1 joint2 joint3 joint4 joint5 joint6 joint7 joint8 joint9 joint10 joint11</Name_array>
+          <technique_common>
+            <accessor source="#geom-Box001-skin1-joints-array" count="12" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-skin1-bind_poses">
+          <float_array id="geom-Box001-skin1-bind_poses-array" count="192">0.005235604 -2.99584e-8 -0.9999863 56.68706 0.9999863 -5.76568e-6 0.005235604 -0.1992889 -5.76576e-6 -1 -2.28856e-10 -5.49216e-7 0 0 0 1 0.9998422 0 0.01776363 -8.007828 -0.01776363 -4.37114e-8 0.9998422 -57.25692 7.76473e-10 -1 -4.37045e-8 2.50278e-6 0 0 0 1 0.9999973 6.75606e-10 0.002307889 -25.59795 -0.002307889 -4.37062e-8 0.9999973 -57.65958 7.76473e-10 -1 -4.37045e-8 2.5028e-6 0 0 0 1 0.01123531 -3.21445e-8 0.9999369 -60.38681 -0.9999369 2.81713e-6 0.01123531 -0.7225576 -2.81731e-6 -1 -4.91111e-10 -9.44362e-8 0 0 0 1 -0.9999743 3.25833e-7 -0.007168253 -6.582006 0.007168253 -1.42606e-8 -0.9999743 57.97683 -3.25927e-7 -1 1.19246e-8 -2.97142e-6 0 0 0 1 -0.9999945 -1.50873e-7 0.003311129 -25.68998 -0.003311129 -1.08453e-8 -0.9999945 57.71079 1.50908e-7 -1 1.03457e-8 7.66103e-6 0 0 0 1 -1.16132e-7 0.01555379 -0.9998791 36.07135 3.72637e-6 -0.9998791 -0.01555379 0.3850035 -1 -3.72773e-6 5.81587e-8 -5.002429 0 0 0 1 6.29591e-12 -0.01030859 -0.9999467 14.97309 8.82765e-8 -0.9999467 0.01030859 -0.002226219 -1 -8.82721e-8 9.03716e-10 -5.002426 0 0 0 1 8.81154e-8 -0.9987403 -0.0501743 0.07802504 -3.10862e-15 -0.0501743 0.9987403 -1.324863 -1 -8.80046e-8 -4.42112e-9 -5.002426 0 0 0 1 -1.16132e-7 0.01555379 -0.9998791 36.07135 3.72637e-6 -0.9998791 -0.01555379 0.3849667 -1 -3.72773e-6 5.81587e-8 4.876112 0 0 0 1 6.29591e-12 -0.01030859 -0.9999467 14.97309 8.82765e-8 -0.9999467 0.01030859 -0.002227098 -1 -8.82721e-8 9.03716e-10 4.876114 0 0 0 1 8.81154e-8 -0.9987403 -0.0501743 0.07802417 -3.10862e-15 -0.0501743 0.9987403 -1.324863 -1 -8.80046e-8 -4.42112e-9 4.876114 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-skin1-bind_poses-array" count="12" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Box001-skin1-weights">
+          <float_array id="geom-Box001-skin1-weights-array" count="111">1 0.75 0.25 0.5 0.5 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.3333333 0.6666667 0.3333333 0.6666667 0.3333333 0.6666667 0.3333333 0.6666667 0.3333333 0.6666667 0.3333333 0.6666667 0.3333333 0.6666667 0.3333333 0.6666667 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.75 0.25 0.75 0.25 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.3333333 0.6666667 0.3333333 0.6666667 0.3333333 0.6666667 0.3333333 0.6666667 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</float_array>
+          <technique_common>
+            <accessor source="#geom-Box001-skin1-weights-array" count="111" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#geom-Box001-skin1-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#geom-Box001-skin1-bind_poses"/>
+        </joints>
+        <vertex_weights count="138">
+          <input semantic="JOINT" source="#geom-Box001-skin1-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#geom-Box001-skin1-weights" offset="1"/>
+          <vcount>2 2 2 1 2 1 2 2 1 1 1 1 2 2 1 1 1 1 1 2 2 2 2 2 2 2 2 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 2 2 2 1 1 1 2 2 1 1 1 1 2 1 1 1 1 2 2 2 2 2 2 2 2 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 9 2 6 3 9 4 0 5 9 6 0 0 0 7 1 8 0 0 1 9 0 10 6 11 9 12 9 0 9 0 9 0 0 0 0 13 1 14 0 15 1 16 0 0 1 0 1 0 1 0 1 0 1 17 2 18 1 19 2 20 1 21 2 22 1 23 2 24 2 25 1 26 2 27 1 28 2 29 1 30 2 31 1 32 2 0 2 0 2 0 2 0 9 33 10 34 9 35 10 36 9 37 10 38 9 39 10 40 9 41 10 42 9 43 10 44 9 45 10 46 9 47 10 48 10 49 11 50 10 51 11 52 10 53 11 54 10 55 11 56 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 11 0 11 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 3 0 3 0 3 0 3 0 3 0 3 0 6 57 9 58 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 0 0 0 0 0 59 6 60 0 61 6 62 0 63 4 64 6 0 6 0 6 0 0 65 4 66 0 67 4 68 5 0 5 0 5 0 5 0 0 69 4 70 4 0 4 0 4 0 4 0 4 71 5 72 4 73 5 74 4 75 5 76 4 77 5 78 5 79 4 80 5 81 4 82 5 83 4 84 5 85 4 86 5 0 5 0 5 0 5 0 6 87 7 88 6 89 7 90 6 91 7 92 6 93 7 94 6 95 7 96 6 97 7 98 6 99 7 100 6 101 7 102 7 103 8 104 7 105 8 106 7 107 8 108 7 109 8 110 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 3 0 8 0 8 0 5 0 5 0 5 0 5 0</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="mason_3_png">
+      <init_from>file:///C:/Users/aklat_000/Dropbox/ProjectFactions/models/Kreyton/mason/mason_3.png</init_from>
+    </image>
+    <image id="mason_bump_png">
+      <init_from>file:///C:/Users/aklat_000/Dropbox/ProjectFactions/models/Kreyton/mason/mason_bump.png</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Box001" name="Box001">
+        <instance_controller url="#geom-Box001-skin1">
+          <skeleton>#node-Bone001</skeleton>
+          <skeleton>#node-Bone005</skeleton>
+          <skeleton>#node-Bone007</skeleton>
+          <skeleton>#node-Bone008</skeleton>
+          <skeleton>#node-Bone010</skeleton>
+          <skeleton>#node-Bone013</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_1_-_Default_1" target="#_1_-_Default-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-Bone001" name="Bone001" sid="joint0" type="JOINT">
+        <translate>-0.09750485 0 56.68732</translate>
+        <rotate>0 0 1 0</rotate>
+        <rotate>0 1 0 89.70003</rotate>
+        <rotate sid="rotationX">1 0 0 84.02725</rotate>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-Bone005" name="Bone005" sid="joint1" type="JOINT">
+        <translate>9 2.61578e-13 57.39013</translate>
+        <rotate sid="rotationZ">0 0 1 70.46358</rotate>
+        <rotate sid="rotationY">0 1 0 64.34594</rotate>
+        <rotate sid="rotationX">1 0 0 157.6373</rotate>
+        <scale>0.7628353 1 1</scale>
+        <node id="node-Bone006" name="Bone006" sid="joint2" type="JOINT">
+          <translate>16.58139 0.03383446 1.90735e-6</translate>
+          <rotate>0 0 1 -0.8856024</rotate>
+          <rotate>0 1 0 7.95329e-16</rotate>
+          <rotate>1 0 0 0</rotate>
+          <scale>0.9253798 1 1</scale>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-Bone007" name="Bone007" sid="joint3" type="JOINT">
+        <translate>-0.04404724 0 60.39112</translate>
+        <rotate>0 0 1 179.9998</rotate>
+        <rotate sid="rotationY">0 1 0 -87.48247</rotate>
+        <rotate>1 0 0 -90</rotate>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-Bone008" name="Bone008" sid="joint4" type="JOINT">
+        <translate>-9 1.16456e-13 57.92816</translate>
+        <rotate sid="rotationZ">0 0 1 -101.9619</rotate>
+        <rotate sid="rotationY">0 1 0 63.39085</rotate>
+        <rotate sid="rotationX">1 0 0 -20.27456</rotate>
+        <rotate>-1 -7.8538e-9 -1.28076e-7 -7.018122</rotate>
+        <scale>0.7628354 1 1</scale>
+        <rotate>-1 -7.8538e-9 -1.28076e-7 7.018122</rotate>
+        <node id="node-Bone009" name="Bone009" sid="joint5" type="JOINT">
+          <translate>16.59612 0.01365852 0</translate>
+          <rotate>0 0 1 -0.6004283</rotate>
+          <rotate>0 1 0 -2.73208e-5</rotate>
+          <rotate>1 0 0 0</rotate>
+          <rotate>-1 1.01512e-5 3.31779e-6 -2.04422</rotate>
+          <scale>0.92538 1 0.9999999</scale>
+          <rotate>-1 1.01512e-5 3.31779e-6 2.04422</rotate>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-Bone010" name="Bone010" sid="joint6" type="JOINT">
+        <translate sid="translation">-5.002426 0.3148589 36.07298</translate>
+        <rotate>0 0 1 90.00043</rotate>
+        <rotate sid="rotationY">0 1 0 59.78027</rotate>
+        <rotate>1 0 0 -89.99978</rotate>
+        <node id="node-Bone011" name="Bone011" sid="joint7" type="JOINT">
+          <translate>21.10321 1.90735e-6 -2.38419e-6</translate>
+          <rotate sid="rotationZ">0 0 1 1.481852</rotate>
+          <rotate>0 1 0 1.13069e-6</rotate>
+          <rotate>1 0 0 2.08548e-4</rotate>
+          <node id="node-Bone012" name="Bone012" sid="joint8" type="JOINT">
+            <translate>13.64593 1.90735e-6 4.76837e-7</translate>
+            <rotate sid="rotationZ">0 0 1 99.50148</rotate>
+            <rotate>0 1 0 0</rotate>
+            <rotate>1 0 0 3.05476e-7</rotate>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+      <node id="node-Bone013" name="Bone013" sid="joint9" type="JOINT">
+        <translate sid="translation">4.876114 -1.332114 36.07298</translate>
+        <rotate>0 0 1 -89.99956</rotate>
+        <rotate sid="rotationY">0 1 0 69.59929</rotate>
+        <rotate>1 0 0 90.00021</rotate>
+        <node id="node-Bone014" name="Bone014" sid="joint10" type="JOINT">
+          <translate>21.10321 3.8147e-6 -2.38419e-6</translate>
+          <rotate sid="rotationZ">0 0 1 1.481852</rotate>
+          <rotate>0 1 0 1.13069e-6</rotate>
+          <rotate>1 0 0 2.08548e-4</rotate>
+          <node id="node-Bone015" name="Bone015" sid="joint11" type="JOINT">
+            <translate>13.64593 1.90735e-6 4.76837e-7</translate>
+            <rotate sid="rotationZ">0 0 1 84.41347</rotate>
+            <rotate>0 1 0 0</rotate>
+            <rotate>1 0 0 3.05476e-7</rotate>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <library_animations>
+    <animation>
+      <source id="node-Bone001_rotationX.ANGLE-input">
+        <float_array id="node-Bone001_rotationX.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone001_rotationX.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone001_rotationX.ANGLE-output">
+        <float_array id="node-Bone001_rotationX.ANGLE-output-array" count="81">84.02597 84.27584 84.52571 84.7756 85.02545 85.27533 85.5252 85.77507 86.02494 86.2748 86.52468 86.77456 87.02442 87.27429 87.52417 87.77403 88.02391 88.27377 88.52364 88.77351 89.02339 89.37762 89.73184 90.08608 90.4403 90.79452 91.14875 91.50298 91.85721 92.21144 92.56567 92.9199 93.27411 93.62835 93.98258 94.33681 94.69103 95.04525 95.39949 95.75372 96.10794 95.77563 95.44331 95.11104 94.77872 94.44642 94.1141 93.78178 93.44949 93.11718 92.78487 92.45256 92.12025 91.78795 91.45564 91.12334 90.79104 90.45871 90.12641 89.79411 89.4618 89.19001 88.91821 88.64643 88.37464 88.10285 87.83105 87.55925 87.28747 87.01568 86.74389 86.4721 86.2003 85.9285 85.65672 85.38493 85.11314 84.84134 84.56956 84.29776 84.02597</float_array>
+        <technique_common>
+          <accessor source="#node-Bone001_rotationX.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone001_rotationX.ANGLE-interpolation">
+        <Name_array id="node-Bone001_rotationX.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone001_rotationX.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationZ.ANGLE-input">
+        <float_array id="node-Bone005_rotationZ.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationZ.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationZ.ANGLE-output">
+        <float_array id="node-Bone005_rotationZ.ANGLE-output-array" count="81">70.46357 70.46903 70.47263 70.47517 70.47743 70.48023 70.48437 70.49063 70.49983 70.51276 70.53022 71.85756 75.52435 81.11774 88.22491 96.43298 105.3291 114.5005 123.5343 132.0176 139.5376 137.7608 135.984 134.2072 132.4304 130.6536 128.8768 127.1 125.3232 123.5464 121.7696 119.9928 118.216 116.4393 114.6625 112.8857 111.1089 109.3321 107.5553 105.7785 104.0017 105.6393 107.4872 109.4553 111.4534 113.3915 115.1793 116.7268 117.9437 118.7399 119.0254 116.3668 108.9507 97.6166 83.20417 66.55292 48.5024 29.89218 11.5618 -5.649173 -20.90117 -16.33293 -11.76469 -7.19646 -2.628222 1.940015 6.508252 11.07649 15.64473 20.21296 24.7812 29.34944 33.91767 38.48591 43.05415 47.62238 52.19062 56.75885 61.32709 65.89532 70.46357</float_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationZ.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Bone005_rotationZ.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationZ.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationY.ANGLE-input">
+        <float_array id="node-Bone005_rotationY.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationY.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationY.ANGLE-output">
+        <float_array id="node-Bone005_rotationY.ANGLE-output-array" count="81">64.34594 66.15739 67.96632 69.77379 71.58089 73.38874 75.19839 77.01093 78.82745 80.64903 82.47678 84.31139 86.15217 87.99801 89.84782 91.70054 93.55506 95.41032 97.2652 99.11864 100.9695 101.9533 102.937 103.9207 104.9044 105.8881 106.8718 107.8555 108.8392 109.8229 110.8066 111.7903 112.7741 113.7578 114.7415 115.7252 116.7089 117.6926 118.6763 119.66 120.6437 118.4261 116.1691 113.8897 111.6046 109.3308 107.085 104.8842 102.7452 100.6849 98.72005 96.86195 95.09935 93.41541 91.79327 90.21607 88.66695 87.12908 85.58559 84.01964 82.41434 81.51093 80.6075 79.70409 78.80067 77.89725 76.99381 76.09039 75.18698 74.28356 73.38015 72.47672 71.5733 70.66988 69.76646 68.86304 67.95961 67.05619 66.15278 65.24935 64.34594</float_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationY.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Bone005_rotationY.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationY.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationX.ANGLE-input">
+        <float_array id="node-Bone005_rotationX.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationX.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationX.ANGLE-output">
+        <float_array id="node-Bone005_rotationX.ANGLE-output-array" count="81">157.6373 157.4881 157.3198 157.1405 156.9585 156.7819 156.619 156.4781 156.3672 156.2947 156.2687 157.5629 161.1734 166.6912 173.7076 181.8141 190.6017 199.6618 208.5856 216.9645 224.3897 222.6539 220.9181 219.1823 217.4465 215.7106 213.9748 212.239 210.5032 208.7673 207.0315 205.2957 203.5599 201.8241 200.0883 198.3524 196.6166 194.8808 193.145 191.4092 189.6734 191.499 193.559 195.7531 197.9806 200.1412 202.1343 203.8594 205.216 206.1037 206.4219 203.7633 196.3472 185.0131 170.6007 153.9494 135.8989 117.2887 98.95829 81.74732 66.49532 71.05241 75.6095 80.16663 84.72372 89.28082 93.83791 98.395 102.9521 107.5092 112.0663 116.6234 121.1805 125.7376 130.2947 134.8518 139.4089 143.966 148.5231 153.0802 157.6373</float_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationX.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone005_rotationX.ANGLE-interpolation">
+        <Name_array id="node-Bone005_rotationX.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone005_rotationX.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone007_rotationY.ANGLE-input">
+        <float_array id="node-Bone007_rotationY.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone007_rotationY.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone007_rotationY.ANGLE-output">
+        <float_array id="node-Bone007_rotationY.ANGLE-output-array" count="81">-92.51752 -92.37643 -92.23532 -92.09424 -91.95315 -91.81205 -91.67095 -91.52985 -91.38878 -91.24767 -91.10658 -90.96548 -90.82439 -90.6833 -90.5422 -90.4011 -90.26002 -90.11892 -89.97782 -89.83674 -89.69564 -89.5867 -89.47777 -89.36885 -89.25992 -89.15098 -89.04205 -88.93311 -88.8242 -88.71526 -88.60633 -88.49741 -88.38847 -88.27953 -88.17061 -88.06167 -87.95274 -87.84381 -87.73488 -87.62595 -87.51702 -87.61131 -87.7056 -87.79993 -87.89422 -87.98851 -88.0828 -88.17709 -88.27142 -88.3657 -88.45999 -88.55428 -88.6486 -88.7429 -88.83719 -88.93149 -89.02578 -89.12007 -89.21438 -89.30867 -89.40297 -89.5587 -89.71442 -89.87016 -90.02589 -90.1816 -90.33733 -90.49305 -90.64879 -90.80452 -90.96024 -91.11597 -91.2717 -91.42742 -91.58315 -91.73888 -91.89461 -92.05033 -92.20606 -92.36179 -92.51752</float_array>
+        <technique_common>
+          <accessor source="#node-Bone007_rotationY.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone007_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Bone007_rotationY.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone007_rotationY.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationZ.ANGLE-input">
+        <float_array id="node-Bone008_rotationZ.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationZ.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationZ.ANGLE-output">
+        <float_array id="node-Bone008_rotationZ.ANGLE-output-array" count="81">-101.9619 -103.9878 -106.0137 -108.0397 -110.0656 -112.0915 -114.1174 -116.1433 -118.1692 -120.1951 -122.221 -124.2469 -126.2728 -128.2988 -130.3247 -132.3506 -134.3765 -136.4024 -138.4283 -140.4542 -142.4801 -134.7477 -126.0221 -116.7291 -107.2941 -98.1429 -89.7011 -82.39433 -76.64822 -72.88842 -71.54057 -71.69408 -72.1223 -72.77675 -73.60895 -74.57042 -75.61269 -76.68727 -77.74569 -78.73948 -79.62016 -76.00814 -72.39612 -68.78413 -65.17212 -61.56011 -57.94809 -54.33608 -50.72408 -47.11208 -43.50006 -39.88805 -36.27604 -32.66403 -29.05202 -25.44001 -21.828 -18.21599 -14.60398 -10.99197 -7.379964 -19.73236 -33.6713 -48.51683 -63.58902 -78.20789 -91.69353 -103.366 -112.5453 -118.5515 -120.7047 -120.3485 -119.3552 -117.837 -115.9065 -113.6761 -111.2583 -108.7655 -106.3102 -104.0049 -101.9619</float_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationZ.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Bone008_rotationZ.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationZ.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationY.ANGLE-input">
+        <float_array id="node-Bone008_rotationY.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationY.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationY.ANGLE-output">
+        <float_array id="node-Bone008_rotationY.ANGLE-output-array" count="81">63.39085 64.3652 65.33954 66.3139 67.28824 68.26259 69.23693 70.21127 71.18564 72.15998 73.13433 74.10868 75.08302 76.05737 77.03172 78.00607 78.98042 79.95477 80.92911 81.90347 82.87781 84.52593 86.1719 87.81662 89.46103 91.10605 92.75263 94.40169 96.05415 97.71095 99.37302 101.041 102.7142 104.3917 106.0727 107.7561 109.4411 111.1268 112.8121 114.4961 116.178 115.099 114.0199 112.9409 111.8618 110.7828 109.7037 108.6247 107.5457 106.4666 105.3876 104.3085 103.2295 102.1505 101.0714 99.99236 98.91332 97.83428 96.75524 95.67619 94.59715 93.09888 91.60859 90.12285 88.63825 87.15137 85.6588 84.15712 82.64291 81.11277 79.56327 77.99213 76.40165 74.79523 73.17627 71.54822 69.91447 68.27844 66.64355 65.01321 63.39085</float_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationY.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Bone008_rotationY.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationY.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationX.ANGLE-input">
+        <float_array id="node-Bone008_rotationX.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationX.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationX.ANGLE-output">
+        <float_array id="node-Bone008_rotationX.ANGLE-output-array" count="81">339.7254 337.8487 335.9719 334.0952 332.2185 330.3417 328.465 326.5882 324.7115 322.8347 320.9579 319.0812 317.2044 315.3277 313.4509 311.5742 309.6974 307.8207 305.9439 304.0672 302.1905 310.032 318.8808 328.3051 337.8733 347.1537 355.7148 363.1247 368.952 372.7649 374.1317 373.9782 373.55 372.8956 372.0634 371.102 370.0598 368.9852 367.9268 366.9331 366.0524 369.7155 373.3786 377.0417 380.7048 384.3678 388.0309 391.6939 395.3571 399.0201 402.6832 406.3463 410.0093 413.6725 417.3355 420.9986 424.6616 428.3247 431.9878 435.6509 439.314 426.588 412.2274 396.9328 381.4047 366.3436 352.4501 340.4246 330.9676 324.7797 322.5614 322.8875 323.7972 325.1875 326.9554 328.9979 331.2121 333.4949 335.7434 337.8546 339.7254</float_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationX.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone008_rotationX.ANGLE-interpolation">
+        <Name_array id="node-Bone008_rotationX.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone008_rotationX.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone010_translation.Y-input">
+        <float_array id="node-Bone010_translation.Y-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone010_translation.Y-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone010_translation.Y-output">
+        <float_array id="node-Bone010_translation.Y-output-array" count="81">0.3148589 0.2992496 0.2836402 0.2680309 0.2524215 0.2368121 0.2212028 0.2055934 0.1899841 0.1743747 0.1587653 0.1431559 0.1275466 0.1119372 0.09632788 0.08071852 0.06510916 0.04949979 0.03389045 0.01828108 0.002671719 -0.04969644 -0.1020646 -0.1544328 -0.206801 -0.2591691 -0.3115373 -0.3639054 -0.4162737 -0.4686417 -0.5210099 -0.5733781 -0.6257463 -0.6781144 -0.7304826 -0.7828507 -0.8352189 -0.8875871 -0.9399552 -0.9923234 -1.044692 -1.007745 -0.9707993 -0.9338534 -0.8969073 -0.859961 -0.8230149 -0.7860687 -0.7491228 -0.7121767 -0.6752305 -0.6382843 -0.6013383 -0.5643922 -0.5274461 -0.4905 -0.4535539 -0.4166077 -0.3796617 -0.3427156 -0.3057694 -0.274738 -0.2437066 -0.2126752 -0.1816438 -0.1506124 -0.1195809 -0.08854951 -0.05751811 -0.02648669 0.004544731 0.03557616 0.06660759 0.09763897 0.1286704 0.1597018 0.1907332 0.2217647 0.2527961 0.2838275 0.3148589</float_array>
+        <technique_common>
+          <accessor source="#node-Bone010_translation.Y-output-array" count="81" stride="1">
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone010_translation.Y-interpolation">
+        <Name_array id="node-Bone010_translation.Y-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone010_translation.Y-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone010_rotationY.ANGLE-input">
+        <float_array id="node-Bone010_rotationY.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone010_rotationY.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone010_rotationY.ANGLE-output">
+        <float_array id="node-Bone010_rotationY.ANGLE-output-array" count="81">-239.7803 -242.2331 -244.6859 -247.1388 -249.5917 -252.0445 -254.4973 -256.9501 -259.403 -261.8558 -264.3087 -266.7615 -269.2144 -271.6672 -274.12 -276.5729 -279.0257 -281.4785 -283.9314 -286.3842 -288.8371 -289.2021 -289.567 -289.9321 -290.297 -290.662 -291.027 -291.3919 -291.757 -292.1219 -292.487 -292.8519 -293.2169 -293.5819 -293.9469 -294.3119 -294.6769 -295.0419 -295.4069 -295.7719 -296.1368 -294.807 -293.4772 -292.1474 -290.8176 -289.4877 -288.1579 -286.8281 -285.4983 -284.1685 -282.8386 -281.5088 -280.179 -278.8492 -277.5193 -276.1895 -274.8597 -273.5299 -272.2 -270.8703 -269.5404 -268.0524 -266.5644 -265.0764 -263.5884 -262.1004 -260.6124 -259.1243 -257.6364 -256.1483 -254.6603 -253.1723 -251.6843 -250.1963 -248.7083 -247.2203 -245.7323 -244.2443 -242.7563 -241.2682 -239.7803</float_array>
+        <technique_common>
+          <accessor source="#node-Bone010_rotationY.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone010_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Bone010_rotationY.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone010_rotationY.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone011_rotationZ.ANGLE-input">
+        <float_array id="node-Bone011_rotationZ.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone011_rotationZ.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone011_rotationZ.ANGLE-output">
+        <float_array id="node-Bone011_rotationZ.ANGLE-output-array" count="81">1.481851 -0.8273285 -3.136508 -5.445688 -7.754869 -10.06405 -12.37323 -14.6824 -16.99159 -19.30076 -21.60995 -23.91912 -26.2283 -28.53748 -30.84666 -33.15584 -35.46502 -37.7742 -40.08338 -42.39256 -44.70174 -42.32867 -39.95561 -37.58255 -35.20949 -32.83642 -30.46336 -28.09029 -25.71723 -23.34416 -20.9711 -18.59803 -16.22497 -13.8519 -11.47884 -9.105776 -6.73271 -4.359645 -1.986583 0.3864813 2.759547 2.727604 2.695662 2.663719 2.631777 2.599834 2.567893 2.53595 2.504008 2.472065 2.440123 2.40818 2.376238 2.344296 2.312353 2.280411 2.248469 2.216526 2.184584 2.152641 2.120699 2.088756 2.056814 2.024872 1.992929 1.960987 1.929044 1.897102 1.86516 1.833218 1.801275 1.769333 1.73739 1.705448 1.673506 1.641563 1.609621 1.577678 1.545736 1.513794 1.481851</float_array>
+        <technique_common>
+          <accessor source="#node-Bone011_rotationZ.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone011_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Bone011_rotationZ.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone011_rotationZ.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone012_rotationZ.ANGLE-input">
+        <float_array id="node-Bone012_rotationZ.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone012_rotationZ.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone012_rotationZ.ANGLE-output">
+        <float_array id="node-Bone012_rotationZ.ANGLE-output-array" count="81">99.50148 99.80933 100.1172 100.425 100.7329 101.0408 101.3486 101.6565 101.9643 102.2722 102.58 102.8879 103.1957 103.5036 103.8114 104.1193 104.4272 104.735 105.0429 105.3507 105.6586 104.3836 103.1085 101.8335 100.5585 99.28348 98.00845 96.73342 95.45844 94.1834 92.90838 91.63337 90.35835 89.08333 87.8083 86.53329 85.25827 83.98325 82.70823 81.43321 80.1582 80.64179 81.12536 81.60894 82.09251 82.5761 83.05969 83.54327 84.02686 84.51041 84.99401 85.47761 85.96117 86.44477 86.92833 87.41193 87.89552 88.37909 88.86267 89.34624 89.82983 90.31342 90.797 91.28059 91.76417 92.24774 92.73133 93.21492 93.69849 94.18209 94.66566 95.14925 95.63282 96.11639 96.59998 97.08356 97.56715 98.05074 98.53431 99.01791 99.50148</float_array>
+        <technique_common>
+          <accessor source="#node-Bone012_rotationZ.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone012_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Bone012_rotationZ.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone012_rotationZ.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone013_translation.Y-input">
+        <float_array id="node-Bone013_translation.Y-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone013_translation.Y-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone013_translation.Y-output">
+        <float_array id="node-Bone013_translation.Y-output-array" count="81">-1.332114 -1.297177 -1.262241 -1.227304 -1.192368 -1.157431 -1.122495 -1.087558 -1.052622 -1.017685 -0.9827485 -0.947812 -0.9128754 -0.877939 -0.8430024 -0.8080659 -0.7731293 -0.7381928 -0.7032564 -0.6683198 -0.6333833 -0.5798066 -0.5262299 -0.4726533 -0.4190767 -0.3655 -0.3119233 -0.2583466 -0.20477 -0.1511934 -0.09761667 -0.04404001 0.009536676 0.06311328 0.11669 0.1702666 0.2238433 0.2774199 0.3309965 0.3845733 0.4381499 0.3960803 0.3540106 0.3119411 0.2698714 0.2278018 0.1857322 0.1436625 0.101593 0.05952331 0.01745367 -0.02461597 -0.0666856 -0.1087552 -0.1508248 -0.1928945 -0.2349641 -0.2770337 -0.3191033 -0.3611729 -0.4032426 -0.4496861 -0.4961297 -0.5425733 -0.5890169 -0.6354604 -0.6819039 -0.7283474 -0.7747911 -0.8212346 -0.8676782 -0.9141217 -0.9605653 -1.007009 -1.053452 -1.099896 -1.14634 -1.192783 -1.239227 -1.28567 -1.332114</float_array>
+        <technique_common>
+          <accessor source="#node-Bone013_translation.Y-output-array" count="81" stride="1">
+            <param name="Y" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone013_translation.Y-interpolation">
+        <Name_array id="node-Bone013_translation.Y-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone013_translation.Y-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone013_rotationY.ANGLE-input">
+        <float_array id="node-Bone013_rotationY.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone013_rotationY.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone013_rotationY.ANGLE-output">
+        <float_array id="node-Bone013_rotationY.ANGLE-output-array" count="81">-290.4007 -289.3667 -288.3328 -287.2989 -286.2649 -285.2309 -284.197 -283.1631 -282.1291 -281.0951 -280.0612 -279.0272 -277.9933 -276.9594 -275.9254 -274.8914 -273.8575 -272.8235 -271.7896 -270.7556 -269.7217 -268.4604 -267.1992 -265.938 -264.6768 -263.4155 -262.1543 -260.893 -259.6319 -258.3706 -257.1094 -255.8482 -254.587 -253.3257 -252.0645 -250.8033 -249.542 -248.2808 -247.0196 -245.7584 -244.4971 -246.7176 -248.938 -251.1585 -253.3789 -255.5994 -257.8198 -260.0402 -262.2607 -264.4811 -266.7016 -268.922 -271.1425 -273.3629 -275.5834 -277.8038 -280.0243 -282.2447 -284.4651 -286.6856 -288.9061 -288.9808 -289.0555 -289.1302 -289.205 -289.2797 -289.3544 -289.4291 -289.504 -289.5786 -289.6534 -289.7281 -289.8028 -289.8776 -289.9523 -290.027 -290.1018 -290.1765 -290.2512 -290.326 -290.4007</float_array>
+        <technique_common>
+          <accessor source="#node-Bone013_rotationY.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone013_rotationY.ANGLE-interpolation">
+        <Name_array id="node-Bone013_rotationY.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone013_rotationY.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone014_rotationZ.ANGLE-input">
+        <float_array id="node-Bone014_rotationZ.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone014_rotationZ.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone014_rotationZ.ANGLE-output">
+        <float_array id="node-Bone014_rotationZ.ANGLE-output-array" count="81">1.481851 0.6642942 -0.153263 -0.97082 -1.788377 -2.605934 -3.423491 -4.241048 -5.058606 -5.876163 -6.693719 -7.511277 -8.328835 -9.14639 -9.963947 -10.7815 -11.59906 -12.41662 -13.23418 -14.05173 -14.86929 -15.68684 -16.5044 -17.32196 -18.13952 -18.95708 -19.77464 -20.59219 -21.40974 -22.2273 -23.04486 -23.86242 -24.67998 -25.49753 -26.31509 -27.13264 -27.9502 -28.76776 -29.58531 -30.40287 -31.22043 -32.03799 -32.85555 -33.6731 -34.49066 -35.30822 -36.12577 -36.94333 -37.76089 -38.57844 -39.396 -40.21355 -41.03112 -41.84867 -42.66623 -43.48379 -44.30134 -45.1189 -45.93645 -46.75402 -47.57157 -45.1189 -42.66623 -40.21356 -37.76089 -35.30821 -32.85555 -30.40287 -27.95021 -25.49753 -23.04486 -20.59219 -18.13952 -15.68685 -13.23418 -10.7815 -8.328834 -5.876162 -3.423492 -0.9708206 1.481851</float_array>
+        <technique_common>
+          <accessor source="#node-Bone014_rotationZ.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone014_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Bone014_rotationZ.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone014_rotationZ.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone015_rotationZ.ANGLE-input">
+        <float_array id="node-Bone015_rotationZ.ANGLE-input-array" count="81">0 0.03333334 0.06666667 0.1 0.1333333 0.1666667 0.2 0.2333333 0.2666667 0.3 0.3333333 0.3666667 0.4 0.4333333 0.4666667 0.5 0.5333334 0.5666667 0.6 0.6333333 0.6666667 0.7 0.7333333 0.7666667 0.8 0.8333333 0.8666667 0.9 0.9333333 0.9666666 1 1.033333 1.066667 1.1 1.133333 1.166667 1.2 1.233333 1.266667 1.3 1.333333 1.366667 1.4 1.433333 1.466667 1.5 1.533333 1.566667 1.6 1.633333 1.666667 1.7 1.733333 1.766667 1.8 1.833333 1.866667 1.9 1.933333 1.966667 2 2.033333 2.066667 2.1 2.133333 2.166667 2.2 2.233333 2.266667 2.3 2.333333 2.366667 2.4 2.433333 2.466667 2.5 2.533333 2.566667 2.6 2.633333 2.666667</float_array>
+        <technique_common>
+          <accessor source="#node-Bone015_rotationZ.ANGLE-input-array" count="81" stride="1">
+            <param name="TIME" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone015_rotationZ.ANGLE-output">
+        <float_array id="node-Bone015_rotationZ.ANGLE-output-array" count="81">84.41346 84.62851 84.84356 85.05862 85.27367 85.48872 85.70377 85.91882 86.13388 86.34893 86.56397 86.77902 86.99408 87.20912 87.42418 87.63923 87.85428 88.06933 88.28439 88.49944 88.71448 89.03034 89.34621 89.66208 89.97795 90.29379 90.60966 90.92551 91.2414 91.55726 91.87312 92.18899 92.50485 92.82072 93.13657 93.45245 93.76832 94.08417 94.40004 94.71591 95.03177 95.31101 95.59025 95.86952 96.14875 96.42799 96.70724 96.98647 97.26574 97.54498 97.82422 98.10346 98.38271 98.66196 98.9412 99.22044 99.49969 99.77892 100.0582 100.3374 100.6167 99.8065 98.99634 98.18619 97.37603 96.56586 95.75571 94.94553 94.13539 93.32523 92.51507 91.7049 90.89474 90.08458 89.27442 88.46426 87.65411 86.84394 86.03378 85.22363 84.41346</float_array>
+        <technique_common>
+          <accessor source="#node-Bone015_rotationZ.ANGLE-output-array" count="81" stride="1">
+            <param name="ANGLE" type="float"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <source id="node-Bone015_rotationZ.ANGLE-interpolation">
+        <Name_array id="node-Bone015_rotationZ.ANGLE-interpolation-array" count="81">LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR LINEAR</Name_array>
+        <technique_common>
+          <accessor source="#node-Bone015_rotationZ.ANGLE-interpolation-array" count="81" stride="1">
+            <param name="INTERPOLATION" type="name"/>
+          </accessor>
+        </technique_common>
+      </source>
+      <sampler id="node-Bone001_rotationX.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone001_rotationX.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone001_rotationX.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone001_rotationX.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone005_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone005_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone005_rotationZ.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone005_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone005_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone005_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone005_rotationY.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone005_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone005_rotationX.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone005_rotationX.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone005_rotationX.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone005_rotationX.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone007_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone007_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone007_rotationY.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone007_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone008_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone008_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone008_rotationZ.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone008_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone008_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone008_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone008_rotationY.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone008_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone008_rotationX.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone008_rotationX.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone008_rotationX.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone008_rotationX.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone010_translation.Y-sampler">
+        <input semantic="INPUT" source="#node-Bone010_translation.Y-input"/>
+        <input semantic="OUTPUT" source="#node-Bone010_translation.Y-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone010_translation.Y-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone010_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone010_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone010_rotationY.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone010_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone011_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone011_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone011_rotationZ.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone011_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone012_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone012_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone012_rotationZ.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone012_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone013_translation.Y-sampler">
+        <input semantic="INPUT" source="#node-Bone013_translation.Y-input"/>
+        <input semantic="OUTPUT" source="#node-Bone013_translation.Y-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone013_translation.Y-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone013_rotationY.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone013_rotationY.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone013_rotationY.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone013_rotationY.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone014_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone014_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone014_rotationZ.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone014_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <sampler id="node-Bone015_rotationZ.ANGLE-sampler">
+        <input semantic="INPUT" source="#node-Bone015_rotationZ.ANGLE-input"/>
+        <input semantic="OUTPUT" source="#node-Bone015_rotationZ.ANGLE-output"/>
+        <input semantic="INTERPOLATION" source="#node-Bone015_rotationZ.ANGLE-interpolation"/>
+      </sampler>
+      <channel source="#node-Bone001_rotationX.ANGLE-sampler" target="node-Bone001/rotationX.ANGLE"/>
+      <channel source="#node-Bone005_rotationZ.ANGLE-sampler" target="node-Bone005/rotationZ.ANGLE"/>
+      <channel source="#node-Bone005_rotationY.ANGLE-sampler" target="node-Bone005/rotationY.ANGLE"/>
+      <channel source="#node-Bone005_rotationX.ANGLE-sampler" target="node-Bone005/rotationX.ANGLE"/>
+      <channel source="#node-Bone007_rotationY.ANGLE-sampler" target="node-Bone007/rotationY.ANGLE"/>
+      <channel source="#node-Bone008_rotationZ.ANGLE-sampler" target="node-Bone008/rotationZ.ANGLE"/>
+      <channel source="#node-Bone008_rotationY.ANGLE-sampler" target="node-Bone008/rotationY.ANGLE"/>
+      <channel source="#node-Bone008_rotationX.ANGLE-sampler" target="node-Bone008/rotationX.ANGLE"/>
+      <channel source="#node-Bone010_translation.Y-sampler" target="node-Bone010/translation.Y"/>
+      <channel source="#node-Bone010_rotationY.ANGLE-sampler" target="node-Bone010/rotationY.ANGLE"/>
+      <channel source="#node-Bone011_rotationZ.ANGLE-sampler" target="node-Bone011/rotationZ.ANGLE"/>
+      <channel source="#node-Bone012_rotationZ.ANGLE-sampler" target="node-Bone012/rotationZ.ANGLE"/>
+      <channel source="#node-Bone013_translation.Y-sampler" target="node-Bone013/translation.Y"/>
+      <channel source="#node-Bone013_rotationY.ANGLE-sampler" target="node-Bone013/rotationY.ANGLE"/>
+      <channel source="#node-Bone014_rotationZ.ANGLE-sampler" target="node-Bone014/rotationZ.ANGLE"/>
+      <channel source="#node-Bone015_rotationZ.ANGLE-sampler" target="node-Bone015/rotationZ.ANGLE"/>
+    </animation>
+  </library_animations>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

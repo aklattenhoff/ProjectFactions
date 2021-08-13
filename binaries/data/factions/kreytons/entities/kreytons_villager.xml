@@ -1,0 +1,116 @@
+<Entity type="unit" name="kreytons_villager">
+	<Name>Villager</Name>
+	
+	<Class>Unit</Class>
+	<Class>Human</Class>
+	<Class>Civilian</Class>
+	<Class>Gatherer</Class>
+	<Class>Builder</Class>
+	
+	<Flag>ObscuredByEntities</Flag>
+	
+	<Cost type="food">100</Cost>
+	
+	<PopulationCount>1</PopulationCount>
+	<BuildLimit>100</BuildLimit>
+	
+	<MovementSpeed>2.500</MovementSpeed>
+	<MovementTurnRate>10.000</MovementTurnRate>
+	<MovementCollisionRadius>0.200</MovementCollisionRadius>
+	<MovementAwareRadius>0.300</MovementAwareRadius>
+	<MovementTerrain>Land</MovementTerrain>
+	
+	<Hitpoints>100.000</Hitpoints>
+	<Trainpoints>10.000</Trainpoints>
+	<LOS>8.000</LOS>
+	
+	<ModelFile>models/villager.xml</ModelFile>
+	<SmallIcon>art/villager_small_icon.png</SmallIcon>
+	<MediumIcon>art/villager_small_icon.png</MediumIcon>
+	<LargeIcon>textures/ui/unit_icon.png</LargeIcon>
+	
+	<Action row="0" col="0">kreytons_action_buildHouse</Action>
+	<Action row="0" col="1">kreytons_action_buildManor</Action>
+	<Action row="0" col="2">kreytons_action_buildMill</Action>
+	<Action row="0" col="3">kreytons_action_buildBarracks</Action>
+	<Action row="0" col="4">kreytons_action_buildMarket</Action>
+	<Action row="0" col="5">kreytons_action_buildWall</Action>
+	<Action row="1" col="0">kreytons_action_buildArmory</Action>
+	<Action row="1" col="1">kreytons_action_buildLibrary</Action>
+	<Action row="1" col="2">kreytons_action_buildArcaneUniversity</Action>
+	<Action row="1" col="3">kreytons_action_buildArcaneSchool</Action>
+	
+	<HackArmor>0.25</HackArmor>
+	<PierceArmor>0.25</PierceArmor>
+	<MagicArmor>0.25</MagicArmor>
+	
+	<Attack type="range">
+		<DamageType>Pierce</DamageType>
+		<Damage>6.000</Damage>
+		<MinRange>2.000</MinRange>
+		<MaxRange>20.000</MaxRange>
+		<AttackSpeed>1.000</AttackSpeed>
+		<Projectile>
+			<Name>kreytons_projectile_archer_arrow</Name>
+			<Frame>0.8</Frame>
+			<Point3D x="0.000" y="0.500" z="0.200" />
+			<Velocity>10.000</Velocity>
+		</Projectile>
+	</Attack>
+	<Attack type="melee">
+		<DamageType>Hack</DamageType>
+		<Damage>8.000</Damage>
+		<MinRange>0.000</MinRange>
+		<MaxRange>0.500</MaxRange>
+		<AttackSpeed>1.000</AttackSpeed>
+	</Attack>
+	<Attack type="range">
+		<DamageType>Pierce</DamageType>
+		<Damage>6.000</Damage>
+		<MinRange>5.000</MinRange>
+		<MaxRange>20.000</MaxRange>
+		<AttackSpeed>1.300</AttackSpeed>
+	</Attack>
+	
+	<GatherRate>
+		<Class type="Food">1.000</Class>
+		<Class type="Wood">1.000</Class>
+		<Class type="Stone">1.000</Class>
+		<Class type="Alloy">1.000</Class>
+	</GatherRate>
+	<GatherRateOverwrite>
+		<Class type="Huntable">1.200</Class>
+		<Class type="Herdable">1.800</Class>
+		<Class type="Farm">0.800</Class>
+		<Class type="Tree">1.000</Class>
+		<Class type="Quarry">1.000</Class>
+		<Class type="Mine">1.000</Class>
+	</GatherRateOverwrite>
+	
+	<BuildRate>
+		<Class type="Building">1.000</Class>
+	</BuildRate>
+	<BuildRateOverwrite>
+		<Class type="House">1.5000</Class>
+	</BuildRateOverwrite>
+	
+	<HealthIndicatorPosition>
+		<Point3D x="0.000" y="1.500" z="0.000" />
+	</HealthIndicatorPosition>
+	
+	<BoundingBox2DSet>
+		<BoundingBox2D>
+			<Point2D x="-0.400" y="0.000" />
+			<Point2D x="0.400" y="0.000" />
+			<Size2D width="0.500" />
+		</BoundingBox2D>
+	</BoundingBox2DSet>
+	
+	<BoundingBox3DSet>
+		<BoundingBox3D>
+			<Point3D x="-0.200" y="0.500" z="0.000" />
+			<Point3D x="0.200" y="0.500" z="0.000" />
+			<Size3D width="0.250" height="1.000" />
+		</BoundingBox3D>
+	</BoundingBox3DSet>
+</Entity>

@@ -1,0 +1,26 @@
+<Object type="object" name="inferno_tree">
+	<Name>Tree</Name>
+	<Cost type="food">0</Cost>
+	<PopulationCount>0</PopulationCount>
+	<BuildLimit>10</BuildLimit>
+	<Defense>
+		<HackArmor>0.2</HackArmor>
+		<PierceArmor>0.9</PierceArmor>
+		<MagicArmor>0.7</MagicArmor>
+	</Defense>
+	<HealthIndicatorPosition>
+		<Point3D x="0.000" y="2.500" z="0.000" />
+	</HealthIndicatorPosition>
+	<BoundingBox3DSet>
+		<BoundingBox3D>
+			<Point3D x="-0.150" y="1.000" z="0.000" />
+			<Point3D x="0.150" y="1.000" z="0.000" />
+			<BB3DSize width="0.300" height="2.000" />
+		</BoundingBox3D>
+	</BoundingBox3DSet>
+	<ModelFile>models/tree.xml</ModelFile>
+	<Icon>textures/ui/icon.png</Icon>
+	<SmallIcon>art/tree_small_icon.png</SmallIcon>
+	
+	<Health>1000</Health>
+</Object>

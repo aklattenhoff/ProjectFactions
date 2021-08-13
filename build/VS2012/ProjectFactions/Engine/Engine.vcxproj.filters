@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{1bbe19bf-9387-4643-8a7e-99ecb1d59939}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Math">
+      <UniqueIdentifier>{9a72bc22-8cdf-4569-a8f9-4ae9e489f466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Input">
+      <UniqueIdentifier>{0487e490-caca-45ca-93ba-ba231cc2c300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\ActionManager">
+      <UniqueIdentifier>{f38fa6ab-df36-4e91-a88f-d5499449eaf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Entity">
+      <UniqueIdentifier>{10b0e353-02e3-4132-b308-17d810935458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Player">
+      <UniqueIdentifier>{ee53f0a4-c4c4-4315-8c9c-0150c87b1de0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\LogicModules">
+      <UniqueIdentifier>{9f3296b9-2142-47cc-acd0-4f934b7e54d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntityManager">
+      <UniqueIdentifier>{fbb34ced-83f5-4162-921c-6c3b90014113}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Faction">
+      <UniqueIdentifier>{bbcf727f-0f40-4354-99be-6bf978c64d9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntityXML">
+      <UniqueIdentifier>{ef6d2855-70ed-4367-9b86-2abc4d717962}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainMenu">
+      <UniqueIdentifier>{d78bccaa-41be-4068-b58f-240ee26bc58c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainMenu\UIElements">
+      <UniqueIdentifier>{3724f217-9e21-41a0-a958-bc19656baaf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Bloom">
+      <UniqueIdentifier>{8caec395-be31-4682-8121-a2ab29f4da4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\ParticleSystem">
+      <UniqueIdentifier>{647c7f5c-94a3-4fcd-b5ba-e2d2a79b0e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntityStatsSystem">
+      <UniqueIdentifier>{fabb62d7-3c95-44ba-8e17-d38989102a7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\ShadowMap">
+      <UniqueIdentifier>{c182f221-5412-4957-8129-dc4b2dea12ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SquadronManager">
+      <UniqueIdentifier>{c2c55195-1824-444e-9615-729b50afc7e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\TempEntityCreator">
+      <UniqueIdentifier>{e29f575b-ba68-4571-ac88-f2bb79715c4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\ProjectileSystem">
+      <UniqueIdentifier>{0b5b65d8-f6ee-4f2c-8615-8f9192f2dff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\LOS">
+      <UniqueIdentifier>{2e70026a-fd23-470c-82d4-3692756c45e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\LOSMap">
+      <UniqueIdentifier>{14cca26f-f4a9-4694-be4a-f074c9e1609c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\PathFinder">
+      <UniqueIdentifier>{08568471-1021-47a4-98e4-c93079b519b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntityMovement">
+      <UniqueIdentifier>{0df5ff39-0b8a-4166-afc8-b1c3fca95622}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\World.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Math\BoundingBox.cpp">
+      <Filter>Game\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Math\BoundingBox2DSet.cpp">
+      <Filter>Game\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Math\BoundingBox3DSet.cpp">
+      <Filter>Game\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Math\Line2D.cpp">
+      <Filter>Game\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Math\Ray.cpp">
+      <Filter>Game\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Math\Transformation.cpp">
+      <Filter>Game\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Input\Input.cpp">
+      <Filter>Game\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\Action.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionArray.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionListParser.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionManager.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionManagerInterface.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionParser.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\Entity.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Player\Player.cpp">
+      <Filter>Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityList.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityEventQueue.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityEvent.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Math\Path.cpp">
+      <Filter>Game\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityBase.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityBaseList.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityStats.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityManager.cpp">
+      <Filter>Game\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityRenderer.cpp">
+      <Filter>Game\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Faction\FactionBase.cpp">
+      <Filter>Game\Faction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Faction\FactionBaseList.cpp">
+      <Filter>Game\Faction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityBaseCreator.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Math\EuclideanVector2D.cpp">
+      <Filter>Game\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Player\PlayerList.cpp">
+      <Filter>Game\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMEntityEventHandler.cpp">
+      <Filter>Game\LogicModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntitySelectionList.cpp">
+      <Filter>Game\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntitySelectionHandler.cpp">
+      <Filter>Game\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityMouseOverList.cpp">
+      <Filter>Game\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityMap.cpp">
+      <Filter>Game\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMMovement.cpp">
+      <Filter>Game\LogicModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\DebugEntityRenderer.cpp">
+      <Filter>Game\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMGatherResource.cpp">
+      <Filter>Game\LogicModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMAttack.cpp">
+      <Filter>Game\LogicModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMBuild.cpp">
+      <Filter>Game\LogicModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityXML\EntityXMLTags.cpp">
+      <Filter>Game\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityXML\DebugEntityXMLParser.cpp">
+      <Filter>Game\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityXML\EntityXML.cpp">
+      <Filter>Game\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\MainMenu\MainMenu.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\MainMenu\MMLANLobby.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\MainMenu\Menu.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\MainMenu\MMLANHost.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\MainMenu\UIElements\MMPage.cpp">
+      <Filter>MainMenu\UIElements</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\MainMenu\UIElements\MMView.cpp">
+      <Filter>MainMenu\UIElements</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\MainMenu\UIElements\MMButton.cpp">
+      <Filter>MainMenu\UIElements</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\MainMenu\MMHomePage.cpp">
+      <Filter>MainMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Bloom\Bloom.cpp">
+      <Filter>Game\Bloom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ParticleSystem\ParticleSystem.cpp">
+      <Filter>Game\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ParticleSystem\Particle.cpp">
+      <Filter>Game\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityStatsSystem\EntityStatsSystem.cpp">
+      <Filter>Game\EntityStatsSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityStatsSystem\EntityStatsBase.cpp">
+      <Filter>Game\EntityStatsSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ShadowMap\ShadowMap.cpp">
+      <Filter>Game\ShadowMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\SquadronManager\Squadron.cpp">
+      <Filter>Game\SquadronManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\SquadronManager\SquadronManager.cpp">
+      <Filter>Game\SquadronManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\SquadronManager\Group.cpp">
+      <Filter>Game\SquadronManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionSystem.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityProcessEvent.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityProcessEventQueue.cpp">
+      <Filter>Game\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMEntityProcessEventHandler.cpp">
+      <Filter>Game\LogicModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMTrain.cpp">
+      <Filter>Game\LogicModules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseCreator.cpp">
+      <Filter>Game\TempEntityCreator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseListCreator.cpp">
+      <Filter>Game\TempEntityCreator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityXML\OldEntityXMLParser.cpp">
+      <Filter>Game\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityModelXMLCreator.cpp">
+      <Filter>Game\TempEntityCreator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityAnimationHandler.cpp">
+      <Filter>Game\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionList.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionListCreator.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ProjectileSystem\ProjectileSystem.cpp">
+      <Filter>Game\ProjectileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ProjectileSystem\Projectile.cpp">
+      <Filter>Game\ProjectileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ProjectileSystem\ProjectileBase.cpp">
+      <Filter>Game\ProjectileSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionProgressQueue.cpp">
+      <Filter>Game\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LOS\LOS.cpp">
+      <Filter>Game\LOS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\LOSMap\LOSMap.cpp">
+      <Filter>Game\LOSMap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\PathFinder\PathFinder.cpp">
+      <Filter>Game\PathFinder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp">
+      <Filter>Game\EntityMovement</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\World.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Math\BoundingBox.h">
+      <Filter>Game\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Math\BoundingBox2DSet.h">
+      <Filter>Game\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Math\BoundingBox3DSet.h">
+      <Filter>Game\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Math\Line2D.h">
+      <Filter>Game\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Math\Ray.h">
+      <Filter>Game\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Math\Transformation.h">
+      <Filter>Game\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Input\Input.h">
+      <Filter>Game\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\Action.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionArray.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionListParser.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionManager.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionManagerInterface.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionParser.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\Entity.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Player\Player.h">
+      <Filter>Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityList.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityEventQueue.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityEvent.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Math\Path.h">
+      <Filter>Game\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityBase.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityBaseList.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityStats.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityManager.h">
+      <Filter>Game\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityRenderer.h">
+      <Filter>Game\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Faction\FactionBase.h">
+      <Filter>Game\Faction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Faction\FactionBaseList.h">
+      <Filter>Game\Faction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityBaseCreator.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Math\EuclideanVector2D.h">
+      <Filter>Game\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Player\PlayerList.h">
+      <Filter>Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMEntityEventHandler.h">
+      <Filter>Game\LogicModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntitySelectionList.h">
+      <Filter>Game\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntitySelectionHandler.h">
+      <Filter>Game\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityMouseOverList.h">
+      <Filter>Game\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityMap.h">
+      <Filter>Game\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMMovement.h">
+      <Filter>Game\LogicModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\DebugEntityRenderer.h">
+      <Filter>Game\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMGatherResource.h">
+      <Filter>Game\LogicModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMAttack.h">
+      <Filter>Game\LogicModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMBuild.h">
+      <Filter>Game\LogicModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityXML\EntityXMLTags.h">
+      <Filter>Game\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityXML\DebugEntityXMLParser.h">
+      <Filter>Game\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityXML\EntityXML.h">
+      <Filter>Game\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\MainMenu\MainMenu.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\MainMenu\MMLANLobby.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\MainMenu\Menu.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\MainMenu\MMLANHost.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\MainMenu\UIElements\MMPage.h">
+      <Filter>MainMenu\UIElements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\MainMenu\UIElements\MMView.h">
+      <Filter>MainMenu\UIElements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\MainMenu\UIElements\MMButton.h">
+      <Filter>MainMenu\UIElements</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\MainMenu\MMHomePage.h">
+      <Filter>MainMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Bloom\Bloom.h">
+      <Filter>Game\Bloom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ParticleSystem\ParticleSystem.h">
+      <Filter>Game\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ParticleSystem\Particle.h">
+      <Filter>Game\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityStatsSystem\EntityStatsSystem.h">
+      <Filter>Game\EntityStatsSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityStatsSystem\EntityStatsBase.h">
+      <Filter>Game\EntityStatsSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ShadowMap\ShadowMap.h">
+      <Filter>Game\ShadowMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\SquadronManager\Squadron.h">
+      <Filter>Game\SquadronManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\SquadronManager\SquadronManager.h">
+      <Filter>Game\SquadronManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\SquadronManager\Group.h">
+      <Filter>Game\SquadronManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionSystem.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityProcessEvent.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityProcessEventQueue.h">
+      <Filter>Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMEntityProcessEventHandler.h">
+      <Filter>Game\LogicModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMTrain.h">
+      <Filter>Game\LogicModules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseCreator.h">
+      <Filter>Game\TempEntityCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseListCreator.h">
+      <Filter>Game\TempEntityCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityXML\OldEntityXMLParser.h">
+      <Filter>Game\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityModelXMLCreator.h">
+      <Filter>Game\TempEntityCreator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityAnimationHandler.h">
+      <Filter>Game\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionList.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionListCreator.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ProjectileSystem\ProjectileSystem.h">
+      <Filter>Game\ProjectileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ProjectileSystem\Projectile.h">
+      <Filter>Game\ProjectileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ProjectileSystem\ProjectileBase.h">
+      <Filter>Game\ProjectileSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionProgressQueue.h">
+      <Filter>Game\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LOS\LOS.h">
+      <Filter>Game\LOS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\LOSMap\LOSMap.h">
+      <Filter>Game\LOSMap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\PathFinder\PathFinder.h">
+      <Filter>Game\PathFinder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntityMovement\EntityMovement.h">
+      <Filter>Game\EntityMovement</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,57 @@
+<Object type="unit" name="inferno_villager">
+	<Name>Villager</Name>
+	<Class>gatherer</Class>
+	<Class>builder</Class>
+	<Class>goblin</Class>
+	<Cost type="food">100</Cost>
+	<PopulationCount>1</PopulationCount>
+	<MovementSpeed>4.000</MovementSpeed>
+	<BuildLimit>100</BuildLimit>
+	<Defense>
+		<HackArmor>0.25</HackArmor>
+		<PierceArmor>0.25</PierceArmor>
+		<MagicArmor>0.25</MagicArmor>
+	</Defense>
+	<Attack type="melee">
+		<DamageType>Hack</DamageType>
+		<Damage>8.000</Damage>
+		<AttackSpeed>1.000</AttackSpeed>
+	</Attack>
+	<Attack type="range">
+		<DamageType>Pierce</DamageType>
+		<Damage>6.000</Damage>
+		<MaxRange>20.000</MaxRange>
+		<MinRange>5.000</MinRange>
+		<AttackSpeed>1.300</AttackSpeed>
+	</Attack>
+	<GatherRate>
+		<Food>1.000</Food>
+		<Wood>1.000</Wood>
+		<Stone>1.000</Stone>
+		<Alloy>1.000</Alloy>
+	</GatherRate>
+	<Actions>
+		<Action index="0">
+			<Name>inferno_buildHouse</Name>
+		</Action>
+	</Actions>
+	<HealthIndicatorPosition>
+		<Point3D x="0.000" y="1.500" z="0.000" />
+	</HealthIndicatorPosition>
+	<BoundingBox3DSet>
+		<BoundingBox3D>
+			<Point3D x="-0.400" y="1.000" z="0.000" />
+			<Point3D x="0.400" y="1.000" z="0.000" />
+			<BB3DSize width="0.500" height="2.000" />
+		</BoundingBox3D>
+	</BoundingBox3DSet>
+	<ModelFile>models/villager.xml</ModelFile>
+	<Icon>textures/ui/unit_icon.png</Icon>
+	<SmallIcon>art/villager_small_icon.png</SmallIcon>
+	
+	<Health>100</Health>
+	
+	<TerrainType type="land">1</TerrainType>
+	<TerrainType type="water">0</TerrainType>
+	<TerrainType type="air">0</TerrainType>
+</Object>

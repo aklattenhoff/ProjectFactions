@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BB90251A-3954-4D22-A334-4A45CB75122C}</ProjectGuid>
+    <RootNamespace>Graphics</RootNamespace>
+    <ProjectName>Graphics_old</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../Release/</OutDir>
+    <TargetName>Graphics_old</TargetName>
+    <IncludePath>../../../../libraries/assimp/include;../../../../libraries/glm;../../../../libraries/SDL/include;../../../../source;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Camera.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Model\Animation.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Model\Model.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Model\Skeleton.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\MVPMatrix.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\OrthoDepth.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Shader.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Utility\Quad.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Utility\Texture.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Graphics\Utility\TextureUtility.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectAnimation.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectModel.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectModelXMLParser.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectSkeleton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Camera.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Model\Animation.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Model\Model.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Model\Skeleton.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\MVPMatrix.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\OrthoDepth.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Shader.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Utility\Quad.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Utility\Texture.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Graphics\Utility\TextureUtility.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectAnimation.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectModel.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectModelXMLParser.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectSkeleton.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

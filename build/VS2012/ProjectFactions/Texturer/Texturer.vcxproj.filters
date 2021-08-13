@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Texturer">
+      <UniqueIdentifier>{a80a8f14-4b9a-4f32-9aef-48eab5a7c69c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Texturer\Texturer.cpp">
+      <Filter>Texturer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Texturer\Texturer.h">
+      <Filter>Texturer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

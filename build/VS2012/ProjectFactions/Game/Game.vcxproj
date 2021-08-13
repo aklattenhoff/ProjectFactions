@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D1307F61-BF2C-4284-89DB-06BE7A52516B}</ProjectGuid>
+    <RootNamespace>Game</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../Release/</OutDir>
+    <TargetName>Game</TargetName>
+    <IncludePath>../../../../libraries/asio_1_10_4/include;../../../../libraries/assimp/include;../../../../libraries/lib3ds/include;../../../../libraries/FreeType2/include;../../../../source;../../../../libraries/glm;../../../../libraries/SDL/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\DebugEntityRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\DebugEntityXMLParser.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\Entity.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityBase.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityBaseList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityEvent.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityEventQueue.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityManager.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityMap.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityMouseOverList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityProcessEvent.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityProcessEventQueue.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntitySelectionHandler.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntitySelectionList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityStats.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntitySystem.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityXML.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityXMLParser.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityXMLTag.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\DebugEntityRenderer.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\DebugEntityXMLParser.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\Entity.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityBase.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityBaseList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityEvent.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityEventQueue.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityManager.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityMap.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityMouseOverList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityProcessEvent.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityProcessEventQueue.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityRenderer.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntitySelectionHandler.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntitySelectionList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityStats.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntitySystem.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityXML.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityXMLParser.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityXMLTag.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

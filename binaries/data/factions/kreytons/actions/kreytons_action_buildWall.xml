@@ -1,0 +1,9 @@
+<Action type="build_wall" name="kreytons_action_buildWall">
+	<Icon>textures/ui/build_wall_icon.png</Icon>
+	<Build_Wall>
+		<Wall_Connector>kreytons_wall_connector</Wall_Connector>
+		<Wall_2x1>kreytons_wall_2x1</Wall_2x1>
+		<Wall_4x1>kreytons_wall_4x1</Wall_4x1>
+		<Wall_6x1>kreytons_wall_6x1</Wall_6x1>
+	</Build_Wall>
+</Action>

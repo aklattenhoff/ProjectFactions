@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C54D4741-4057-47B6-9273-4BD0AE6F18E9}</ProjectGuid>
+    <RootNamespace>Phage</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../Release/</OutDir>
+    <TargetName>Phage</TargetName>
+    <TargetExt>.lib</TargetExt>
+    <IncludePath>../../../../libraries/soloud/include;../../../../libraries/assimp/include;../../../../libraries/lib3ds/include;../../../../libraries/FreeType2/include;../../../../source;../../../../libraries/glm;../../../../libraries/SDL2/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Phage\Backend\Animation.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Backend\Model.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Backend\Skeleton.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Camera.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_FrameBuffer.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_BoundingBox.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Line.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Math.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Entity.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Matrix.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Mixer.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Model.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_MVP.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Prop.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_PropDesc.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Quad.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Scene.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Shader.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Sound.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Terrain.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainDecal.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainMesh.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainMeshPatch.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainTexture.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_TerrainTileDebug.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_UIEntity.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_UILineRect.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_UIText.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_UITextureQuad.cpp" />
+    <ClCompile Include="..\..\..\..\source\Phage\Phage_Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Phage\Backend\Animation.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Backend\Model.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Backend\Skeleton.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Camera.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Const.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_FrameBuffer.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_BoundingBox.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Line.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Math.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Entity.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Matrix.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Mixer.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Model.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_MVP.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Prop.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_PropDesc.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Quad.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Scene.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Shader.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Sound.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Terrain.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainDecal.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainMesh.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainMeshPatch.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainTexture.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_TerrainTileDebug.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_UIEntity.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_UILineRect.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_UIText.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_UITextureQuad.h" />
+    <ClInclude Include="..\..\..\..\source\Phage\Phage_Window.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

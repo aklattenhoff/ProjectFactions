@@ -1,0 +1,70 @@
+<Entity type="building" name="kreytons_faction_center">
+	<Name>Faction Center</Name>
+	
+	<Class>Building</Class>
+	<Class>Trainer</Class>
+	
+	<Cost type="wood">1000</Cost>
+	
+	<BuildLimit>1</BuildLimit>
+	
+	<Hitpoints>100000.000</Hitpoints>
+	<Buildpoints>25.000</Buildpoints>
+	<LOS>25.000</LOS>
+	
+	<ModelFile>models/factionCenter.xml</ModelFile>
+	<SmallIcon>art/factionCenter_small_icon.png</SmallIcon>
+	<MediumIcon>art/factionCenter_small_icon.png</MediumIcon>
+	<LargeIcon>textures/ui/unit_icon.png</LargeIcon>
+	
+	<Action row="0" col="0">kreytons_action_trainVillager</Action>
+	
+	<HackArmor>0.900</HackArmor>
+	<PierceArmor>0.900</PierceArmor>
+	<MagicArmor>0.900</MagicArmor>
+	
+	<Attack type="range">
+		<DamageType>Pierce</DamageType>
+		<Damage>25.000</Damage>
+		<MinRange>1.000</MinRange>
+		<MaxRange>25.000</MaxRange>
+		<AttackSpeed>1.000</AttackSpeed>
+	</Attack>
+	
+	
+	<TrainRate>
+		<Class type="Unit">1.000</Class>
+	</TrainRate>
+	<TrainRateOverwrite>
+		<Class type="Villager">1.0000</Class>
+	</TrainRateOverwrite>
+	
+	<HealthIndicatorPosition>
+		<Point3D x="0.000" y="1.500" z="0.000" />
+	</HealthIndicatorPosition>
+	
+	<BoundingBox2DSet>
+		<BoundingBox2D>
+			<Point2D x="-0.400" y="0.000" />
+			<Point2D x="0.400" y="0.000" />
+			<Size2D width="0.500" />
+		</BoundingBox2D>
+	</BoundingBox2DSet>
+	
+	<BoundingBox3DSet>
+		<BoundingBox3D>
+			<Point3D x="-3.900" y="1.600" z="-2.900" />
+			<Point3D x="3.900" y="1.600" z="-2.900" />
+			<Size3D width="13.800" height="3.200" />
+		</BoundingBox3D>
+		<BoundingBox3D>
+			<Point3D x="-2.800" y="4.800" z="0.000" />
+			<Point3D x="2.800" y="4.800" z="0.000" />
+			<Size3D width="8.000" height="3.200" />
+		</BoundingBox3D><BoundingBox3D>
+			<Point3D x="-2.800" y="8.000" z="1.200" />
+			<Point3D x="2.800" y="8.000" z="1.200" />
+			<Size3D width="5.600" height="3.200" />
+		</BoundingBox3D>
+	</BoundingBox3DSet>
+</Entity>

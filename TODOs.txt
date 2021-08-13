@@ -1,0 +1,17 @@
+Major TODO list
+
+Parser:
+Separate parsers (i.e. Action, Entity, Model, Texture)
+	Have each different parsed class refer to each other by id string (e.g. Action --BuildHouseIcon--> Texture)
+
+LogicModules:
+Train LM
+Research LM
+Build LM
+
+Action Manager:
+Update for any new actions
+
+Terrain:
+Texture splatting based on texture loaded onto GPU
+Terrain replacement

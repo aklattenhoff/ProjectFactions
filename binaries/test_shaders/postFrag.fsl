@@ -1,0 +1,19 @@
+#version 330
+
+in vec3 outPos;
+in vec2 outTextCoord;
+
+uniform sampler2D sampler;
+uniform sampler2D samplerDiffuse;
+
+out vec4 outputColor;
+
+void main()
+{
+	outputColor = vec4(1.0);
+	
+	if (outPos.x < 200)
+		outputColor.xyz *= texture(samplerDiffuse, outTextCoord).xyz;
+	else
+		outputColor.xyz *= texture(sampler, outTextCoord).xyz;
+}

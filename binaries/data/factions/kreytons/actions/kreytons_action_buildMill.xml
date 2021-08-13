@@ -1,0 +1,4 @@
+<Action type="build" name="kreytons_action_buildMill">
+	<Icon>textures/ui/build_mill_icon.png</Icon>
+	<Build>kreytons_mill</Build>
+</Action>

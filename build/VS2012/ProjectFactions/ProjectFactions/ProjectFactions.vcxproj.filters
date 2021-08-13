@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Factions">
+      <UniqueIdentifier>{bc859dc9-b0cd-4e8e-87ae-ca99b08e935f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{24036716-c71c-42a6-a8a7-a9b07e290d83}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Factions\Factions.h">
+      <Filter>Factions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\loadGLE.h" />
+    <ClInclude Include="..\..\..\..\source\Debug\Debug.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Debug\DebugOutput.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Debug\DebugFlags.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Factions\Factions.cpp">
+      <Filter>Factions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\loadGLE.cpp" />
+    <ClCompile Include="..\..\..\..\source\main.cpp" />
+    <ClCompile Include="..\..\..\..\source\Debug\DebugOutput.cpp">
+      <Filter>Debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

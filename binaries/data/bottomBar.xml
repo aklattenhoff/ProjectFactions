@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<BottomBar>
+	<ActionPanel position="0">textures/ui/action_panel.png</ActionPanel>
+	<ObjectPanel position="1">textures/ui/object_panel.png</ObjectPanel>
+	<ResourcePanel position="2">textures/ui/resource_panel.png</ResourcePanel>
+	<MinimapPanel position="3">textures/ui/minimap_panel.png</MinimapPanel>
+</BottomBar>

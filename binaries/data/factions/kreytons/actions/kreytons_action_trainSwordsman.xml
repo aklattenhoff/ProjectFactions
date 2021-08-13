@@ -1,0 +1,4 @@
+<Action type="train" name="kreytons_action_trainSwordsman">
+	<Icon>textures/ui/train_swordsman_icon.png</Icon>
+	<Train>kreytons_swordsman</Train>
+</Action>

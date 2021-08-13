@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.75</Scale>
+	<ModelFile>models/base.dae</ModelFile>
+	<TextureFile>models/base_villager.png</TextureFile>
+	<BumpTextureFile>models/base_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/base_sbc.png</SBCTextureFile>
+	<SoundEffectFile name="footstep1">sounds/wood01.ogg</SoundEffectFile>
+	<SoundEffectFile name="hammer">sounds/wood_hit_08.ogg</SoundEffectFile>
+	<Animations>
+		<Animation name="Idle_1">
+			<AnimFile>models/base_idle.dae</AnimFile>
+		</Animation>
+		<Animation name="Walking">
+			<AnimFile>models/base_walk.dae</AnimFile>
+			<AnimSpeed>3.000</AnimSpeed>
+		</Animation>
+		<Animation name="Build">
+			<AnimFile>models/base_build.dae</AnimFile>
+			<AnimSpeed>3.000</AnimSpeed>
+			<SoundEffect name="hammer">0.5</SoundEffect>
+		</Animation>
+		<Animation name="Gather_Food">
+			<AnimFile>models/base_gather.dae</AnimFile>
+			<AnimSpeed>2.000</AnimSpeed>
+		</Animation>
+		<Animation name="Gather_Wood">
+			<AnimFile>models/base_gather.dae</AnimFile>
+			<AnimSpeed>2.000</AnimSpeed>
+		</Animation>
+		<Animation name="Attack_1">
+			<AnimFile>models/base_attack.dae</AnimFile>
+			<AnimSpeed>2.083</AnimSpeed>
+		</Animation>
+	</Animations>
+</Model>

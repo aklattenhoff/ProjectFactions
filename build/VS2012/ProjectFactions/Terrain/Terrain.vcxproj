@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\Terrain.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainGrid.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainGridDebug.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainInfo.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainMap.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainMapDebug.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainMesh.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainOverlay.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainPainter.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainTexture.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainTileMap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\Terrain.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainGrid.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainGridDebug.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainInfo.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainMap.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainMapDebug.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainMesh.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainOverlay.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainPainter.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainTexture.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainTileMap.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{82A1DA08-80EB-4684-A28E-9D0EC905EF9F}</ProjectGuid>
+    <RootNamespace>Terrain</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../Release/</OutDir>
+    <TargetName>Terrain</TargetName>
+    <IncludePath>../../../../libraries/asio_1_10_4/include;../../../../libraries/assimp/include;../../../../libraries/FreeType2/include;../../../../libraries/glm;../../../../libraries/SDL/include;../../../../source;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,34 @@
+<Entity type="object" name="kreytons_wall_2x1">
+	<Name>Wall</Name>
+	
+	<Cost type="food">0</Cost>
+	<PopulationCount>0</PopulationCount>
+	<BuildLimit>10</BuildLimit>
+	<Defense>
+		<HackArmor>0.2</HackArmor>
+		<PierceArmor>0.9</PierceArmor>
+		<MagicArmor>0.7</MagicArmor>
+	</Defense>
+	<HealthIndicatorPosition>
+		<Point3D x="0.000" y="2.500" z="0.000" />
+	</HealthIndicatorPosition>
+	<BoundingBox2DSet>
+		<BoundingBox2D>
+			<Point2D x="-1.000" y="0.000" />
+			<Point2D x="1.000" y="0.000" />
+			<Size2D width="0.200" />
+		</BoundingBox2D>
+	</BoundingBox2DSet>
+	<BoundingBox3DSet>
+		<BoundingBox3D>
+			<Point3D x="-1.000" y="0.750" z="0.000" />
+			<Point3D x="1.000" y="0.750" z="0.000" />
+			<Size3D width="0.200" height="1.500" />
+		</BoundingBox3D>
+	</BoundingBox3DSet>
+	<ModelFile>data/factions/kreytons/models/kreytons_models_wall_2x1.xml</ModelFile>
+	<Icon>textures/ui/icon.png</Icon>
+	<SmallIcon>art/tree_small_icon.png</SmallIcon>
+	
+	<Health>1000</Health>
+</Entity>

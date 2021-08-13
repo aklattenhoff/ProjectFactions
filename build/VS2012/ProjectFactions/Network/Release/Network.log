@@ -1,0 +1,11 @@
+﻿Build started 1/1/2017 8:43:40 PM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Network\Network.vcxproj" on node 5 (Build target(s)).
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../Release/Network.lib" /NOLOGO /LTCG Release\GameResponse.obj
+         Release\Network.obj
+         Network.vcxproj -> C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Network\../Release/Network.lib
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Network\Network.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.49

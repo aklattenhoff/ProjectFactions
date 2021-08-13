@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<EntityList>
+	<Include>
+		<Entity>data/factions/kreytons/entities/kreytons_villager.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_faction_center.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_tree.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_tree_b.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_tree_c.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_tree_new.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_mill.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_house.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_armory.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_swordsman.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_archer.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_quarry.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_quarry_1.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_granary.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_market.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_outpost.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_wall_connector.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_wall_2x1.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_wall_4x1.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_wall_6x1.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_wall_gatehouse.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_agronome_guild.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_manor.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_barracks.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_library.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_arcane_university.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_arcane_school.xml</Entity>
+		<Entity>data/factions/kreytons/entities/kreytons_deer.xml</Entity>
+	</Include>
+</EntityList>
+<PropList>
+	<Include>
+		<Prop>data/factions/kreytons/models/kreytons_props_swordsman_sword.xml</Prop>
+		<Prop>data/factions/kreytons/models/kreytons_props_archer_bow.xml</Prop>
+		<Prop>data/factions/kreytons/models/kreytons_props_archer_arrow.xml</Prop>
+		<Prop>data/factions/kreytons/models/kreytons_props_mason_hammer.xml</Prop>
+		<Prop>data/factions/kreytons/models/kreytons_props_mason_axe.xml</Prop>
+	</Include>
+</PropList>
+<ProjectileList>
+	<Include>
+		<Projectile>data/factions/kreytons/models/kreytons_projectile_archer_arrow.xml</Projectile>
+	</Include>
+</ProjectileList>

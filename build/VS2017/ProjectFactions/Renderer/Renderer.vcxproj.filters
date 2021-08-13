@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{b081a85d-7d69-43c2-b7ec-d551701331f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\RS">
+      <UniqueIdentifier>{25b89a73-224e-4568-b37e-1df82dee58fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\GUIText.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\GUIRectangle.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\Entity.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\GUITexture.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\GUILineRect.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\TerrainDecal.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\GUIToolTip.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\Prop.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\PhageEntity.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\PhageTerrainDecal.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Renderer\RS\GUIToolTipBackground.cpp">
+      <Filter>Renderer\RS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\GUIText.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\GUIRectangle.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\Entity.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\GUITexture.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\GUILineRect.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\TerrainDecal.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\GUIToolTip.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\Prop.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\PhageEntity.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\PhageTerrainDecal.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Renderer\RS\GUIToolTipBackground.h">
+      <Filter>Renderer\RS</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<Projectile name="kreytons_projectile_archer_arrow">
+	<Name>Arrow</Name>
+	<Flag>Model</Flag>
+	<Model>data/factions/kreytons/models/kreytons_models_arrow.xml</Model>
+	<BallisticsFlag>Arc_Homing</BallisticsFlag>
+	<DamageFlag>SingleTarget</DamageFlag>
+	<ArcMotion dist1="5.0" angle1="20.0" height1="3.0" dist2="12.0" angle2="40.0" height2="9.0" />
+	<Velocity>1.000</Velocity>
+</Projectile>

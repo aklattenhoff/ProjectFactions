@@ -1,0 +1,73 @@
+#version 330
+layout(location = 0) in vec3 position;
+layout(location = 1) in vec2 texture_in;
+layout(location = 2) in vec3 normal_in;
+layout(location = 3) in ivec4 boneID_in;
+layout(location = 4) in vec4 boneWeight_in;
+layout(location = 5) in vec3 tangent_in;
+layout(location = 6) in vec3 bitangent_in;
+
+uniform vec3 cameraPosition;
+uniform mat4 modelMatrix;
+uniform mat4 matrix;
+
+uniform int animationFlag;
+const int MAX_BONES = 100;
+uniform mat4 boneMatrix[MAX_BONES];
+
+const int PASS_NORMAL = 0;
+const int PASS_TERRAIN = 1;
+uniform int passValue;
+
+out vec3 camPos;
+out vec3 surfacePos;
+out vec3 directionToLight;
+out vec2 textureCoords;
+out vec3 normalVec;
+out float normalValue;
+out vec3 lightVec;
+out int passValOut;
+
+void main()
+{
+	mat4 boneTransform = mat4(1.0);
+	if (animationFlag == 0)
+	{
+		//Calculate the position of the vertex
+		gl_Position = matrix * vec4(position, 1.0);
+	}
+	else
+	{
+		boneTransform = boneMatrix[boneID_in[0]] * boneWeight_in[0];
+		boneTransform += boneMatrix[boneID_in[1]] * boneWeight_in[1];
+		boneTransform += boneMatrix[boneID_in[2]] * boneWeight_in[2];
+		boneTransform += boneMatrix[boneID_in[3]] * boneWeight_in[3];
+		gl_Position = matrix * boneTransform * vec4(position, 1.0);	
+	}
+	
+	//Light constants
+	directionToLight = normalize(vec3(1.0, 1.0, 1.0));
+	
+	//Gram-Schmidt
+	vec3 T = normalize(vec3(modelMatrix* vec4(tangent_in, 0.0)));
+	vec3 N = normalize(vec3(modelMatrix* vec4(normal_in, 0.0)));
+	T = normalize(T - dot(T, N) * N);
+	vec3 B = cross(T, N);
+	
+	//Make all light calculations
+	//lightVec = directionToLight * mat3(tangent_in, bitangent_in, normalize(modelMatrix*vec4(normal_in, 1.0)));
+	lightVec = directionToLight * mat3(T, B, N);
+	//vec3 normss = normal_in;
+	//normss.x = 0.0;
+	//if (normss.y < -1.0) normss.y = -1.0;if (normss.y > 1.0) normss.y = 1.0;
+	//if (normss.z < -1.0) normss.z = -1.0;if (normss.z > 1.0) normss.z = 1.0;
+	//lightVec = normal_in;// + vec3(1.1, 1.1, 1.1);
+	
+	camPos = cameraPosition;
+	surfacePos = gl_Position.xyz;
+	textureCoords = texture_in;
+	normalVec = normalize(modelMatrix*vec4(normal_in, 1.0)).xyz;
+	normalValue = dot(normalize(modelMatrix*vec4(normal_in, 1.0)), normalize(vec4(directionToLight, 1.0)));
+	
+	passValOut = passValue;
+}

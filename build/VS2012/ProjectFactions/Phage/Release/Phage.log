@@ -1,0 +1,61 @@
+﻿Build started 2/2/2017 12:58:04 AM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Phage\Phage.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\source\Phage\Phage_Scene.cpp
+         Phage_Scene.cpp
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(203): warning C4244: 'argument' : conversion from 'float' to 'GLsizei', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(212): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(221): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(230): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(403): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(551): warning C4244: 'argument' : conversion from 'float' to 'GLsizei', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(564): warning C4244: 'argument' : conversion from 'float' to 'GLsizei', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(574): warning C4244: 'argument' : conversion from 'float' to 'GLsizei', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(580): warning C4244: 'argument' : conversion from 'float' to 'GLsizei', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(635): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(637): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(639): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(707): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(743): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(755): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(773): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(787): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(802): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(821): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(832): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(835): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(862): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(878): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\source\Phage\Phage_Scene.cpp(888): warning C4018: '<' : signed/unsigned mismatch
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../Release/Phage.lib" /NOLOGO /LTCG Release\Phage_Camera.obj
+         Release\Phage_CameraWrapper.obj
+         Release\Phage_FrameBuffer.obj
+         Release\Phage_BoundingBox.obj
+         Release\Phage_Line.obj
+         Release\Phage_Math.obj
+         Release\Phage_Entity.obj
+         Release\Phage_Matrix.obj
+         Release\Phage_Model.obj
+         Release\Phage_MVP.obj
+         Release\Phage_Prop.obj
+         Release\Phage_PropDesc.obj
+         Release\Phage_Scene.obj
+         Release\Phage_Shader.obj
+         Release\Phage_Terrain.obj
+         Release\Phage_TerrainDecal.obj
+         Release\Phage_TerrainMesh.obj
+         Release\Phage_TerrainMeshPatch.obj
+         Release\Phage_TerrainTexture.obj
+         Release\Phage_TerrainTileDebug.obj
+         Release\Phage_UIEntity.obj
+         Release\Phage_UILineRect.obj
+         Release\Phage_UIText.obj
+         Release\Phage_UITextureQuad.obj
+         Release\Phage_Window.obj
+         Phage.vcxproj -> C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Phage\../Release/Phage.lib
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Phage\Phage.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.34

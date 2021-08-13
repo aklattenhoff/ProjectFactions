@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>1.0</Scale>
+	<ModelFile>models/armory_new_unbuilt.dae</ModelFile>
+	<TextureFile>models/armory_new_unbuilt.png</TextureFile>
+	<BumpTextureFile>models/armory_new_unbuilt_bump.png</BumpTextureFile>
+</Model>

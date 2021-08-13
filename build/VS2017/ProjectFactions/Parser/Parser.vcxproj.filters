@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Parser">
+      <UniqueIdentifier>{514c69b6-90fa-45bc-99e8-99a090bb3afe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\EntityListXML">
+      <UniqueIdentifier>{a7722023-861f-464e-9149-2f4860e8156b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\EntityXML">
+      <UniqueIdentifier>{37877e17-a5c2-4281-9fa5-0f48c465ba77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\FactionListXML">
+      <UniqueIdentifier>{8242a37c-a99e-4e8b-92ef-e0afd10bcc1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\FactionsXML">
+      <UniqueIdentifier>{50f588e6-8013-4593-8cc8-4da72f7f999b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\ActionXML">
+      <UniqueIdentifier>{4d10c5d3-56d0-4da5-b4ee-40b3bd1db0ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\ActionListXML">
+      <UniqueIdentifier>{b65ee97d-b259-4aad-8eaa-4febf824fa5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\PropXML">
+      <UniqueIdentifier>{65f7484a-a1f6-4d31-a323-cde1ad0e14b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\ProjectileXML">
+      <UniqueIdentifier>{ccb51e6c-a75b-41b4-b675-8c0ca3493a22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\ProjectileListXML">
+      <UniqueIdentifier>{40e3b380-cc26-43b1-bdcb-a8cd9c27ec04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\ShaderListXML">
+      <UniqueIdentifier>{f87a6156-e171-4acb-ad86-a32b21ec1cb6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Parser\EntityListXML.cpp">
+      <Filter>Parser\EntityListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\EntityListXMLCreator.cpp">
+      <Filter>Parser\EntityListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\EntityXMLCreator.cpp">
+      <Filter>Parser\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\EntityXMLParser.cpp">
+      <Filter>Parser\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\EntityXMLTag.cpp">
+      <Filter>Parser\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\DebugEntityXMLParser.cpp">
+      <Filter>Parser\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\EntityXML.cpp">
+      <Filter>Parser\EntityXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\FactionListXMLParser.cpp">
+      <Filter>Parser\FactionListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\FactionXMLData.cpp">
+      <Filter>Parser\FactionListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\FactionListXML.cpp">
+      <Filter>Parser\FactionListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\FactionsXMLParser.cpp">
+      <Filter>Parser\FactionsXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\FactionsXML.cpp">
+      <Filter>Parser\FactionsXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\Parser.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ActionXML.cpp">
+      <Filter>Parser\ActionXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ActionListXML.cpp">
+      <Filter>Parser\ActionListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ActionXMLCreator.cpp">
+      <Filter>Parser\ActionXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ActionListXMLCreator.cpp">
+      <Filter>Parser\ActionListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\PropXML.cpp">
+      <Filter>Parser\PropXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\PropXMLCreator.cpp">
+      <Filter>Parser\PropXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ProjectileXML.cpp">
+      <Filter>Parser\ProjectileXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ProjectileXMLCreator.cpp">
+      <Filter>Parser\ProjectileXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ProjectileListXML.cpp">
+      <Filter>Parser\ProjectileListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ProjectileListXMLCreator.cpp">
+      <Filter>Parser\ProjectileListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ShaderListXML.cpp">
+      <Filter>Parser\ShaderListXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Parser\ShaderListXMLParser.cpp">
+      <Filter>Parser\ShaderListXML</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Parser\EntityListXML.h">
+      <Filter>Parser\EntityListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\EntityListXMLCreator.h">
+      <Filter>Parser\EntityListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\EntityXML.h">
+      <Filter>Parser\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\EntityXMLCreator.h">
+      <Filter>Parser\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\EntityXMLParser.h">
+      <Filter>Parser\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\EntityXMLTag.h">
+      <Filter>Parser\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\DebugEntityXMLParser.h">
+      <Filter>Parser\EntityXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\FactionListXML.h">
+      <Filter>Parser\FactionListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\FactionListXMLParser.h">
+      <Filter>Parser\FactionListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\FactionXMLData.h">
+      <Filter>Parser\FactionListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\FactionsXML.h">
+      <Filter>Parser\FactionsXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\FactionsXMLParser.h">
+      <Filter>Parser\FactionsXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\Parser.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ActionXML.h">
+      <Filter>Parser\ActionXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ActionListXML.h">
+      <Filter>Parser\ActionListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ActionXMLCreator.h">
+      <Filter>Parser\ActionXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ActionListXMLCreator.h">
+      <Filter>Parser\ActionListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\PropXML.h">
+      <Filter>Parser\PropXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\PropXMLCreator.h">
+      <Filter>Parser\PropXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ProjectileXML.h">
+      <Filter>Parser\ProjectileXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ProjectileXMLCreator.h">
+      <Filter>Parser\ProjectileXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ProjectileListXML.h">
+      <Filter>Parser\ProjectileListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ProjectileListXMLCreator.h">
+      <Filter>Parser\ProjectileListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ShaderListXML.h">
+      <Filter>Parser\ShaderListXML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Parser\ShaderListXMLParser.h">
+      <Filter>Parser\ShaderListXML</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

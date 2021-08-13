@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Phage_Test">
+      <UniqueIdentifier>{36177772-bad8-422c-872c-999307ab3e9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{249edb8a-a168-4b9f-84ff-af9a096bd741}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Phage_Test\main.cpp">
+      <Filter>Phage_Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\loadGLE.cpp">
+      <Filter>Dependencies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Debug\DebugOutput.cpp">
+      <Filter>Dependencies</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\loadGLE.h">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Debug\Debug.h">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Debug\DebugFlags.h">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Debug\DebugOutput.h">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+﻿  Generating code
+c:\users\aklat\dropbox\projectfactions\source\phage_test\main.cpp(198): warning C4700: uninitialized local variable '_tbo' used
+  All 248 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Phage_Test.vcxproj -> C:\Users\aklat\Dropbox\ProjectFactions\build\VS2017\ProjectFactions\Phage_Test\../../../../binaries/Phage_Test.exe

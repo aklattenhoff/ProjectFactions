@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<ActionList>
+	<Include>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildHouse.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildManor.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildMill.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildArmory.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildBarracks.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildLibrary.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildArcaneUniversity.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildArcaneSchool.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildMarket.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_trainVillager.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_trainSwordsman.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_trainArcher.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_buildWall.xml</Action>
+		<Action>data/factions/kreytons/actions/kreytons_action_upgradeToGatehouse.xml</Action>
+	</Include>
+</ActionList>

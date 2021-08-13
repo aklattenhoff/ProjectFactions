@@ -1,0 +1,121 @@
+﻿Build started 2/9/2015 5:07:05 PM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Game\Game.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\source\Game\EntitySystem\DebugEntityRenderer.cpp ..\..\..\..\source\Game\EntitySystem\Entity.cpp ..\..\..\..\source\Game\EntitySystem\EntityBase.cpp ..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp ..\..\..\..\source\Game\EntitySystem\EntityBaseList.cpp ..\..\..\..\source\Game\EntitySystem\EntityManager.cpp ..\..\..\..\source\Game\EntitySystem\EntityMap.cpp ..\..\..\..\source\Game\EntitySystem\EntityMouseOverList.cpp ..\..\..\..\source\Game\EntitySystem\EntityRenderer.cpp ..\..\..\..\source\Game\EntitySystem\EntitySelectionHandler.cpp ..\..\..\..\source\Game\EntitySystem\EntitySelectionList.cpp ..\..\..\..\source\Game\EntitySystem\EntityStats.cpp ..\..\..\..\source\Game\EntitySystem\EntityXML.cpp ..\..\..\..\source\Game\EntitySystem\EntityXMLParser.cpp ..\..\..\..\source\Game\EntitySystem\EntityXMLTag.cpp
+         DebugEntityRenderer.cpp
+         Entity.cpp
+         EntityBase.cpp
+         EntityXMLBaseCreator.cpp
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(55): error C2653: 'EntityXMLTags' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(55): error C2065: 'Attack' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(55): error C2923: 'std::vector' : 'Attack' is not a valid template type argument for parameter '_Ty'
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(55): error C2133: 'attackVector' : unknown size
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(55): error C2512: 'std::vector' : no appropriate default constructor available
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(71): error C2653: 'EntityXMLTags' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(71): error C3861: 'Cost': identifier not found
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(126): error C2653: 'EntityXMLTags' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(126): error C2664: 'void std::vector<EntityXMLTag::Action,std::allocator<_Ty>>::push_back(const EntityXMLTag::Action &)' : cannot convert argument 1 from 'Action' to 'EntityXMLTag::Action &&'
+                 with
+                 [
+                     _Ty=EntityXMLTag::Action
+                 ]
+                 Reason: cannot convert from 'Action' to 'EntityXMLTag::Action'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(144): error C2664: 'int EntityXMLParser::GetAttack(std::vector<EntityXMLTag::Attack,std::allocator<_Ty>> *)' : cannot convert argument 1 from 'std::vector *' to 'std::vector<EntityXMLTag::Attack,std::allocator<_Ty>> *'
+                 with
+                 [
+                     _Ty=EntityXMLTag::Attack
+                 ]
+                 Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+     1>..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp(145): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'std::vector' (or there is no acceptable conversion)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vector(948): could be 'std::vector<EntityXMLTag::Attack,std::allocator<_Ty>> &std::vector<_Ty,std::allocator<_Ty>>::operator =(const std::vector<_Ty,std::allocator<_Ty>> &)'
+                 with
+                 [
+                     _Ty=EntityXMLTag::Attack
+                 ]
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vector(926): or       'std::vector<EntityXMLTag::Attack,std::allocator<_Ty>> &std::vector<_Ty,std::allocator<_Ty>>::operator =(std::initializer_list<EntityXMLTag::Attack>)'
+                 with
+                 [
+                     _Ty=EntityXMLTag::Attack
+                 ]
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\vector(822): or       'std::vector<EntityXMLTag::Attack,std::allocator<_Ty>> &std::vector<_Ty,std::allocator<_Ty>>::operator =(std::vector<_Ty,std::allocator<_Ty>> &&)'
+                 with
+                 [
+                     _Ty=EntityXMLTag::Attack
+                 ]
+                 while trying to match the argument list '(std::vector<EntityXMLTag::Attack,std::allocator<_Ty>>, std::vector)'
+                 with
+                 [
+                     _Ty=EntityXMLTag::Attack
+                 ]
+         EntityBaseList.cpp
+         EntityManager.cpp
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(37): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(37): error C2227: left of '->GetEntityList' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(41): error C2653: 'LMEntityEventHandler' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(41): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(41): error C3861: 'HandleEntityEventPreProcess': identifier not found
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(43): error C2027: use of undefined type 'EntityProcessEventQueue'
+                 C:\Users\aklat_000\Dropbox\ProjectFactions\source\Game/Entity/Entity.h(14) : see declaration of 'EntityProcessEventQueue'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(43): error C2227: left of '->Size' must point to class/struct/union/generic type
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(44): error C2653: 'LMEntityProcessEventHandler' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(44): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(44): error C3861: 'HandleEntityEventPreProcess': identifier not found
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(52): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(52): error C2227: left of '->GetEntityList' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(56): error C2653: 'LMEntityEventHandler' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(56): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(56): error C3861: 'HandleEntityEventProcess': identifier not found
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(58): error C2027: use of undefined type 'EntityProcessEventQueue'
+                 C:\Users\aklat_000\Dropbox\ProjectFactions\source\Game/Entity/Entity.h(14) : see declaration of 'EntityProcessEventQueue'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(58): error C2227: left of '->Size' must point to class/struct/union/generic type
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(59): error C2653: 'LMEntityProcessEventHandler' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(59): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(59): error C3861: 'HandleEntityEventProcess': identifier not found
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(62): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(62): error C2227: left of '->GetLOSMap' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(62): error C2227: left of '->Clear' must point to class/struct/union/generic type
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(64): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(64): error C2227: left of '->GetLOSMap' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(64): error C2227: left of '->SetLineOfSight' must point to class/struct/union/generic type
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(64): error C2227: left of '->GetCamera' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(70): error C2511: 'int EntityManager::PostProcessEntities(World *)' : overloaded member function not found in 'EntityManager'
+                 c:\users\aklat_000\dropbox\projectfactions\source\game\entitysystem\EntityManager.h(10) : see declaration of 'EntityManager'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(75): error C2653: 'LMEntityEventHandler' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(75): error C3861: 'HandleEntityEventPostProcess': identifier not found
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(77): error C2027: use of undefined type 'EntityProcessEventQueue'
+                 C:\Users\aklat_000\Dropbox\ProjectFactions\source\Game/Entity/Entity.h(14) : see declaration of 'EntityProcessEventQueue'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(77): error C2227: left of '->Size' must point to class/struct/union/generic type
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(78): error C2653: 'LMEntityProcessEventHandler' : is not a class or namespace name
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(78): error C3861: 'HandleEntityEventPostProcess': identifier not found
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(86): error C2065: '_entitySelectionHandler' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(86): error C2227: left of '->CalcMouseOver' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(86): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(93): error C2065: '_entitySelectionHandler' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(93): error C2227: left of '->SetOrthoSquare' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(93): error C2065: 'world' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(100): error C2065: '_entitySelectionHandler' : undeclared identifier
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(100): error C2227: left of '->SelectMouseOver' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>..\..\..\..\source\Game\EntitySystem\EntityManager.cpp(100): error C2065: 'world' : undeclared identifier
+         EntityMap.cpp
+         EntityMouseOverList.cpp
+         EntityRenderer.cpp
+         EntitySelectionHandler.cpp
+         EntitySelectionList.cpp
+         EntityStats.cpp
+         EntityXML.cpp
+         EntityXMLParser.cpp
+         EntityXMLTag.cpp
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Game\Game.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:13.40

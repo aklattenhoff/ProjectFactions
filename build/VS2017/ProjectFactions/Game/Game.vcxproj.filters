@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{0302571c-ea1c-4031-95f5-3e3ae6026905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntitySystem">
+      <UniqueIdentifier>{6ca583b5-18a6-46e5-b1ef-d9c6e2de95ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntitySystem\Entity">
+      <UniqueIdentifier>{81b97923-5d93-497d-b220-58f62a215d52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntitySystem\EntityManager">
+      <UniqueIdentifier>{ad903279-4df9-436a-8e6e-dc7d85ffc064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntitySystem\EntityLists">
+      <UniqueIdentifier>{61477c63-4abc-41a7-ae30-90d2bb5a1b94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\EntitySystem\EntityParsers">
+      <UniqueIdentifier>{4e090720-397e-4c9b-8a62-c9feb8118f6f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntitySystem.cpp">
+      <Filter>Game\EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityStats.cpp">
+      <Filter>Game\EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\Entity.cpp">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityBase.cpp">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityEvent.cpp">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityEventQueue.cpp">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityProcessEvent.cpp">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityProcessEventQueue.cpp">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\DebugEntityRenderer.cpp">
+      <Filter>Game\EntitySystem\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityManager.cpp">
+      <Filter>Game\EntitySystem\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityRenderer.cpp">
+      <Filter>Game\EntitySystem\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntitySelectionHandler.cpp">
+      <Filter>Game\EntitySystem\EntityManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityList.cpp">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityMap.cpp">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityMouseOverList.cpp">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntitySelectionList.cpp">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityBaseList.cpp">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\DebugEntityXMLParser.cpp">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityXML.cpp">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.cpp">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityXMLParser.cpp">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\EntitySystem\EntityXMLTag.cpp">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntitySystem.h">
+      <Filter>Game\EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityStats.h">
+      <Filter>Game\EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\Entity.h">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityBase.h">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityEvent.h">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityEventQueue.h">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityProcessEvent.h">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityProcessEventQueue.h">
+      <Filter>Game\EntitySystem\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\DebugEntityRenderer.h">
+      <Filter>Game\EntitySystem\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityManager.h">
+      <Filter>Game\EntitySystem\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityRenderer.h">
+      <Filter>Game\EntitySystem\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntitySelectionHandler.h">
+      <Filter>Game\EntitySystem\EntityManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityList.h">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityMap.h">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityMouseOverList.h">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntitySelectionList.h">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityBaseList.h">
+      <Filter>Game\EntitySystem\EntityLists</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\DebugEntityXMLParser.h">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityXML.h">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityXMLBaseCreator.h">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityXMLParser.h">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\EntitySystem\EntityXMLTag.h">
+      <Filter>Game\EntitySystem\EntityParsers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

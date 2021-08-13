@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{c8278c17-2882-4f7f-9bb1-3b871095ccd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\GUIBottomBar">
+      <UniqueIdentifier>{767b5048-0b64-4b82-8838-43fffb115f1f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUICursor.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIIcon.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIManager.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIRectangle.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIUnitSelectionBox.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIBottomBar\ActionPanel.cpp">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIBottomBar\GUIBottomBar.cpp">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIBottomBar\GUIBottomBarParser.cpp">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIBottomBar\MinimapPanel.cpp">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIBottomBar\ObjectPanel.cpp">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIBottomBar\ResourcePanel.cpp">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUITexture.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIText.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\GUIBottomBar\UIProgressQueue.cpp">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\GUI\OrthoDepth.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUICursor.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIIcon.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIManager.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIRectangle.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIUnitSelectionBox.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIBottomBar\ActionPanel.h">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIBottomBar\GUIBottomBar.h">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIBottomBar\GUIBottomBarParser.h">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIBottomBar\MinimapPanel.h">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIBottomBar\ObjectPanel.h">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIBottomBar\ResourcePanel.h">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIText.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUITexture.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\GUIBottomBar\UIProgressQueue.h">
+      <Filter>GUI\GUIBottomBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\GUI\OrthoDepth.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

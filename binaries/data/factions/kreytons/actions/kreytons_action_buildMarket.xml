@@ -1,0 +1,4 @@
+<Action type="build" name="kreytons_action_buildMarket">
+	<Icon>textures/ui/build_market_icon.png</Icon>
+	<Build>kreytons_market</Build>
+</Action>

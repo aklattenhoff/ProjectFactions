@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<FactionList>
+	<Faction>
+		<Name>Inferno Horde</Name>
+		<ObjectList>data/factions/inferno/ObjectList.xml</ObjectList>
+		<EntityList>data/factions/kreytons/EntityList.xml</EntityList>
+		<ActionList>data/factions/kreytons/ActionList.xml</ActionList>
+	</Faction>
+</FactionList>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<ShaderList>
+	<DefaultVertex>defaultVertex.fsl</DefaultVertex>
+	<DefaultFragment>defaultFragment.fsl</DefaultFragment>
+</ShaderList>

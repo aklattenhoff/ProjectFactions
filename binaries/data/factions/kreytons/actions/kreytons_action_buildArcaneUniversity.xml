@@ -1,0 +1,4 @@
+<Action type="build" name="kreytons_action_buildArcaneUniversity">
+	<Icon>textures/ui/build_house_icon.png</Icon>
+	<Build>kreytons_arcane_university</Build>
+</Action>

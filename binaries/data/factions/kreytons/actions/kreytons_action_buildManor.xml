@@ -1,0 +1,4 @@
+<Action type="build" name="kreytons_action_buildManor">
+	<Icon>textures/ui/build_manor_icon.png</Icon>
+	<Build>kreytons_manor</Build>
+</Action>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>1.5</Scale>
+	<ModelFile>models/granary_new.dae</ModelFile>
+	<TextureFile>models/granary_new.png</TextureFile>
+	<BumpTextureFile>models/granary_new_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/granary_new_sbc.png</SBCTextureFile>
+</Model>

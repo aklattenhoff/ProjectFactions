@@ -1,0 +1,34 @@
+﻿Build started 1/1/2017 8:43:42 PM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Graphics\Graphics.vcxproj" on node 7 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\source\Game\ObjectModel\ObjectModel.cpp ..\..\..\..\source\Graphics\Model\Animation.cpp
+         ObjectModel.cpp
+         Animation.cpp
+     1>..\..\..\..\source\Graphics\Model\Animation.cpp(298): warning C4018: '>' : signed/unsigned mismatch
+     1>..\..\..\..\source\Graphics\Model\Animation.cpp(330): warning C4018: '>' : signed/unsigned mismatch
+     1>..\..\..\..\source\Graphics\Model\Animation.cpp(341): warning C4018: '>' : signed/unsigned mismatch
+     1>..\..\..\..\source\Graphics\Model\Animation.cpp(380): warning C4018: '>' : signed/unsigned mismatch
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../Release/Graphics.lib" /NOLOGO /LTCG Release\ObjectAnimation.obj
+         Release\ObjectModel.obj
+         Release\ObjectModelXMLParser.obj
+         Release\ObjectSkeleton.obj
+         Release\BBModel.obj
+         Release\Camera.obj
+         Release\Animation.obj
+         Release\Model.obj
+         Release\Skeleton.obj
+         Release\MVPMatrix.obj
+         Release\OrthoDepth.obj
+         Release\Shader.obj
+         Release\ShaderManager.obj
+         Release\TextureLoader.obj
+         Release\Quad.obj
+         Release\Texture.obj
+         Release\TextureUtility.obj
+         Graphics.vcxproj -> C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Graphics\../Release/Graphics.lib
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Graphics\Graphics.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.04

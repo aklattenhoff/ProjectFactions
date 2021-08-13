@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F8A32FB3-2AAE-49B8-95DD-CA899C702BD0}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../Release/</OutDir>
+    <TargetName>Engine</TargetName>
+    <IncludePath>../../../../libraries/soloud/include;../../../../libraries/assimp/include;../../../../libraries/lib3ds/include;../../../../libraries/FreeType2/include;../../../../source;../../../../libraries/glm;../../../../libraries/SDL2/include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\Action.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionArray.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionListCreator.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionListParser.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionManager.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionManagerInterface.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionParser.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionProgressQueue.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ActionManager\ActionSystem.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Bloom\Bloom.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\DebugEntityRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityAnimationHandler.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityManager.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityMap.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityMouseOverList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntityRenderer.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntitySelectionHandler.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityManager\EntitySelectionList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityMovement\EntityCollision.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityMovement\EntityMovement.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityStatsSystem\EntityStatsBase.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityStatsSystem\EntityStatsSystem.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityXML\DebugEntityXMLParser.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityXML\EntityXML.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityXML\OldEntityXMLParser.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\EntityXML\EntityXMLTags.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\Entity.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityBase.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityBaseList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityEvent.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityEventQueue.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityProcessEvent.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityProcessEventQueue.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityStats.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Entity\EntityBaseCreator.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Faction\FactionBase.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Faction\FactionBaseList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\GaiaManager\GaiaList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\GaiaManager\GaiaManager.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Game.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\GameCreator\GameCreator.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Input\Input.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMAttack.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMBuild.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMEntityEventHandler.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMEntityProcessEventHandler.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMGatherResource.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMMovement.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LogicModules\LMTrain.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LOSMap\LOSMap.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\LOS\LOS.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\BoundingBox.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\BoundingBox2DSet.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\BoundingBox3DSet.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\EuclideanVector2D.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\Frustum.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\Line2D.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\Path.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\Plane.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\Ray.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Math\Transformation.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ParticleSystem\Particle.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ParticleSystem\ParticleSystem.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\PathFinder\PathFinder.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Player\Player.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\Player\PlayerList.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ProjectileSystem\Projectile.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ProjectileSystem\ProjectileBase.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ProjectileSystem\ProjectileSystem.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\ShadowMap\ShadowMap.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\SquadronManager\Group.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\SquadronManager\Squadron.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\SquadronManager\SquadronManager.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseCreator.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseListCreator.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityModelXMLCreator.cpp" />
+    <ClCompile Include="..\..\..\..\source\Game\World.cpp" />
+    <ClCompile Include="..\..\..\..\source\MainMenu\MainMenu.cpp" />
+    <ClCompile Include="..\..\..\..\source\MainMenu\Menu.cpp" />
+    <ClCompile Include="..\..\..\..\source\MainMenu\MMHomePage.cpp" />
+    <ClCompile Include="..\..\..\..\source\MainMenu\MMLANHost.cpp" />
+    <ClCompile Include="..\..\..\..\source\MainMenu\MMLANLobby.cpp" />
+    <ClCompile Include="..\..\..\..\source\MainMenu\UIElements\MMButton.cpp" />
+    <ClCompile Include="..\..\..\..\source\MainMenu\UIElements\MMPage.cpp" />
+    <ClCompile Include="..\..\..\..\source\MainMenu\UIElements\MMView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\Action.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionArray.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionListCreator.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionListParser.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionManager.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionManagerInterface.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionParser.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionProgressQueue.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ActionManager\ActionSystem.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Bloom\Bloom.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\DebugEntityRenderer.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityAnimationHandler.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityManager.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityMap.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityMouseOverList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntityRenderer.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntitySelectionHandler.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityManager\EntitySelectionList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityMovement\EntityCollision.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityMovement\EntityMovement.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityStatsSystem\EntityStatsBase.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityStatsSystem\EntityStatsSystem.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityXML\DebugEntityXMLParser.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityXML\EntityXML.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityXML\OldEntityXMLParser.h" />
+    <ClInclude Include="..\..\..\..\source\Game\EntityXML\EntityXMLTags.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\Entity.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityBase.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityBaseList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityEvent.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityEventQueue.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityProcessEvent.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityProcessEventQueue.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityStats.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Entity\EntityBaseCreator.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Faction\FactionBase.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Faction\FactionBaseList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\GaiaManager\GaiaList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\GaiaManager\GaiaManager.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Game.h" />
+    <ClInclude Include="..\..\..\..\source\Game\GameCreator\GameCreator.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Input\Input.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMAttack.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMBuild.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMEntityEventHandler.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMEntityProcessEventHandler.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMGatherResource.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMMovement.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LogicModules\LMTrain.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LOSMap\LOSMap.h" />
+    <ClInclude Include="..\..\..\..\source\Game\LOS\LOS.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\BoundingBox.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\BoundingBox2DSet.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\BoundingBox3DSet.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\EuclideanVector2D.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\Frustum.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\Line2D.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\Path.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\Plane.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\Ray.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Math\Transformation.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ParticleSystem\Particle.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ParticleSystem\ParticleSystem.h" />
+    <ClInclude Include="..\..\..\..\source\Game\PathFinder\PathFinder.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Player\Player.h" />
+    <ClInclude Include="..\..\..\..\source\Game\Player\PlayerList.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ProjectileSystem\Projectile.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ProjectileSystem\ProjectileBase.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ProjectileSystem\ProjectileSystem.h" />
+    <ClInclude Include="..\..\..\..\source\Game\ShadowMap\ShadowMap.h" />
+    <ClInclude Include="..\..\..\..\source\Game\SquadronManager\Group.h" />
+    <ClInclude Include="..\..\..\..\source\Game\SquadronManager\Squadron.h" />
+    <ClInclude Include="..\..\..\..\source\Game\SquadronManager\SquadronManager.h" />
+    <ClInclude Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseCreator.h" />
+    <ClInclude Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityBaseListCreator.h" />
+    <ClInclude Include="..\..\..\..\source\Game\TempEntityCreator\TempEntityModelXMLCreator.h" />
+    <ClInclude Include="..\..\..\..\source\Game\World.h" />
+    <ClInclude Include="..\..\..\..\source\MainMenu\MainMenu.h" />
+    <ClInclude Include="..\..\..\..\source\MainMenu\Menu.h" />
+    <ClInclude Include="..\..\..\..\source\MainMenu\MMHomePage.h" />
+    <ClInclude Include="..\..\..\..\source\MainMenu\MMLANHost.h" />
+    <ClInclude Include="..\..\..\..\source\MainMenu\MMLANLobby.h" />
+    <ClInclude Include="..\..\..\..\source\MainMenu\UIElements\MMButton.h" />
+    <ClInclude Include="..\..\..\..\source\MainMenu\UIElements\MMPage.h" />
+    <ClInclude Include="..\..\..\..\source\MainMenu\UIElements\MMView.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

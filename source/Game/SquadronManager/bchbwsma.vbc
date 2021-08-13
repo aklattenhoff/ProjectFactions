@@ -1,0 +1,303 @@
+#include "Squadron.h"
+
+#include "loadGLE.h"
+#include "Debug/Debug.h"
+
+#include "Game/World.h"
+
+#include "Game/Entity/Entity.h"
+#include "Game/Entity/EntityEvent.h"
+#include "Game/Entity/EntityEventQueue.h"
+
+#include "Game/SquadronManager/Group.h"
+
+#include "Game/Terrain/Terrain.h"
+
+Squadron::Squadron()
+{
+	//This way we can check if the direction has been set prior to calculating
+	_endpointDirection = -1.0f;
+
+	removedEntitiyNumber = 0;
+}
+
+Squadron::~Squadron()
+{
+	for (unsigned int i = 0;i < _groupVector.size();i ++)
+		delete _groupVector[i];
+}
+
+int Squadron::Init()
+{
+	return 0;
+}
+
+int Squadron::AddEntity(Entity* entity)
+{
+	_entitiesInSquadron.push_back(entity);
+
+	return 0;
+}
+
+int Squadron::RemoveEntity(Entity* entity)
+{
+	for (unsigned int i = 0;i < _entitiesInSquadron.size();i ++)
+	{
+		if (_entitiesInSquadron[i] == entity)
+		{
+			_entitiesInSquadron.erase(_entitiesInSquadron.begin()+i);
+			removedEntitiyNumber ++;
+		}
+	}
+
+	return 0;
+}
+
+int Squadron::SetEndpoint(glm::vec2 endpoint)
+{
+	_endpoint = endpoint;
+
+	return 0;
+}
+
+int Squadron::SetEndpoint(float x, float y)
+{
+	_endpoint.x = x;
+	_endpoint.y = y;
+
+	return 0;
+}
+
+glm::vec2 Squadron::GetEndpoint()
+{
+	return _endpoint;
+}
+
+float Squadron::GetEndpointDirection()
+{
+	return _endpointDirection;
+}
+
+int Squadron::CalculateGroups(World* world)
+{
+	_groupVector.clear();
+
+	//Calculate the entities that have this squad as their front event
+	CalculateActiveEntities(world);
+
+	//Clear all of the cached groups in the events
+	for (unsigned int i = 0;i < _activeEntities.size();i ++)
+	{
+		_activeEntities[i]->GetEventQueue()->GetFrontEvent()->group = NULL;
+	}
+
+	//Iterate through the active entities and group them
+	for (unsigned int i = 0;i < _activeEntities.size();i ++)
+	{
+		EntityEvent* entityEvent = _activeEntities[i]->GetEventQueue()->GetFrontEvent();
+		if (entityEvent->group == NULL)
+		{
+			//NOTE:This could get messy because the pointer could outlive the instance.
+			//But the assumption is that the event is deleted at the same time the Squadron is deleted
+			//Otherwise, the event's group pointer should be cleared when the group vector is cleared
+			_groupVector.push_back(new Group());
+			entityEvent->group = _groupVector.back();
+
+			entityEvent->group->entities.push_back(_activeEntities[i]);
+			DebugOutput("Added new group number:%i\n", entityEvent->group);
+		}
+		for (unsigned int j = i + 1;j < _activeEntities.size();j ++)
+		{
+			if (_activeEntities[j]->GetEventQueue()->GetFrontEvent()->group != NULL)
+				continue;
+
+			glm::vec2 t1 = glm::vec2(_activeEntities[i]->GetTranslationVector().x, _activeEntities[i]->GetTranslationVector().z);
+			glm::vec2 t2 = glm::vec2(_activeEntities[j]->GetTranslationVector().x, _activeEntities[j]->GetTranslationVector().z);
+			if (glm::distance(t1, t2) < 10.0f/*threshold value*/)
+			{
+				_activeEntities[j]->GetEventQueue()->GetFrontEvent()->group = entityEvent->group;
+				entityEvent->group->entities.push_back(_activeEntities[j]);
+				DebugOutput("Added entity to group number:%i\n", entityEvent->group);
+			}
+		}
+	}
+
+	//Set the centerpoint of each group
+	int previousSize = _activeEntities.size();
+	int expectedSize = previousSize - removedEntitiyNumber;
+	CalculateGroupStartpoints(world);
+	int newSize = _activeEntities.size();
+
+	//If there are more people than the old size minus the number we know left the squad
+	if (newSize > expectedSize)
+	{
+		int newEntityNumber = newSize - expectedSize;
+		for (int i = (newSize-1) - newEntityNumber;i < newSize;i ++)
+		{
+			AddActiveEntityToGroups(world, _activeEntities[i]);
+		}
+	}
+
+	//Reset removedEntityNumber
+	removedEntitiyNumber = 0;
+
+	if (_groupVector.size() > 0)
+		CalculateEndpointDirection();
+
+	return 0;
+}
+
+int Squadron::UpdateSquadron(World* world)
+{
+	//Return if squad is empty
+	if (_entitiesInSquadron.size() == 0)
+		return 1;
+
+	//Remove empty groups if there are more than one
+	for (unsigned int i = 0;i < _groupVector.size();i ++)
+	{
+		if (_groupVector.size() > 1 && _groupVector[i]->entities.size() == 0)
+		{
+			delete _groupVector[i];
+			_groupVector.erase(_groupVector.begin() + i);
+		}
+	}
+
+	//Determine if any new entities have become active
+	CalculateActiveEntities(world);
+
+
+	for (unsigned int i = 0;i < _groupVector.size();i ++)
+	{
+		if (_groupVector[i]->path.Size() == 0)
+			world->GetTerrain()->getTerrainMap()->FindPath(_groupVector[i]->centerpoint, _endpoint, &_groupVector[i]->path);
+
+
+	}
+
+	return 0;
+}
+
+int Squadron::DebugDrawGroups(World* world, unsigned int tex)
+{
+	for (unsigned int i = 0;i < _groupVector.size();i ++)
+	{
+		world->GetTerrain()->getTerrainOverlay()->AddToOverlay(tex, _groupVector[i]->centerpoint.x, _groupVector[i]->centerpoint.y, (float)_groupVector[i]->entities.size(), (float)_groupVector[i]->entities.size());
+	}
+
+	return 0;
+}
+
+int Squadron::CalculateActiveEntities(World* world)
+{
+	_activeEntities.clear();
+
+	//Calculate the entities that have this squad as their front event
+	for (unsigned int i = 0;i < _entitiesInSquadron.size();i ++)
+	{
+		if (_entitiesInSquadron[i]->GetEventQueue()->GetFrontEvent()->squadron == this)
+			_activeEntities.push_back(_entitiesInSquadron[i]);
+	}
+
+	return 0;
+}
+
+int Squadron::CalculateGroupStartpoints(World* world)
+{
+	for (unsigned int i = 0;i < _groupVector.size();i ++)
+	{
+		//Simply choose the entity who is closes to the goal
+		float closestDistance = -1.0f;
+		int closestEntityIndex = -1;
+		for (unsigned int j = 0;j < _groupVector[i]->entities.size();j ++)
+		{
+			glm::vec2 entityPos = glm::vec2(_groupVector[i]->entities[j]->GetTranslationVector().x, _groupVector[i]->entities[j]->GetTranslationVector().z);
+			float distance = glm::distance(entityPos, _endpoint);
+			if (j == 0)
+			{
+				closestDistance = distance;
+				closestEntityIndex = 0;
+			}
+			else
+			{
+				if (distance < closestDistance)
+				{
+					closestDistance = distance;
+					closestEntityIndex = j;
+				}
+			}
+		}
+
+		//Set the group startpoint to the closest-to-goal point in the group
+		//NOTE:The reason this is chosen is because we can guarantee that this point is free
+		//and the path should be shortest for most cases.
+		_groupVector[i]->centerpoint = glm::vec2(	_groupVector[i]->entities[closestEntityIndex]->GetTranslationVector().x,
+													_groupVector[i]->entities[closestEntityIndex]->GetTranslationVector().z);
+	}
+
+	return 0;
+}
+
+int Squadron::CalculateEndpointDirection()
+{
+	//Don't calculate this if the endpoint direction is already set
+	if (_endpointDirection >= 0.0f)
+		return 1;
+
+	//Find the largest group to determine the influence of the direction
+	int largestGroupIndex = 0;
+	for (unsigned int i = 1;i < _groupVector.size();i ++)
+	{
+		if (_groupVector[i]->entities.size() > _groupVector[largestGroupIndex]->entities.size())
+			largestGroupIndex = i;
+	}
+
+	//Calculate the direction from the endpoint to the largest group's startpoint
+	glm::vec2 startpoint = _groupVector[largestGroupIndex]->centerpoint;
+	float opp = startpoint.y - _endpoint.y;
+	bool oppNeg = opp < 0.0f;
+	if (oppNeg) opp *= -1.0f;
+	float adj = startpoint.x - _endpoint.x;
+	bool adjNeg = adj < 0.0f;
+	if (adjNeg) adj *= -1.0f;
+	if (adj == 0.0f)
+	{
+		if (oppNeg)
+			_endpointDirection = 270.0f;
+		else
+			_endpointDirection = 90.0f;
+	}
+	else
+	{
+		float angle  = glm::degrees(glm::atan(opp/adj));
+		if (oppNeg)
+		{
+			if (adjNeg)	//QUAD 1
+				angle = 360.0f - angle;
+			else		//QUAD 2
+				angle = 180.0f + angle;
+		}
+		else
+		{
+			if (adjNeg)	//QUAD 3
+				angle = angle;
+			else		//QUAD 4
+				angle = 180.0f - angle;
+		}
+		_endpointDirection = angle;
+	}
+
+	return 0;
+}
+
+int Squadron::AddActiveEntityToGroups(World* world, Entity* entity)
+{
+	//Determine if the entity can be merged into an existing group
+	int shortestGroupIndex = -1;
+	for (unsigned int i = 0;i < _groupVector.size();i ++)
+	{
+		if (i == 0)
+	}
+
+	return 0;
+}

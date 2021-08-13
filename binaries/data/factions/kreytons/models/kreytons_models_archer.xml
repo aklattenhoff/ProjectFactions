@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.2</Scale>
+	<ModelFile>models/archer.dae</ModelFile>
+	<TextureFile>models/archer.png</TextureFile>
+	<BumpTextureFile>models/archer_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/archer_sbc.png</SBCTextureFile>
+	<Animations>
+		<Animation name="Idle_1">
+			<AnimFile>models/archer_idle.dae</AnimFile>
+			<AnimSpeed>1.000</AnimSpeed>
+			<Prop>
+				<Name>kreytons_props_archer_bow</Name>
+				<Bone>Lower Arm.L</Bone>
+				<Offset>
+					<Translate x="0.0" y="0.205" z="0.0" />
+					<Rotate x="0.0" y="0.0" z="90.0" />
+					<Scale x="1.0" y="1.0" z="1.0" />
+				</Offset>
+			</Prop>
+			<Prop>
+				<Name>kreytons_props_archer_arrow</Name>
+				<Bone>Lower Arm.R</Bone>
+				<Offset>
+					<Translate x="0.0" y="0.205" z="0.0" />
+					<Rotate x="0.0" y="0.0" z="90.0" />
+					<Scale x="1.0" y="1.0" z="1.0" />
+				</Offset>
+			</Prop>
+		</Animation>
+	</Animations>
+</Model>

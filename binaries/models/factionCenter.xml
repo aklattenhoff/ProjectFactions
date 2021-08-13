@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>4.0</Scale>
+	<ModelFile>models/FC_new_2.dae</ModelFile>
+	<TextureFile>models/FC_new.png</TextureFile>
+	<BumpTextureFile>models/FC_new_bump.png</BumpTextureFile>
+</Model>

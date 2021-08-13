@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.1</Scale>
+	<ModelFile>models/house_2.dae</ModelFile>
+	<TextureFile>models/house_2.png</TextureFile>
+	<BumpTextureFile>models/house_2_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/house_2_sbc.png</SBCTextureFile>
+</Model>

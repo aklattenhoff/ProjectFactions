@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{56d75d7f-05cc-47d8-bc28-1936521b44fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Model">
+      <UniqueIdentifier>{78f1f811-3f25-47c0-97a1-a413ba123bda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Utility">
+      <UniqueIdentifier>{1d9e7f85-f73d-43aa-bfd7-91e481ad9667}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\GUI">
+      <UniqueIdentifier>{7995fbcd-b614-4ce5-a64e-65f64b70f4d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectModel">
+      <UniqueIdentifier>{aaecb0b6-5091-4bf3-a5ea-b793472f518b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Texture">
+      <UniqueIdentifier>{de167a29-9de4-436b-8d9f-d059ef7a91d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\BBModel">
+      <UniqueIdentifier>{8dc14707-4699-4aa1-9bda-240b79d94883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Shader">
+      <UniqueIdentifier>{caf687d9-134f-478a-810e-7cd2a9efb8f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Graphics\Utility\Quad.h">
+      <Filter>Graphics\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\Utility\Texture.h">
+      <Filter>Graphics\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\Utility\TextureUtility.h">
+      <Filter>Graphics\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\Model\Animation.h">
+      <Filter>Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\Model\Model.h">
+      <Filter>Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\Model\Skeleton.h">
+      <Filter>Graphics\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\Camera.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\MVPMatrix.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\OrthoDepth.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\Shader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\TextureLoader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectAnimation.h">
+      <Filter>ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectModel.h">
+      <Filter>ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectModelXMLParser.h">
+      <Filter>ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\ObjectModel\ObjectSkeleton.h">
+      <Filter>ObjectModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\BBModel\BBModel.h">
+      <Filter>Graphics\BBModel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Graphics\Shader\ShaderManager.h">
+      <Filter>Graphics\Shader</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Graphics\Utility\Quad.cpp">
+      <Filter>Graphics\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\Utility\Texture.cpp">
+      <Filter>Graphics\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\Utility\TextureUtility.cpp">
+      <Filter>Graphics\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\Model\Animation.cpp">
+      <Filter>Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\Model\Model.cpp">
+      <Filter>Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\Model\Skeleton.cpp">
+      <Filter>Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\Camera.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\MVPMatrix.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\OrthoDepth.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\Shader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\TextureLoader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectAnimation.cpp">
+      <Filter>ObjectModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectModel.cpp">
+      <Filter>ObjectModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectModelXMLParser.cpp">
+      <Filter>ObjectModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\ObjectModel\ObjectSkeleton.cpp">
+      <Filter>ObjectModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\BBModel\BBModel.cpp">
+      <Filter>Graphics\BBModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Graphics\Shader\ShaderManager.cpp">
+      <Filter>Graphics\Shader</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,9 @@
+﻿  ActionPanel.cpp
+  GUIBottomBar.cpp
+  MinimapPanel.cpp
+  ObjectPanel.cpp
+  ResourcePanel.cpp
+  UIProgressQueue.cpp
+  GUICursor.cpp
+  GUIManager.cpp
+  GUI.vcxproj -> C:\Users\aklat\Dropbox\ProjectFactions\build\VS2017\ProjectFactions\GUI\../Release/GUI.lib

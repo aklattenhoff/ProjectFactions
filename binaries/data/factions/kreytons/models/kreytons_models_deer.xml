@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.2</Scale>
+	<ModelFile>models/boar.dae</ModelFile>
+	<TextureFile>models/boar.png</TextureFile>
+	<BumpTextureFile>models/deer_bump.png</BumpTextureFile>
+	<Animations>
+		<Animation name="Idle_1">
+			<AnimFile>models/boar_idle.dae</AnimFile>
+		</Animation>
+		<Animation name="Walking">
+			<AnimFile>models/boar_walk.dae</AnimFile>
+			<AnimSpeed>2.500</AnimSpeed>
+		</Animation>
+		<Animation name="Death">
+			<AnimFile>models/boar_death.dae</AnimFile>
+			<AnimSpeed>4.000</AnimSpeed>
+		</Animation>
+		<Animation name="Dead">
+			<AnimFile>models/boar_dead.dae</AnimFile>
+		</Animation>
+	</Animations>
+</Model>

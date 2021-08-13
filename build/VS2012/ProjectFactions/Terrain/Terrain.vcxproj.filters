@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{b11eadb5-f4f4-4b12-a677-cee1b258543e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\Terrain.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainGrid.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainGridDebug.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainMap.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainMapDebug.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainPainter.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainTexture.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainTileMap.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainInfo.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainOverlay.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\source\Game\Terrain\TerrainMesh.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\Terrain.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainGrid.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainGridDebug.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainMap.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainMapDebug.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainPainter.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainTexture.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainTileMap.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainInfo.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainOverlay.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\source\Game\Terrain\TerrainMesh.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

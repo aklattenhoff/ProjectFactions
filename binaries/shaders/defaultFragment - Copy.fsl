@@ -1,0 +1,42 @@
+#version 330
+
+in vec3 camPos;
+in vec3 surfacePos;
+in vec3 directionToLight;
+in vec2 textureCoords;
+in vec3 normalVec;
+in float normalValue;
+in vec3 lightVec;
+in int passValOut;
+
+uniform sampler2D sampler;
+uniform sampler2D bumpSampler;
+
+out vec4 outputColor;
+
+void main()
+{
+	vec4 t = texture(sampler, textureCoords);
+	vec3 normalBump = normalize(2.0 * texture(bumpSampler, textureCoords).xyz - 1.0);
+	
+	//Specular
+	//vec3 reflectVec = reflect(directionToLight, normalVec);
+	vec3 directionToCamera = normalize(camPos - surfacePos);
+	//float cosAngle = max(0.0, dot(directionToCamera, reflectVec));
+	//float specularCoef = pow(cosAngle, 1.0);
+	//float specularCoef = dot(normalBump, normalize(lightVec+directionToCamera));
+	
+	float intesnsify = dot(normalVec, directionToCamera);
+	
+	//float specular = pow(max(dot(halfVec, normalVec), 0.0), 2.0);
+	
+	
+	outputColor = vec4(1.0);
+	outputColor *= t;
+	//outputColor *= dot(normalVec, directionToLight)*0.5 + 0.5;
+	outputColor.xyz *= dot(normalBump, lightVec)*0.5+0.75;
+	//outputColor.xyz = lightVec;
+	//outputColor += pow(specularCoef, 10.0);
+	//outputColor += specularCoef;
+	//outputColor *= intesnsify*0.3+0.7;
+}

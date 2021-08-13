@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F6ABBB92-8FF7-4258-9680-7F2E7575083F}</ProjectGuid>
+    <RootNamespace>Shaders</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="AmbientOcclusion.fx">
+      <FileType>Text</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fxc.exe -Zi -Cc -nologo -T fx_2_0 -Fc "%(RootDir)%(Directory)%(Filename).html" "%(RootDir)%(Directory)%(Filename).fx"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).fxo;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fxc.exe -Zi -Cc -nologo -T fx_2_0 -Fc "%(RootDir)%(Directory)%(Filename).html" "%(RootDir)%(Directory)%(Filename).fx"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="DepthTest.fx">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fxc.exe -Zi -Cc -nologo -T fx_2_0 -Fc "%(RootDir)%(Directory)%(Filename).html" "%(RootDir)%(Directory)%(Filename).fx"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).fxo;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fxc.exe -Zi -Cc -nologo -T fx_2_0 -Fc "%(RootDir)%(Directory)%(Filename).html" "%(RootDir)%(Directory)%(Filename).fx"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="Downsample4x.fx">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fxc.exe -Zi -Cc -nologo -T fx_2_0 -Fc "%(RootDir)%(Directory)%(Filename).html" "%(RootDir)%(Directory)%(Filename).fx"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).fxo;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fxc.exe -Zi -Cc -nologo -T fx_2_0 -Fc "%(RootDir)%(Directory)%(Filename).html" "%(RootDir)%(Directory)%(Filename).fx"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ThreePixelsAverage.fx">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fxc.exe -Zi -Cc -nologo -T fx_2_0 -Fc "%(RootDir)%(Directory)%(Filename).html" "%(RootDir)%(Directory)%(Filename).fx"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).fxo;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fxc.exe -Zi -Cc -nologo -T fx_2_0 -Fc "%(RootDir)%(Directory)%(Filename).html" "%(RootDir)%(Directory)%(Filename).fx"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AmbientOcclusion.html" />
+    <None Include="DepthTest.html" />
+    <None Include="Downsample4x.html" />
+    <None Include="ThreePixelsAverage.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

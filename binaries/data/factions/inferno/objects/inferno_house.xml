@@ -1,0 +1,34 @@
+<Object type="building" name="inferno_house">
+	<Name>House</Name>
+	<Cost type="wood">100</Cost>
+	<PopulationLimitAdd>10</PopulationLimitAdd>
+	<PopulationCount>0</PopulationCount>
+	<BuildLimit>10</BuildLimit>
+	<Defense>
+		<HackArmor>0.2</HackArmor>
+		<PierceArmor>0.5</PierceArmor>
+		<MagicArmor>0.5</MagicArmor>
+	</Defense>
+	<HealthIndicatorPosition>
+		<Point3D x="0.000" y="2.500" z="0.000" />
+	</HealthIndicatorPosition>
+	<BoundingBox2DSet>
+		<BoundingBox2D>
+			<Point2D x="-1.500" y="0.000" />
+			<Point2D x="1.500" y="0.000" />
+			<BB2DSize width="3.500" />
+		</BoundingBox2D>
+	</BoundingBox2DSet>
+	<BoundingBox3DSet>
+		<BoundingBox3D>
+			<Point3D x="-1.500" y="1.025" z="0.000" />
+			<Point3D x="1.500" y="1.025" z="0.000" />
+			<BB3DSize width="3.500" height="2.050" />
+		</BoundingBox3D>
+	</BoundingBox3DSet>
+	<ModelFile>models/house.xml</ModelFile>
+	<Icon>textures/ui/icon.png</Icon>
+	<SmallIcon>textures/ui/icon_small.png</SmallIcon>
+	
+	<Health>1000</Health>
+</Object>

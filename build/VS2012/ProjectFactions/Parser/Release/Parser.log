@@ -1,0 +1,37 @@
+﻿Build started 1/1/2017 8:43:43 PM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Parser\Parser.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\source\Parser\EntityXMLTag.cpp
+         EntityXMLTag.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../Release/Parser.lib" /NOLOGO /LTCG Release\ActionListXML.obj
+         Release\ActionListXMLCreator.obj
+         Release\ActionXML.obj
+         Release\ActionXMLCreator.obj
+         Release\DebugEntityXMLParser.obj
+         Release\EntityListXML.obj
+         Release\EntityListXMLCreator.obj
+         Release\EntityXML.obj
+         Release\EntityXMLCreator.obj
+         Release\EntityXMLParser.obj
+         Release\EntityXMLTag.obj
+         Release\FactionListXML.obj
+         Release\FactionListXMLParser.obj
+         Release\FactionsXML.obj
+         Release\FactionsXMLParser.obj
+         Release\FactionXMLData.obj
+         Release\Parser.obj
+         Release\ProjectileListXML.obj
+         Release\ProjectileListXMLCreator.obj
+         Release\ProjectileXML.obj
+         Release\ProjectileXMLCreator.obj
+         Release\PropXML.obj
+         Release\PropXMLCreator.obj
+         Release\ShaderListXML.obj
+         Release\ShaderListXMLParser.obj
+         Parser.vcxproj -> C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Parser\../Release/Parser.lib
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Parser\Parser.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.95

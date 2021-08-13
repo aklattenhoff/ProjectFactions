@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<ActionList>
+	<Include>
+		<Action>data/factions/inferno/actions/inferno_buildHouse.xml</Action>
+	</Include>
+</ActionList>

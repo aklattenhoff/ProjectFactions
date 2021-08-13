@@ -1,0 +1,23 @@
+﻿Build started 2/2/2017 12:48:39 AM.
+     1>Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Terrain\Terrain.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\source\Game\Terrain\TerrainOverlay.cpp
+         TerrainOverlay.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../Release/Terrain.lib" /NOLOGO /LTCG Release\Terrain.obj
+         Release\TerrainGrid.obj
+         Release\TerrainGridDebug.obj
+         Release\TerrainInfo.obj
+         Release\TerrainMap.obj
+         Release\TerrainMapDebug.obj
+         Release\TerrainMesh.obj
+         Release\TerrainOverlay.obj
+         Release\TerrainPainter.obj
+         Release\TerrainTexture.obj
+         Release\TerrainTileMap.obj
+         Terrain.vcxproj -> C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Terrain\../Release/Terrain.lib
+     1>Done Building Project "C:\Users\aklat_000\Dropbox\ProjectFactions\build\VS2012\ProjectFactions\Terrain\Terrain.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.82

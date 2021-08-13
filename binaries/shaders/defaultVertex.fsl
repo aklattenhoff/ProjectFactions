@@ -1,0 +1,183 @@
+#version 330
+layout(location = 0) in vec3 position;
+layout(location = 1) in vec2 texture_in;
+layout(location = 2) in vec3 normal_in;
+layout(location = 3) in ivec4 boneID_in;
+layout(location = 4) in vec4 boneWeight_in;
+layout(location = 5) in vec3 tangent_in;
+layout(location = 6) in vec3 bitangent_in;
+layout(location = 7) in vec2 alphaCoords_in;
+
+const int losTable[16] = 
+int[](
+	0x00000001,
+	0x00000002,
+	0x00000004,
+	0x00000008,
+	0x00000010,
+	0x00000020,
+	0x00000040,
+	0x00000080,
+	0x00000100,
+	0x00000200,
+	0x00000400,
+	0x00000800,
+	0x00001000,
+	0x00002000,
+	0x00004000,
+	0x00008000
+);
+
+uniform vec3 cameraPosition;
+uniform mat4 modelMatrix;
+uniform mat4 matrix;
+
+uniform int animationFlag;
+const int MAX_BONES = 100;
+uniform mat4 boneMatrix[MAX_BONES];
+
+const int PASS_NORMAL = 0;
+const int PASS_TERRAIN = 1;
+const int PASS_UI = 2;
+const int PASS_FINAL = 3;
+const int PASS_DECAL = 4;
+const int PASS_LINE = 5;
+uniform int passValue;
+
+//Data for terrain pass
+const int MAX_TERRAIN_MAPS = 2;
+uniform sampler2D terrainMapSampler[MAX_TERRAIN_MAPS];
+out vec2 terrainTextureUV[3];
+flat out int terrainTextureMap[3];
+out vec2 alphaTextureUV[2];
+flat out int alphaTextureMap[2];
+
+//Data for shadow pass
+uniform int shadowFlag;
+uniform mat4 shadowMatrix;
+uniform mat4 shadowBias;
+out vec4 shadowOut;
+
+//uniform int losData[17];
+out float losShade;
+out vec3 terrPos;
+
+out vec3 camPos;
+out vec3 surfacePos;
+out vec3 directionToLight;
+out vec2 textureCoords;
+out vec3 normalVec;
+out float normalValue;
+out vec3 lightVec;
+flat out int passValOut;
+flat out int shadowFlagOut;
+
+void main()
+{
+	mat4 boneTransform = mat4(1.0);
+	shadowOut = shadowBias * modelMatrix * vec4(position, 1.0);
+	if (shadowFlag == 1)
+	{
+		if (animationFlag == 0)
+		{
+			//Calculate the position of the vertex
+			gl_Position = shadowMatrix * modelMatrix * vec4(position, 1.0);
+		}
+		else
+		{
+			boneTransform = boneMatrix[boneID_in[0]] * boneWeight_in[0];
+			boneTransform += boneMatrix[boneID_in[1]] * boneWeight_in[1];
+			boneTransform += boneMatrix[boneID_in[2]] * boneWeight_in[2];
+			boneTransform += boneMatrix[boneID_in[3]] * boneWeight_in[3];
+			gl_Position = shadowMatrix * modelMatrix * boneTransform * vec4(position, 1.0);	
+		}
+	}
+	else
+	{
+		if (animationFlag == 0)
+		{
+			//Calculate the position of the vertex
+			gl_Position = matrix * vec4(position, 1.0);
+		}
+		else
+		{
+			boneTransform = boneMatrix[boneID_in[0]] * boneWeight_in[0];
+			boneTransform += boneMatrix[boneID_in[1]] * boneWeight_in[1];
+			boneTransform += boneMatrix[boneID_in[2]] * boneWeight_in[2];
+			boneTransform += boneMatrix[boneID_in[3]] * boneWeight_in[3];
+			gl_Position = matrix * boneTransform * vec4(position, 1.0);	
+		}
+	}
+	
+	//Light constants
+	directionToLight = normalize(vec3(1.0, 1.0, 1.0));
+	//Gram-Schmidt
+	vec3 T = normalize(vec3(modelMatrix* vec4(tangent_in, 0.0)));
+	vec3 N = normalize(vec3(modelMatrix* vec4(normal_in, 0.0)));
+	T = normalize(T - dot(T, N) * N);
+	vec3 B = cross(T, N);
+	//Make all light calculations
+	lightVec = directionToLight * mat3(T, B, N);
+	
+	//Terrain pass
+	if (passValue == PASS_TERRAIN)
+	{
+		vec2 terrainGridPos = vec2(position.x - alphaCoords_in.x, position.z - alphaCoords_in.y);
+		terrainGridPos /= 256.0;
+		vec4 terrainMap1 = texture(terrainMapSampler[0], terrainGridPos);
+		vec4 terrainMap2 = texture(terrainMapSampler[1], terrainGridPos);
+		
+		float terrainUVSize = 512.0 / 2048.0;
+		vec2 uvCorrect = vec2(0.0, 0.0);
+		float pixelVal = max(cameraPosition.y/10.0, 1.0);
+		if (texture_in.x < 0.01) uvCorrect.x = pixelVal;
+		if (texture_in.y < 0.01) uvCorrect.y = pixelVal;
+		if (texture_in.x > 0.99) uvCorrect.x = -pixelVal;
+		if (texture_in.y > 0.99) uvCorrect.y = -pixelVal;
+		uvCorrect /= 512.0;
+		terrainTextureUV[0].x = (texture_in.x + uvCorrect.x) * terrainUVSize + float(int(terrainMap1.r*255.0)%4)/4.0;
+		terrainTextureUV[0].y = (texture_in.y + uvCorrect.y) * terrainUVSize + float(int(terrainMap1.r*255.0)/4)/4.0;
+		terrainTextureUV[1].x = (texture_in.x + uvCorrect.x) * terrainUVSize + float(int(terrainMap1.g*255.0)%4)/4.0;
+		terrainTextureUV[1].y = (texture_in.y + uvCorrect.y) * terrainUVSize + float(int(terrainMap1.g*255.0)/4)/4.0;
+		terrainTextureUV[2].x = (texture_in.x + uvCorrect.x) * terrainUVSize + float(int(terrainMap1.b*255.0)%4)/4.0;
+		terrainTextureUV[2].y = (texture_in.y + uvCorrect.y) * terrainUVSize + float(int(terrainMap1.b*255.0)/4)/4.0;
+		
+		terrainTextureMap[0] = int(terrainMap1.r*255.0)/16;
+		terrainTextureMap[1] = int(terrainMap1.g*255.0)/16;
+		terrainTextureMap[2] = int(terrainMap1.b*255.0)/16;
+		
+		float alphaUVSize = 64.0 / 1024.0;
+		vec2 alphaCorrect = vec2(0.0, 0.0);
+		if (alphaCoords_in.x < 0.01) alphaCorrect.x = pixelVal;
+		if (alphaCoords_in.y < 0.01) alphaCorrect.y = pixelVal;
+		if (alphaCoords_in.x > 0.99) alphaCorrect.x = -pixelVal;
+		if (alphaCoords_in.y > 0.99) alphaCorrect.y = -pixelVal;
+		alphaCorrect /= 64.0;
+		alphaTextureUV[0].x = (alphaCoords_in.x + alphaCorrect.x) * alphaUVSize + float(int(terrainMap2.r*255.0)%16)/16.0;
+		alphaTextureUV[0].y = (alphaCoords_in.y + alphaCorrect.y) * alphaUVSize + float(int(terrainMap2.r*255.0)/16)/16.0;
+		alphaTextureUV[1].x = (alphaCoords_in.x + alphaCorrect.x) * alphaUVSize + float(int(terrainMap2.g*255.0)%16)/16.0;
+		alphaTextureUV[1].y = (alphaCoords_in.y + alphaCorrect.y) * alphaUVSize + float(int(terrainMap2.g*255.0)/16)/16.0;
+		
+		alphaTextureMap[0] = 0;
+		alphaTextureMap[1] = 0;
+		
+		/*int losX = 15 - int(mod(position.x, 16));
+		int losY = int(mod(position.z, 16));
+		bool losBool = (losData[losY] & losTable[losX]) > 0;
+		if (losBool)
+			losShade = 1.0;
+		else
+			losShade = 0.5;*/
+		losShade = 1.0;
+		terrPos = position;
+	}
+	
+	//Set "out" data
+	camPos = cameraPosition;
+	surfacePos = gl_Position.xyz;
+	textureCoords = texture_in;
+	normalVec = normalize(modelMatrix*vec4(normal_in, 1.0)).xyz;
+	normalValue = dot(normalize(modelMatrix*vec4(normal_in, 1.0)), normalize(vec4(directionToLight, 1.0)));
+	passValOut = passValue;
+	shadowFlagOut = shadowFlag;
+}

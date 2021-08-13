@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<Model>
+	<Orientation>z</Orientation>
+	<Scale>0.1</Scale>
+	<ModelFile>models/market_new.dae</ModelFile>
+	<TextureFile>models/market_512.png</TextureFile>
+	<BumpTextureFile>models/market_bump.png</BumpTextureFile>
+	<SBCTextureFile>models/market_sbc.png</SBCTextureFile>
+</Model>
